@@ -1539,3 +1539,6 @@ body.rg-drawer-on{overflow:hidden}
 .rg-time{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;padding:4px;border-radius:10px;border:1px solid #e6d9a3;background:#fffdf5;color:#3d2b1f;text-decoration:none;font:700 .95rem var(--sans)}
 .rg-time small{font-weight:400;font-size:.72rem;color:#6b5410}
 .rg-time:hover,.rg-time:focus-visible{background:linear-gradient(#fffbea,#f8e39a);outline:2px solid #b8962e;outline-offset:1px}
+/* 3.42 (24.10.2026, Claude «Маисовый полоз цена»): «Религии мира» — мировые центры и международные организации
+   каждого направления выделены жирным (класс w у строки списка) */
+.relig-page ul.links li.w > a{font-weight:700}

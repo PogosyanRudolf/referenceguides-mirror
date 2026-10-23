@@ -477,7 +477,7 @@
         'natural-sciences.html': 'Физика, химия, биология', 'applied-sciences.html': 'Инженерия и медицина', 'learners.html': 'Малышам, школьникам и студентам: уроки, учебники, развивающие игры',
         'resources.html': 'Страны, университеты и языки мира', 'reference-catalogs.html': 'Плотность и температура плавления веществ, каталог справочников', 'geography.html': 'Глобус со справкой о каждой стране',
         'tv.html': 'Телевидение, радио и веб-камеры всех стран', 'apps.html': 'Бесплатные программы для учёбы, работы и творчества', 'art-culture.html': 'Музеи, галереи и культурное наследие',
-        'culture-news.html': 'События культуры Еревана с датами и источниками', 'tickets.html': 'Афиша Еревана и покупка билетов',
+        'culture-news.html': 'События культуры Еревана с датами и источниками', 'tickets.html': 'Афиша Еревана и покупка билетов', 'religion.html': 'Официальные сайты религиозных организаций мира: 21 направление',
         'consultants.html': 'Помощь специалистов по источникам и данным, бесплатная Zoom-консультация', 'about.html': 'Наша миссия и правила' } },
     en: { btn: 'Site guide', hello: 'Hello! I am your guide to this site. What would you like to do?', hint: 'I am your guide — click me and I will show you where everything is.',
       close: 'Close', lang: 'Choose language', pc: 'Consultants', pa: 'About the project', consult: 'Free Zoom consultation — book now',
@@ -486,7 +486,7 @@
         'natural-sciences.html': 'Physics, chemistry and biology', 'applied-sciences.html': 'Engineering and medicine', 'learners.html': 'For little ones, pupils and students: lessons, textbooks, educational games',
         'resources.html': 'Countries, universities and languages of the world', 'reference-catalogs.html': 'Density and melting point of substances, a catalogue of reference works', 'geography.html': 'A globe with a fact sheet on every country',
         'tv.html': 'TV, radio and webcams from every country', 'apps.html': 'Free programs for learning, work and creativity', 'art-culture.html': 'Museums, galleries and cultural heritage',
-        'culture-news.html': 'Yerevan cultural events with dates and sources', 'tickets.html': 'Yerevan events and tickets',
+        'culture-news.html': 'Yerevan cultural events with dates and sources', 'tickets.html': 'Yerevan events and tickets', 'religion.html': 'Official websites of religious organisations: 21 traditions',
         'consultants.html': 'Expert help with sources and data, a free Zoom consultation', 'about.html': 'Our mission and rules' } },
     hy: { btn: 'Կայքի ուղեցույց', hello: 'Բարև Ձեզ։ Ես կայքի ուղեցույցն եմ։ Ի՞նչ եք ցանկանում անել։', hint: 'Ես ձեր ուղեցույցն եմ. սեղմեք՝ ցույց կտամ, թե որտեղ ինչ կա։',
       close: 'Փակել', lang: 'Ընտրել լեզու', pc: 'Խորհրդատուներ', pa: 'Նախագծի մասին', consult: 'Անվճար Zoom խորհրդատվություն՝ գրանցվել',
@@ -495,7 +495,7 @@
         'natural-sciences.html': 'Ֆիզիկա, քիմիա, կենսաբանություն', 'applied-sciences.html': 'Ինժեներիա և բժշկություն', 'learners.html': 'Փոքրիկներին, դպրոցականներին և ուսանողներին՝ դասեր, դասագրքեր, զարգացնող խաղեր',
         'resources.html': 'Աշխարհի երկրներ, համալսարաններ և լեզուներ', 'reference-catalogs.html': 'Նյութերի խտությունը և հալման ջերմաստիճանը, տեղեկատուների ցանկ', 'geography.html': 'Գլոբուս՝ յուրաքանչյուր երկրի մասին տեղեկանքով',
         'tv.html': 'Բոլոր երկրների հեռուստատեսություն, ռադիո և վեբ-տեսախցիկներ', 'apps.html': 'Անվճար ծրագրեր ուսման, աշխատանքի և ստեղծագործության համար', 'art-culture.html': 'Թանգարաններ, պատկերասրահներ և մշակութային ժառանգություն',
-        'culture-news.html': 'Երևանի մշակութային իրադարձություններ՝ ամսաթվերով և աղբյուրներով', 'tickets.html': 'Երևանի աֆիշա և տոմսերի գնում',
+        'culture-news.html': 'Երևանի մշակութային իրադարձություններ՝ ամսաթվերով և աղբյուրներով', 'tickets.html': 'Երևանի աֆիշա և տոմսերի գնում', 'religion.html': 'Կրոնական կազմակերպությունների պաշտոնական կայքեր՝ 21 ուղղություն',
         'consultants.html': 'Մասնագետների օգնություն աղբյուրների և տվյալների հարցում, անվճար Zoom խորհրդատվություն', 'about.html': 'Մեր առաքելությունը և կանոնները' } },
     fr: { btn: 'Guide du site', hello: 'Bonjour ! Je suis votre guide du site. Que souhaitez-vous faire ?', hint: 'Je suis votre guide — cliquez, je vous montre où tout se trouve.',
       close: 'Fermer', lang: 'Choisir la langue', pc: 'Consultants', pa: 'À propos du projet', consult: 'Consultation Zoom gratuite — réserver',
@@ -504,7 +504,7 @@
         'natural-sciences.html': 'Physique, chimie, biologie', 'applied-sciences.html': 'Ingénierie et médecine', 'learners.html': 'Pour les petits, les élèves et les étudiants : leçons, manuels, jeux éducatifs',
         'resources.html': 'Pays, universités et langues du monde', 'reference-catalogs.html': 'Masse volumique et point de fusion des substances, catalogue d’ouvrages de référence', 'geography.html': 'Un globe avec une fiche sur chaque pays',
         'tv.html': 'Télévision, radio et webcams de tous les pays', 'apps.html': 'Logiciels gratuits pour apprendre, travailler et créer', 'art-culture.html': 'Musées, galeries et patrimoine culturel',
-        'culture-news.html': 'Événements culturels d’Erevan avec dates et sources', 'tickets.html': 'Spectacles à Erevan et achat de billets',
+        'culture-news.html': 'Événements culturels d’Erevan avec dates et sources', 'tickets.html': 'Spectacles à Erevan et achat de billets', 'religion.html': 'Sites officiels des organisations religieuses : 21 traditions',
         'consultants.html': 'L’aide d’experts pour les sources et les données, une consultation Zoom gratuite', 'about.html': 'Notre mission et nos règles' } },
     de: { btn: 'Wegweiser', hello: 'Hallo! Ich bin Ihr Wegweiser durch die Seite. Was möchten Sie tun?', hint: 'Ich bin Ihr Wegweiser — klicken Sie, ich zeige Ihnen, wo was zu finden ist.',
       close: 'Schließen', lang: 'Sprache wählen', pc: 'Berater', pa: 'Über das Projekt', consult: 'Kostenlose Zoom-Beratung — anmelden',
@@ -513,7 +513,7 @@
         'natural-sciences.html': 'Physik, Chemie, Biologie', 'applied-sciences.html': 'Ingenieurwesen und Medizin', 'learners.html': 'Für die Kleinsten, Schüler und Studierende: Lektionen, Lehrbücher, Lernspiele',
         'resources.html': 'Länder, Universitäten und Sprachen der Welt', 'reference-catalogs.html': 'Dichte und Schmelzpunkt von Stoffen, Katalog der Nachschlagewerke', 'geography.html': 'Ein Globus mit Steckbrief zu jedem Land',
         'tv.html': 'Fernsehen, Radio und Webcams aus allen Ländern', 'apps.html': 'Kostenlose Programme zum Lernen, Arbeiten und Gestalten', 'art-culture.html': 'Museen, Galerien und Kulturerbe',
-        'culture-news.html': 'Kulturveranstaltungen in Jerewan mit Daten und Quellen', 'tickets.html': 'Veranstaltungen in Jerewan und Tickets',
+        'culture-news.html': 'Kulturveranstaltungen in Jerewan mit Daten und Quellen', 'tickets.html': 'Veranstaltungen in Jerewan und Tickets', 'religion.html': 'Offizielle Websites religiöser Organisationen: 21 Richtungen',
         'consultants.html': 'Hilfe von Fachleuten zu Quellen und Daten, kostenlose Zoom-Beratung', 'about.html': 'Unsere Mission und Regeln' } }
   };
   var G5 = G5x[LANG] || G5x.en;
@@ -527,7 +527,7 @@
   }[LANG] || null;
   var FUNCS = [['learn', ['science.html', 'formalsciences.html', 'natural-sciences.html', 'applied-sciences.html', 'learners.html']],
     ['find', ['resources.html', 'reference-catalogs.html', 'geography.html', 'tv.html', 'apps.html']],
-    ['cult', ['art-culture.html', 'culture-news.html', 'tickets.html']], ['help', ['consultants.html']], ['about', ['about.html']]];
+    ['cult', ['art-culture.html', 'religion.html', 'culture-news.html', 'tickets.html']], ['help', ['consultants.html']], ['about', ['about.html']]];
   var LANGNAME = { ru: 'Русский', en: 'English', hy: 'Հայերեն', fr: 'Français', de: 'Deutsch' };
   var HEREPAGE = (location.pathname.split('/').pop() || 'index.html');
   // Профессор в мантии и шапочке — рисунок сайта (свой, без чужих персонажей); vb — какую часть показать
@@ -1343,7 +1343,7 @@
   var KW = {
     learn: "учиться учёба уроки учебники курсы школа вуз студент образование learn study lesson textbook course school university education սովորել դաս դասեր դասագիրք դպրոց համալսարան ուսանող կրթություն",
     find: "находить найти справочник таблица страны география ресурсы программы приложения телевидение радио find search reference table country countries geography resources programs apps tv radio գտնել տեղեկատու աղյուսակ երկիր երկրներ աշխարհագրություն ռեսուրս ծրագիր հեռուստատեսություն ռադիո",
-    cult: "искусство искусство-культура art arts kunst արվեստ история история-культура history histoire geschichte պատմություն культура музей новости афиша билеты театр концерт culture museum news tickets theatre concert մշակույթ թանգարան նորություններ աֆիշա տոմս թատրոն համերգ",
+    cult: "искусство религия религии вера церковь мечеть синагога храм монастырь religion religions faith church mosque synagogue temple կրոն կրոններ եկեղեցի église mosquée religionen kirche moschee искусство-культура art arts kunst արվեստ история история-культура history histoire geschichte պատմություն культура музей новости афиша билеты театр концерт culture museum news tickets theatre concert մշակույթ թանգարան նորություններ աֆիշա տոմս թատրոն համերգ",
     help: "помощь консультация консультант zoom whatsapp help consultation consultant օգնություն խորհրդատվություն խորհրդատու",
     about: "о нас проект миссия правила about project mission rules մեր մասին նախագիծ առաքելություն կանոններ"
   };

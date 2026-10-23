@@ -81,4 +81,9 @@
 <url><loc>https://referenceguides.pages.dev/hy/apps</loc><priority>0.8</priority></url>
 <url><loc>https://referenceguides.pages.dev/fr/apps</loc><priority>0.8</priority></url>
 <url><loc>https://referenceguides.pages.dev/de/apps</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/religion</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/en/religion</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/hy/religion</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/fr/religion</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/de/religion</loc><priority>0.8</priority></url>
 </urlset>
