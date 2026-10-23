@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Карта сайта ReferenceGuides. ВНИМАНИЕ: базовый адрес заменить на фактический при публикации (tools/set_base_url.ps1). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://referenceguides.pages.dev/</loc><priority>1.0</priority></url>
+  <url><loc>https://referenceguides.pages.dev/science</loc><priority>0.9</priority></url>
+  <url><loc>https://referenceguides.pages.dev/learners</loc><priority>0.9</priority></url>
+  <url><loc>https://referenceguides.pages.dev/resources</loc><priority>0.9</priority></url>
+  <url><loc>https://referenceguides.pages.dev/formalsciences</loc><priority>0.9</priority></url>
+  <url><loc>https://referenceguides.pages.dev/natural-sciences</loc><priority>0.9</priority></url>
+  <url><loc>https://referenceguides.pages.dev/applied-sciences</loc><priority>0.9</priority></url>
+  <url><loc>https://referenceguides.pages.dev/reference-catalogs</loc><priority>0.9</priority></url>
+  <url><loc>https://referenceguides.pages.dev/art-culture</loc><priority>0.8</priority></url>
+  <url><loc>https://referenceguides.pages.dev/consultants</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/culture-news</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/about</loc><priority>0.5</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/about</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/applied-sciences</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/art-culture</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/consultants</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/culture-news</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/formalsciences</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/natural-sciences</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/reference-catalogs</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/resources</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/science</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/learners</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/science</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/learners</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/resources</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/formalsciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/natural-sciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/applied-sciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/reference-catalogs</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/art-culture</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/tickets</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/consultants</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/culture-news</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/about</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/science</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/learners</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/resources</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/formalsciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/natural-sciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/applied-sciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/reference-catalogs</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/art-culture</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/tickets</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/consultants</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/culture-news</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/about</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/science</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/learners</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/resources</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/formalsciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/natural-sciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/applied-sciences</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/reference-catalogs</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/art-culture</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/tickets</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/consultants</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/culture-news</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/about</loc><priority>0.6</priority></url>
+  <url><loc>https://referenceguides.pages.dev/tickets</loc><priority>0.8</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/tickets</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/tv</loc><priority>0.8</priority></url>
+  <url><loc>https://referenceguides.pages.dev/en/tv</loc><priority>0.8</priority></url>
+  <url><loc>https://referenceguides.pages.dev/hy/tv</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/fr/tv</loc><priority>0.7</priority></url>
+  <url><loc>https://referenceguides.pages.dev/de/tv</loc><priority>0.7</priority></url>
+<url><loc>https://referenceguides.pages.dev/geography</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/en/geography</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/hy/geography</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/fr/geography</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/de/geography</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/apps</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/en/apps</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/hy/apps</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/fr/apps</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/de/apps</loc><priority>0.8</priority></url>
+</urlset>

@@ -1,0 +1,401 @@
+{
+ "aluminium": {
+  "ru": "Алюминий (Al): плотность — 2,70 г/см³ (2 700 кг/м³); плавление — 660,32 °C. Источник: PubChem.",
+  "en": "Aluminium (Al): density — 2.70 g/cm³ (2,700 kg/m³); melting point — 660.32 °C. Source: PubChem.",
+  "hy": "Ալյումին (Al)՝ խտություն — 2,70 գ/սմ³ (2 700 կգ/մ³); հալում — 660,32 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Aluminium (Al) : masse volumique — 2,70 g/cm³ (2 700 kg/m³); fusion — 660,32 °C. Source : PubChem.",
+  "de": "Aluminium (Al): Dichte — 2,70 g/cm³ (2.700 kg/m³); Schmelzpunkt — 660,32 °C. Quelle: PubChem."
+ },
+ "tungsten": {
+  "ru": "Вольфрам (W): плотность — 19,3 г/см³ (19 300 кг/м³); плавление — 3422 °C. Самая высокая температура плавления среди металлов. Источник: PubChem.",
+  "en": "Tungsten (W): density — 19.3 g/cm³ (19,300 kg/m³); melting point — 3422 °C. The highest melting point of all metals. Source: PubChem.",
+  "hy": "Վոլֆրամ (W)՝ խտություն — 19,3 գ/սմ³ (19 300 կգ/մ³); հալում — 3422 °C։ Մետաղների մեջ հալման ամենաբարձր ջերմաստիճանը։ Աղբյուրը՝ PubChem։",
+  "fr": "Tungstène (W) : masse volumique — 19,3 g/cm³ (19 300 kg/m³); fusion — 3422 °C. Le point de fusion le plus élevé de tous les métaux. Source : PubChem.",
+  "de": "Wolfram (W): Dichte — 19,3 g/cm³ (19.300 kg/m³); Schmelzpunkt — 3422 °C. Der höchste Schmelzpunkt aller Metalle. Quelle: PubChem."
+ },
+ "iron": {
+  "ru": "Железо (Fe): плотность — 7,874 г/см³ (7 874 кг/м³); плавление — 1538 °C. Источник: PubChem.",
+  "en": "Iron (Fe): density — 7.874 g/cm³ (7,874 kg/m³); melting point — 1538 °C. Source: PubChem.",
+  "hy": "Երկաթ (Fe)՝ խտություն — 7,874 գ/սմ³ (7 874 կգ/մ³); հալում — 1538 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Fer (Fe) : masse volumique — 7,874 g/cm³ (7 874 kg/m³); fusion — 1538 °C. Source : PubChem.",
+  "de": "Eisen (Fe): Dichte — 7,874 g/cm³ (7.874 kg/m³); Schmelzpunkt — 1538 °C. Quelle: PubChem."
+ },
+ "gold": {
+  "ru": "Золото (Au): плотность — 19,28 г/см³ (19 280 кг/м³); плавление — 1064,18 °C. Источник: PubChem.",
+  "en": "Gold (Au): density — 19.28 g/cm³ (19,280 kg/m³); melting point — 1064.18 °C. Source: PubChem.",
+  "hy": "Ոսկի (Au)՝ խտություն — 19,28 գ/սմ³ (19 280 կգ/մ³); հալում — 1064,18 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Or (Au) : masse volumique — 19,28 g/cm³ (19 280 kg/m³); fusion — 1064,18 °C. Source : PubChem.",
+  "de": "Gold (Au): Dichte — 19,28 g/cm³ (19.280 kg/m³); Schmelzpunkt — 1064,18 °C. Quelle: PubChem."
+ },
+ "lithium": {
+  "ru": "Литий (Li): плотность — 0,534 г/см³ (534 кг/м³); плавление — 180,5 °C. Самый лёгкий металл. Источник: PubChem.",
+  "en": "Lithium (Li): density — 0.534 g/cm³ (534 kg/m³); melting point — 180.5 °C. The lightest metal. Source: PubChem.",
+  "hy": "Լիթիում (Li)՝ խտություն — 0,534 գ/սմ³ (534 կգ/մ³); հալում — 180,5 °C։ Ամենաթեթև մետաղը։ Աղբյուրը՝ PubChem։",
+  "fr": "Lithium (Li) : masse volumique — 0,534 g/cm³ (534 kg/m³); fusion — 180,5 °C. Le métal le plus léger. Source : PubChem.",
+  "de": "Lithium (Li): Dichte — 0,534 g/cm³ (534 kg/m³); Schmelzpunkt — 180,5 °C. Das leichteste Metall. Quelle: PubChem."
+ },
+ "magnesium": {
+  "ru": "Магний (Mg): плотность — 1,74 г/см³ (1 740 кг/м³); плавление — 650 °C. Источник: PubChem.",
+  "en": "Magnesium (Mg): density — 1.74 g/cm³ (1,740 kg/m³); melting point — 650 °C. Source: PubChem.",
+  "hy": "Մագնիում (Mg)՝ խտություն — 1,74 գ/սմ³ (1 740 կգ/մ³); հալում — 650 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Magnésium (Mg) : masse volumique — 1,74 g/cm³ (1 740 kg/m³); fusion — 650 °C. Source : PubChem.",
+  "de": "Magnesium (Mg): Dichte — 1,74 g/cm³ (1.740 kg/m³); Schmelzpunkt — 650 °C. Quelle: PubChem."
+ },
+ "copper": {
+  "ru": "Медь (Cu): плотность — 8,933 г/см³ (8 933 кг/м³); плавление — 1084,62 °C. Источник: PubChem.",
+  "en": "Copper (Cu): density — 8.933 g/cm³ (8,933 kg/m³); melting point — 1084.62 °C. Source: PubChem.",
+  "hy": "Պղինձ (Cu)՝ խտություն — 8,933 գ/սմ³ (8 933 կգ/մ³); հալում — 1084,62 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Cuivre (Cu) : masse volumique — 8,933 g/cm³ (8 933 kg/m³); fusion — 1084,62 °C. Source : PubChem.",
+  "de": "Kupfer (Cu): Dichte — 8,933 g/cm³ (8.933 kg/m³); Schmelzpunkt — 1084,62 °C. Quelle: PubChem."
+ },
+ "nickel": {
+  "ru": "Никель (Ni): плотность — 8,912 г/см³ (8 912 кг/м³); плавление — 1455 °C. Источник: PubChem.",
+  "en": "Nickel (Ni): density — 8.912 g/cm³ (8,912 kg/m³); melting point — 1455 °C. Source: PubChem.",
+  "hy": "Նիկել (Ni)՝ խտություն — 8,912 գ/սմ³ (8 912 կգ/մ³); հալում — 1455 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Nickel (Ni) : masse volumique — 8,912 g/cm³ (8 912 kg/m³); fusion — 1455 °C. Source : PubChem.",
+  "de": "Nickel (Ni): Dichte — 8,912 g/cm³ (8.912 kg/m³); Schmelzpunkt — 1455 °C. Quelle: PubChem."
+ },
+ "tin": {
+  "ru": "Олово (Sn): плотность — 7,287 г/см³ (7 287 кг/м³); плавление — 231,93 °C. Белое олово. Источник: PubChem.",
+  "en": "Tin (Sn): density — 7.287 g/cm³ (7,287 kg/m³); melting point — 231.93 °C. White tin. Source: PubChem.",
+  "hy": "Անագ (Sn)՝ խտություն — 7,287 գ/սմ³ (7 287 կգ/մ³); հալում — 231,93 °C։ Սպիտակ անագ։ Աղբյուրը՝ PubChem։",
+  "fr": "Étain (Sn) : masse volumique — 7,287 g/cm³ (7 287 kg/m³); fusion — 231,93 °C. Étain blanc. Source : PubChem.",
+  "de": "Zinn (Sn): Dichte — 7,287 g/cm³ (7.287 kg/m³); Schmelzpunkt — 231,93 °C. Weißes Zinn. Quelle: PubChem."
+ },
+ "osmium": {
+  "ru": "Осмий (Os): плотность — 22,57 г/см³ (22 570 кг/м³); плавление — 3033 °C. Источник: PubChem.",
+  "en": "Osmium (Os): density — 22.57 g/cm³ (22,570 kg/m³); melting point — 3033 °C. Source: PubChem.",
+  "hy": "Օսմիում (Os)՝ խտություն — 22,57 գ/սմ³ (22 570 կգ/մ³); հալում — 3033 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Osmium (Os) : masse volumique — 22,57 g/cm³ (22 570 kg/m³); fusion — 3033 °C. Source : PubChem.",
+  "de": "Osmium (Os): Dichte — 22,57 g/cm³ (22.570 kg/m³); Schmelzpunkt — 3033 °C. Quelle: PubChem."
+ },
+ "platinum": {
+  "ru": "Платина (Pt): плотность — 21,46 г/см³ (21 460 кг/м³); плавление — 1768,3 °C. Источник: PubChem.",
+  "en": "Platinum (Pt): density — 21.46 g/cm³ (21,460 kg/m³); melting point — 1768.3 °C. Source: PubChem.",
+  "hy": "Պլատին (Pt)՝ խտություն — 21,46 գ/սմ³ (21 460 կգ/մ³); հալում — 1768,3 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Platine (Pt) : masse volumique — 21,46 g/cm³ (21 460 kg/m³); fusion — 1768,3 °C. Source : PubChem.",
+  "de": "Platin (Pt): Dichte — 21,46 g/cm³ (21.460 kg/m³); Schmelzpunkt — 1768,3 °C. Quelle: PubChem."
+ },
+ "mercury": {
+  "ru": "Ртуть (Hg): плотность — 13,53 г/см³ (13 530 кг/м³); плавление — −38,83 °C. Жидкий металл; плотность при 25 °C. Источник: PubChem.",
+  "en": "Mercury (Hg): density — 13.53 g/cm³ (13,530 kg/m³); melting point — −38.83 °C. A liquid metal; density at 25 °C. Source: PubChem.",
+  "hy": "Սնդիկ (Hg)՝ խտություն — 13,53 գ/սմ³ (13 530 կգ/մ³); հալում — −38,83 °C։ Հեղուկ մետաղ. խտությունը՝ 25 °C-ում։ Աղբյուրը՝ PubChem։",
+  "fr": "Mercure (Hg) : masse volumique — 13,53 g/cm³ (13 530 kg/m³); fusion — −38,83 °C. Métal liquide ; masse volumique à 25 °C. Source : PubChem.",
+  "de": "Quecksilber (Hg): Dichte — 13,53 g/cm³ (13.530 kg/m³); Schmelzpunkt — −38,83 °C. Flüssiges Metall; Dichte bei 25 °C. Quelle: PubChem."
+ },
+ "lead": {
+  "ru": "Свинец (Pb): плотность — 11,34 г/см³ (11 340 кг/м³); плавление — 327,46 °C. Источник: PubChem.",
+  "en": "Lead (Pb): density — 11.34 g/cm³ (11,340 kg/m³); melting point — 327.46 °C. Source: PubChem.",
+  "hy": "Կապար (Pb)՝ խտություն — 11,34 գ/սմ³ (11 340 կգ/մ³); հալում — 327,46 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Plomb (Pb) : masse volumique — 11,34 g/cm³ (11 340 kg/m³); fusion — 327,46 °C. Source : PubChem.",
+  "de": "Blei (Pb): Dichte — 11,34 g/cm³ (11.340 kg/m³); Schmelzpunkt — 327,46 °C. Quelle: PubChem."
+ },
+ "silver": {
+  "ru": "Серебро (Ag): плотность — 10,50 г/см³ (10 500 кг/м³); плавление — 961,78 °C. Источник: PubChem.",
+  "en": "Silver (Ag): density — 10.50 g/cm³ (10,500 kg/m³); melting point — 961.78 °C. Source: PubChem.",
+  "hy": "Արծաթ (Ag)՝ խտություն — 10,50 գ/սմ³ (10 500 կգ/մ³); հալում — 961,78 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Argent (Ag) : masse volumique — 10,50 g/cm³ (10 500 kg/m³); fusion — 961,78 °C. Source : PubChem.",
+  "de": "Silber (Ag): Dichte — 10,50 g/cm³ (10.500 kg/m³); Schmelzpunkt — 961,78 °C. Quelle: PubChem."
+ },
+ "titanium": {
+  "ru": "Титан (Ti): плотность — 4,5 г/см³ (4 500 кг/м³); плавление — 1668 °C. Источник: PubChem.",
+  "en": "Titanium (Ti): density — 4.5 g/cm³ (4,500 kg/m³); melting point — 1668 °C. Source: PubChem.",
+  "hy": "Տիտան (Ti)՝ խտություն — 4,5 գ/սմ³ (4 500 կգ/մ³); հալում — 1668 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Titane (Ti) : masse volumique — 4,5 g/cm³ (4 500 kg/m³); fusion — 1668 °C. Source : PubChem.",
+  "de": "Titan (Ti): Dichte — 4,5 g/cm³ (4.500 kg/m³); Schmelzpunkt — 1668 °C. Quelle: PubChem."
+ },
+ "chromium": {
+  "ru": "Хром (Cr): плотность — 7,15 г/см³ (7 150 кг/м³); плавление — 1907 °C. Источник: PubChem.",
+  "en": "Chromium (Cr): density — 7.15 g/cm³ (7,150 kg/m³); melting point — 1907 °C. Source: PubChem.",
+  "hy": "Քրոմ (Cr)՝ խտություն — 7,15 գ/սմ³ (7 150 կգ/մ³); հալում — 1907 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Chrome (Cr) : masse volumique — 7,15 g/cm³ (7 150 kg/m³); fusion — 1907 °C. Source : PubChem.",
+  "de": "Chrom (Cr): Dichte — 7,15 g/cm³ (7.150 kg/m³); Schmelzpunkt — 1907 °C. Quelle: PubChem."
+ },
+ "zinc": {
+  "ru": "Цинк (Zn): плотность — 7,134 г/см³ (7 134 кг/м³); плавление — 419,53 °C. Источник: PubChem.",
+  "en": "Zinc (Zn): density — 7.134 g/cm³ (7,134 kg/m³); melting point — 419.53 °C. Source: PubChem.",
+  "hy": "Ցինկ (Zn)՝ խտություն — 7,134 գ/սմ³ (7 134 կգ/մ³); հալում — 419,53 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Zinc (Zn) : masse volumique — 7,134 g/cm³ (7 134 kg/m³); fusion — 419,53 °C. Source : PubChem.",
+  "de": "Zink (Zn): Dichte — 7,134 g/cm³ (7.134 kg/m³); Schmelzpunkt — 419,53 °C. Quelle: PubChem."
+ },
+ "steel": {
+  "ru": "Сталь углеродистая: плотность — 7,85 г/см³ (7 850 кг/м³); плавление — 1425–1540 °C. Сплав железа с углеродом: плавится в интервале температур. Источник: Engineering ToolBox.",
+  "en": "Carbon steel: density — 7.85 g/cm³ (7,850 kg/m³); melting point — 1425–1540 °C. An alloy of iron and carbon: melts over a range of temperatures. Source: Engineering ToolBox.",
+  "hy": "Ածխածնային պողպատ՝ խտություն — 7,85 գ/սմ³ (7 850 կգ/մ³); հալում — 1425–1540 °C։ Երկաթի և ածխածնի համաձուլվածք՝ հալվում է ջերմաստիճանների միջակայքում։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Acier au carbone : masse volumique — 7,85 g/cm³ (7 850 kg/m³); fusion — 1425–1540 °C. Alliage de fer et de carbone : fond sur une plage de températures. Source : Engineering ToolBox.",
+  "de": "Kohlenstoffstahl: Dichte — 7,85 g/cm³ (7.850 kg/m³); Schmelzpunkt — 1425–1540 °C. Legierung aus Eisen und Kohlenstoff: schmilzt in einem Temperaturbereich. Quelle: Engineering ToolBox."
+ },
+ "castiron": {
+  "ru": "Чугун: плотность — 6,8–7,8 г/см³ (6 800–7 800 кг/м³); плавление — 1127–1204 °C. Плотность зависит от марки; плавление — у серого чугуна. Источник: Engineering ToolBox.",
+  "en": "Cast iron: density — 6.8–7.8 g/cm³ (6,800–7,800 kg/m³); melting point — 1127–1204 °C. Density depends on the grade; melting point of grey cast iron. Source: Engineering ToolBox.",
+  "hy": "Թուջ՝ խտություն — 6,8–7,8 գ/սմ³ (6 800–7 800 կգ/մ³); հալում — 1127–1204 °C։ Խտությունը կախված է մակնիշից. հալումը՝ մոխրագույն թուջինն է։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Fonte : masse volumique — 6,8–7,8 g/cm³ (6 800–7 800 kg/m³); fusion — 1127–1204 °C. La masse volumique dépend de la nuance ; fusion : fonte grise. Source : Engineering ToolBox.",
+  "de": "Gusseisen: Dichte — 6,8–7,8 g/cm³ (6.800–7.800 kg/m³); Schmelzpunkt — 1127–1204 °C. Dichte je nach Sorte; Schmelzpunkt von Grauguss. Quelle: Engineering ToolBox."
+ },
+ "brass": {
+  "ru": "Латунь: плотность — 8,40–8,70 г/см³ (8 400–8 700 кг/м³); плавление — 930 °C. Литейная латунь; плавление — у жёлтой латуни, красная плавится при 1000 °C. Источник: Engineering ToolBox.",
+  "en": "Brass: density — 8.40–8.70 g/cm³ (8,400–8,700 kg/m³); melting point — 930 °C. Cast brass; melting point of yellow brass, red brass melts at 1000 °C. Source: Engineering ToolBox.",
+  "hy": "Արույր՝ խտություն — 8,40–8,70 գ/սմ³ (8 400–8 700 կգ/մ³); հալում — 930 °C։ Ձուլածո արույր. հալումը՝ դեղին արույրինն է, կարմիրը հալվում է 1000 °C-ում։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Laiton : masse volumique — 8,40–8,70 g/cm³ (8 400–8 700 kg/m³); fusion — 930 °C. Laiton de fonderie ; fusion du laiton jaune, le laiton rouge fond à 1000 °C. Source : Engineering ToolBox.",
+  "de": "Messing: Dichte — 8,40–8,70 g/cm³ (8.400–8.700 kg/m³); Schmelzpunkt — 930 °C. Gussmessing; Schmelzpunkt von Gelbmessing, Rotmessing schmilzt bei 1000 °C. Quelle: Engineering ToolBox."
+ },
+ "bronze": {
+  "ru": "Бронза: плотность — 7,40–8,90 г/см³ (7 400–8 900 кг/м³); плавление — 910 °C. Оловянная бронза: 8–14 % олова. Источник: Engineering ToolBox.",
+  "en": "Bronze: density — 7.40–8.90 g/cm³ (7,400–8,900 kg/m³); melting point — 910 °C. Tin bronze: 8–14 % tin. Source: Engineering ToolBox.",
+  "hy": "Բրոնզ՝ խտություն — 7,40–8,90 գ/սմ³ (7 400–8 900 կգ/մ³); հալում — 910 °C։ Անագային բրոնզ՝ 8–14 % անագ։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Bronze : masse volumique — 7,40–8,90 g/cm³ (7 400–8 900 kg/m³); fusion — 910 °C. Bronze à l’étain : 8 à 14 % d’étain. Source : Engineering ToolBox.",
+  "de": "Bronze: Dichte — 7,40–8,90 g/cm³ (7.400–8.900 kg/m³); Schmelzpunkt — 910 °C. Zinnbronze: 8–14 % Zinn. Quelle: Engineering ToolBox."
+ },
+ "water": {
+  "ru": "Вода (H2O): плотность — 0,9982 г/см³ (998,2 кг/м³); плавление — 0 °C. Плотнее всего вода при 4 °C. Источник: Engineering ToolBox.",
+  "en": "Water (H2O): density — 0.9982 g/cm³ (998.2 kg/m³); melting point — 0 °C. Water is densest at 4 °C. Source: Engineering ToolBox.",
+  "hy": "Ջուր (H2O)՝ խտություն — 0,9982 գ/սմ³ (998,2 կգ/մ³); հալում — 0 °C։ Ջուրն ամենախիտն է 4 °C-ում։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Eau (H2O) : masse volumique — 0,9982 g/cm³ (998,2 kg/m³); fusion — 0 °C. L’eau est la plus dense à 4 °C. Source : Engineering ToolBox.",
+  "de": "Wasser (H2O): Dichte — 0,9982 g/cm³ (998,2 kg/m³); Schmelzpunkt — 0 °C. Wasser ist bei 4 °C am dichtesten. Quelle: Engineering ToolBox."
+ },
+ "seawater": {
+  "ru": "Морская вода: плотность — 1,025 г/см³ (1 025 кг/м³); замерзание — −1,8 °C. Солёность 35 г соли на 1 кг воды; в столбце температуры — точка замерзания. Источники: Engineering ToolBox, Центр данных по снегу и льду США.",
+  "en": "Seawater: density — 1.025 g/cm³ (1,025 kg/m³); freezing point — −1.8 °C. Salinity 35 g of salt per kg of water; the temperature column gives the freezing point. Sources: Engineering ToolBox, US National Snow and Ice Data Center.",
+  "hy": "Ծովի ջուր՝ խտություն — 1,025 գ/սմ³ (1 025 կգ/մ³); սառեցում — −1,8 °C։ Աղիությունը՝ 35 գ աղ 1 կգ ջրում. ջերմաստիճանի սյունակում սառեցման կետն է։ Աղբյուրները՝ Engineering ToolBox, ԱՄՆ ձյան և սառույցի տվյալների ազգային կենտրոն։",
+  "fr": "Eau de mer : masse volumique — 1,025 g/cm³ (1 025 kg/m³); congélation — −1,8 °C. Salinité : 35 g de sel par kg d’eau ; la colonne de température indique le point de congélation. Sources : Engineering ToolBox, Centre national de données sur la neige et la glace (États-Unis).",
+  "de": "Meerwasser: Dichte — 1,025 g/cm³ (1.025 kg/m³); Gefrierpunkt — −1,8 °C. Salzgehalt 35 g Salz pro kg Wasser; in der Temperaturspalte steht der Gefrierpunkt. Quellen: Engineering ToolBox, US-Datenzentrum für Schnee und Eis."
+ },
+ "ethanol": {
+  "ru": "Этиловый спирт (этанол) (C2H5OH): плотность — 0,7893 г/см³ (789,3 кг/м³); плавление — −114,1 °C. Источник: PubChem.",
+  "en": "Ethanol (ethyl alcohol) (C2H5OH): density — 0.7893 g/cm³ (789.3 kg/m³); melting point — −114.1 °C. Source: PubChem.",
+  "hy": "Էթիլային սպիրտ (էթանոլ) (C2H5OH)՝ խտություն — 0,7893 գ/սմ³ (789,3 կգ/մ³); հալում — −114,1 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Éthanol (alcool éthylique) (C2H5OH) : masse volumique — 0,7893 g/cm³ (789,3 kg/m³); fusion — −114,1 °C. Source : PubChem.",
+  "de": "Ethanol (Ethylalkohol) (C2H5OH): Dichte — 0,7893 g/cm³ (789,3 kg/m³); Schmelzpunkt — −114,1 °C. Quelle: PubChem."
+ },
+ "acetone": {
+  "ru": "Ацетон (C3H6O): плотность — 0,791 г/см³ (791 кг/м³); плавление — −94,9 °C. Источник: PubChem.",
+  "en": "Acetone (C3H6O): density — 0.791 g/cm³ (791 kg/m³); melting point — −94.9 °C. Source: PubChem.",
+  "hy": "Ացետոն (C3H6O)՝ խտություն — 0,791 գ/սմ³ (791 կգ/մ³); հալում — −94,9 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Acétone (C3H6O) : masse volumique — 0,791 g/cm³ (791 kg/m³); fusion — −94,9 °C. Source : PubChem.",
+  "de": "Aceton (C3H6O): Dichte — 0,791 g/cm³ (791 kg/m³); Schmelzpunkt — −94,9 °C. Quelle: PubChem."
+ },
+ "glycerol": {
+  "ru": "Глицерин (C3H8O3): плотность — 1,261 г/см³ (1 261 кг/м³); плавление — 18,1 °C. Источник: PubChem.",
+  "en": "Glycerol (glycerine) (C3H8O3): density — 1.261 g/cm³ (1,261 kg/m³); melting point — 18.1 °C. Source: PubChem.",
+  "hy": "Գլիցերին (C3H8O3)՝ խտություն — 1,261 գ/սմ³ (1 261 կգ/մ³); հալում — 18,1 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Glycérol (glycérine) (C3H8O3) : masse volumique — 1,261 g/cm³ (1 261 kg/m³); fusion — 18,1 °C. Source : PubChem.",
+  "de": "Glycerin (C3H8O3): Dichte — 1,261 g/cm³ (1.261 kg/m³); Schmelzpunkt — 18,1 °C. Quelle: PubChem."
+ },
+ "h2so4": {
+  "ru": "Серная кислота (H2SO4): плотность — 1,830 г/см³ (1 830 кг/м³); плавление — 10,31 °C. Чистая кислота (100 %), плотность при 25 °C; концентрированная 96–98 % — 1,84 г/см³. Источник: PubChem.",
+  "en": "Sulfuric acid (H2SO4): density — 1.830 g/cm³ (1,830 kg/m³); melting point — 10.31 °C. Pure acid (100 %), density at 25 °C; concentrated 96–98 % acid: 1.84 g/cm³. Source: PubChem.",
+  "hy": "Ծծմբական թթու (H2SO4)՝ խտություն — 1,830 գ/սմ³ (1 830 կգ/մ³); հալում — 10,31 °C։ Մաքուր թթու (100 %), խտությունը՝ 25 °C-ում. 96–98 % խտացված թթունը՝ 1,84 գ/սմ³։ Աղբյուրը՝ PubChem։",
+  "fr": "Acide sulfurique (H2SO4) : masse volumique — 1,830 g/cm³ (1 830 kg/m³); fusion — 10,31 °C. Acide pur (100 %), masse volumique à 25 °C ; acide concentré à 96–98 % : 1,84 g/cm³. Source : PubChem.",
+  "de": "Schwefelsäure (H2SO4): Dichte — 1,830 g/cm³ (1.830 kg/m³); Schmelzpunkt — 10,31 °C. Reine Säure (100 %), Dichte bei 25 °C; konzentrierte Säure (96–98 %): 1,84 g/cm³. Quelle: PubChem."
+ },
+ "gasoline": {
+  "ru": "Бензин: плотность — 0,715–0,780 г/см³ (715–780 кг/м³); плавление — нет. Смесь веществ: плотность зависит от сорта, точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Petrol (gasoline): density — 0.715–0.780 g/cm³ (715–780 kg/m³); melting point — none. A mixture: density depends on the grade, no melting point. Source: Engineering ToolBox.",
+  "hy": "Բենզին՝ խտություն — 0,715–0,780 գ/սմ³ (715–780 կգ/մ³); հալում — չկա։ Նյութերի խառնուրդ՝ խտությունը կախված է տեսակից, հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Essence : masse volumique — 0,715–0,780 g/cm³ (715–780 kg/m³); fusion — aucun. Mélange : la masse volumique dépend de la qualité, pas de point de fusion. Source : Engineering ToolBox.",
+  "de": "Benzin: Dichte — 0,715–0,780 g/cm³ (715–780 kg/m³); Schmelzpunkt — keiner. Gemisch: Dichte je nach Sorte, kein Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "kerosene": {
+  "ru": "Керосин: плотность — 0,775–0,840 г/см³ (775–840 кг/м³); плавление — нет. Смесь веществ: плотность зависит от сорта, точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Kerosene: density — 0.775–0.840 g/cm³ (775–840 kg/m³); melting point — none. A mixture: density depends on the grade, no melting point. Source: Engineering ToolBox.",
+  "hy": "Կերոսին՝ խտություն — 0,775–0,840 գ/սմ³ (775–840 կգ/մ³); հալում — չկա։ Նյութերի խառնուրդ՝ խտությունը կախված է տեսակից, հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Kérosène : masse volumique — 0,775–0,840 g/cm³ (775–840 kg/m³); fusion — aucun. Mélange : la masse volumique dépend de la qualité, pas de point de fusion. Source : Engineering ToolBox.",
+  "de": "Kerosin: Dichte — 0,775–0,840 g/cm³ (775–840 kg/m³); Schmelzpunkt — keiner. Gemisch: Dichte je nach Sorte, kein Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "sunoil": {
+  "ru": "Подсолнечное масло: плотность — 0,919 г/см³ (919 кг/м³); плавление — нет. Смесь жиров: застывает постепенно, точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Sunflower oil: density — 0.919 g/cm³ (919 kg/m³); melting point — none. A mixture of fats: solidifies gradually, no melting point. Source: Engineering ToolBox.",
+  "hy": "Արևածաղկի յուղ՝ խտություն — 0,919 գ/սմ³ (919 կգ/մ³); հալում — չկա։ Ճարպերի խառնուրդ՝ պնդանում է աստիճանաբար, հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Huile de tournesol : masse volumique — 0,919 g/cm³ (919 kg/m³); fusion — aucun. Mélange de graisses : se fige progressivement, pas de point de fusion. Source : Engineering ToolBox.",
+  "de": "Sonnenblumenöl: Dichte — 0,919 g/cm³ (919 kg/m³); Schmelzpunkt — keiner. Fettgemisch: erstarrt allmählich, kein Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "milk": {
+  "ru": "Молоко: плотность — 1,020–1,050 г/см³ (1 020–1 050 кг/м³); плавление — нет. Плотность при 15 °C; смесь — точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Milk: density — 1.020–1.050 g/cm³ (1,020–1,050 kg/m³); melting point — none. Density at 15 °C; a mixture, no melting point. Source: Engineering ToolBox.",
+  "hy": "Կաթ՝ խտություն — 1,020–1,050 գ/սմ³ (1 020–1 050 կգ/մ³); հալում — չկա։ Խտությունը՝ 15 °C-ում. խառնուրդ է՝ հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Lait : masse volumique — 1,020–1,050 g/cm³ (1 020–1 050 kg/m³); fusion — aucun. Masse volumique à 15 °C ; mélange, pas de point de fusion. Source : Engineering ToolBox.",
+  "de": "Milch: Dichte — 1,020–1,050 g/cm³ (1.020–1.050 kg/m³); Schmelzpunkt — keiner. Dichte bei 15 °C; Gemisch, kein Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "honey": {
+  "ru": "Мёд: плотность — 1,42 г/см³ (1 420 кг/м³); плавление — нет. Смесь веществ — точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Honey: density — 1.42 g/cm³ (1,420 kg/m³); melting point — none. A mixture: no melting point. Source: Engineering ToolBox.",
+  "hy": "Մեղր՝ խտություն — 1,42 գ/սմ³ (1 420 կգ/մ³); հալում — չկա։ Նյութերի խառնուրդ է՝ հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Miel : masse volumique — 1,42 g/cm³ (1 420 kg/m³); fusion — aucun. Mélange : pas de point de fusion. Source : Engineering ToolBox.",
+  "de": "Honig: Dichte — 1,42 g/cm³ (1.420 kg/m³); Schmelzpunkt — keiner. Gemisch: kein Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "ice": {
+  "ru": "Лёд (H2O): плотность — 0,9162 г/см³ (916,2 кг/м³); плавление — 0 °C. Плотность при 0 °C: лёд легче воды и плавает. Источник: Engineering ToolBox.",
+  "en": "Ice (H2O): density — 0.9162 g/cm³ (916.2 kg/m³); melting point — 0 °C. Density at 0 °C: ice is lighter than water and floats. Source: Engineering ToolBox.",
+  "hy": "Սառույց (H2O)՝ խտություն — 0,9162 գ/սմ³ (916,2 կգ/մ³); հալում — 0 °C։ Խտությունը՝ 0 °C-ում. սառույցը ջրից թեթև է և լողում է։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Glace (H2O) : masse volumique — 0,9162 g/cm³ (916,2 kg/m³); fusion — 0 °C. Masse volumique à 0 °C : la glace est plus légère que l’eau et flotte. Source : Engineering ToolBox.",
+  "de": "Eis (H2O): Dichte — 0,9162 g/cm³ (916,2 kg/m³); Schmelzpunkt — 0 °C. Dichte bei 0 °C: Eis ist leichter als Wasser und schwimmt. Quelle: Engineering ToolBox."
+ },
+ "glass": {
+  "ru": "Стекло обычное (оконное): плотность — 2,4–2,8 г/см³ (2 400–2 800 кг/м³); плавление — нет. Аморфное вещество: точки плавления нет, размягчается ниже 700 °C. Источник: Engineering ToolBox.",
+  "en": "Common (window) glass: density — 2.4–2.8 g/cm³ (2,400–2,800 kg/m³); melting point — none. Amorphous: no melting point, softens below 700 °C. Source: Engineering ToolBox.",
+  "hy": "Սովորական (պատուհանի) ապակի՝ խտություն — 2,4–2,8 գ/սմ³ (2 400–2 800 կգ/մ³); հալում — չկա։ Ամորֆ նյութ՝ հալման կետ չունի, փափկում է 700 °C-ից ցածր։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Verre ordinaire (vitre) : masse volumique — 2,4–2,8 g/cm³ (2 400–2 800 kg/m³); fusion — aucun. Amorphe : pas de point de fusion, se ramollit en dessous de 700 °C. Source : Engineering ToolBox.",
+  "de": "Normalglas (Fensterglas): Dichte — 2,4–2,8 g/cm³ (2.400–2.800 kg/m³); Schmelzpunkt — keiner. Amorph: kein Schmelzpunkt, erweicht unter 700 °C. Quelle: Engineering ToolBox."
+ },
+ "brick": {
+  "ru": "Кирпич: плотность — 1,4–2,4 г/см³ (1 400–2 400 кг/м³); плавление — нет. Зависит от вида кирпича; керамика — точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Brick: density — 1.4–2.4 g/cm³ (1,400–2,400 kg/m³); melting point — none. Depends on the type of brick; ceramics have no melting point. Source: Engineering ToolBox.",
+  "hy": "Աղյուս՝ խտություն — 1,4–2,4 գ/սմ³ (1 400–2 400 կգ/մ³); հալում — չկա։ Կախված է աղյուսի տեսակից. կերամիկան հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Brique : masse volumique — 1,4–2,4 g/cm³ (1 400–2 400 kg/m³); fusion — aucun. Dépend du type de brique ; la céramique n’a pas de point de fusion. Source : Engineering ToolBox.",
+  "de": "Ziegel: Dichte — 1,4–2,4 g/cm³ (1.400–2.400 kg/m³); Schmelzpunkt — keiner. Je nach Ziegelart; Keramik hat keinen Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "concrete": {
+  "ru": "Бетон тяжёлый: плотность — 2,0–2,4 г/см³ (2 000–2 400 кг/м³); плавление — нет. Лёгкий и средний бетон — 0,45–1,7 г/см³; точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Dense concrete: density — 2.0–2.4 g/cm³ (2,000–2,400 kg/m³); melting point — none. Lightweight and medium concrete: 0.45–1.7 g/cm³; no melting point. Source: Engineering ToolBox.",
+  "hy": "Ծանր բետոն՝ խտություն — 2,0–2,4 գ/սմ³ (2 000–2 400 կգ/մ³); հալում — չկա։ Թեթև և միջին բետոնը՝ 0,45–1,7 գ/սմ³. հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Béton lourd : masse volumique — 2,0–2,4 g/cm³ (2 000–2 400 kg/m³); fusion — aucun. Béton léger et moyen : 0,45–1,7 g/cm³ ; pas de point de fusion. Source : Engineering ToolBox.",
+  "de": "Schwerbeton: Dichte — 2,0–2,4 g/cm³ (2.000–2.400 kg/m³); Schmelzpunkt — keiner. Leicht- und Normalbeton: 0,45–1,7 g/cm³; kein Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "granite": {
+  "ru": "Гранит: плотность — 2,6–2,8 г/см³ (2 600–2 800 кг/м³); плавление — нет. Горная порода — точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Granite: density — 2.6–2.8 g/cm³ (2,600–2,800 kg/m³); melting point — none. A rock: no single melting point. Source: Engineering ToolBox.",
+  "hy": "Գրանիտ՝ խտություն — 2,6–2,8 գ/սմ³ (2 600–2 800 կգ/մ³); հալում — չկա։ Ապար է՝ հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Granit : masse volumique — 2,6–2,8 g/cm³ (2 600–2 800 kg/m³); fusion — aucun. Roche : pas de point de fusion unique. Source : Engineering ToolBox.",
+  "de": "Granit: Dichte — 2,6–2,8 g/cm³ (2.600–2.800 kg/m³); Schmelzpunkt — keiner. Gestein: kein fester Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "marble": {
+  "ru": "Мрамор: плотность — 2,6–2,8 г/см³ (2 600–2 800 кг/м³); плавление — нет. При сильном нагреве разлагается, не плавясь. Источник: Engineering ToolBox.",
+  "en": "Marble: density — 2.6–2.8 g/cm³ (2,600–2,800 kg/m³); melting point — none. Decomposes without melting when strongly heated. Source: Engineering ToolBox.",
+  "hy": "Մարմար՝ խտություն — 2,6–2,8 գ/սմ³ (2 600–2 800 կգ/մ³); հալում — չկա։ Ուժեղ տաքացնելիս քայքայվում է՝ առանց հալվելու։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Marbre : masse volumique — 2,6–2,8 g/cm³ (2 600–2 800 kg/m³); fusion — aucun. Se décompose sans fondre quand on le chauffe fortement. Source : Engineering ToolBox.",
+  "de": "Marmor: Dichte — 2,6–2,8 g/cm³ (2.600–2.800 kg/m³); Schmelzpunkt — keiner. Zersetzt sich bei starkem Erhitzen, ohne zu schmelzen. Quelle: Engineering ToolBox."
+ },
+ "sand": {
+  "ru": "Песок сухой: плотность — 1,4–1,6 г/см³ (1 400–1 600 кг/м³); плавление — 1550 °C. Насыпная плотность — вместе с воздухом между песчинками. Источник: Engineering ToolBox.",
+  "en": "Dry sand: density — 1.4–1.6 g/cm³ (1,400–1,600 kg/m³); melting point — 1550 °C. Bulk density, including the air between the grains. Source: Engineering ToolBox.",
+  "hy": "Չոր ավազ՝ խտություն — 1,4–1,6 գ/սմ³ (1 400–1 600 կգ/մ³); հալում — 1550 °C։ Լցովի խտություն՝ ավազահատիկների միջև եղած օդի հետ միասին։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Sable sec : masse volumique — 1,4–1,6 g/cm³ (1 400–1 600 kg/m³); fusion — 1550 °C. Masse volumique apparente, air entre les grains compris. Source : Engineering ToolBox.",
+  "de": "Trockener Sand: Dichte — 1,4–1,6 g/cm³ (1.400–1.600 kg/m³); Schmelzpunkt — 1550 °C. Schüttdichte, einschließlich der Luft zwischen den Körnern. Quelle: Engineering ToolBox."
+ },
+ "sugar": {
+  "ru": "Сахар (сахароза) (C12H22O11): плотность — 1,59 г/см³ (1 590 кг/м³); плавление — 185,5 °C. Плавится с разложением. Источник: PubChem.",
+  "en": "Sugar (sucrose) (C12H22O11): density — 1.59 g/cm³ (1,590 kg/m³); melting point — 185.5 °C. Melts with decomposition. Source: PubChem.",
+  "hy": "Շաքար (սախարոզա) (C12H22O11)՝ խտություն — 1,59 գ/սմ³ (1 590 կգ/մ³); հալում — 185,5 °C։ Հալվում է քայքայվելով։ Աղբյուրը՝ PubChem։",
+  "fr": "Sucre (saccharose) (C12H22O11) : masse volumique — 1,59 g/cm³ (1 590 kg/m³); fusion — 185,5 °C. Fond en se décomposant. Source : PubChem.",
+  "de": "Zucker (Saccharose) (C12H22O11): Dichte — 1,59 g/cm³ (1.590 kg/m³); Schmelzpunkt — 185,5 °C. Schmilzt unter Zersetzung. Quelle: PubChem."
+ },
+ "salt": {
+  "ru": "Поваренная соль (NaCl): плотность — 2,17 г/см³ (2 170 кг/м³); плавление — 800,7 °C. Источник: PubChem.",
+  "en": "Table salt (NaCl): density — 2.17 g/cm³ (2,170 kg/m³); melting point — 800.7 °C. Source: PubChem.",
+  "hy": "Կերակրի աղ (NaCl)՝ խտություն — 2,17 գ/սմ³ (2 170 կգ/մ³); հալում — 800,7 °C։ Աղբյուրը՝ PubChem։",
+  "fr": "Sel de table (NaCl) : masse volumique — 2,17 g/cm³ (2 170 kg/m³); fusion — 800,7 °C. Source : PubChem.",
+  "de": "Kochsalz (NaCl): Dichte — 2,17 g/cm³ (2.170 kg/m³); Schmelzpunkt — 800,7 °C. Quelle: PubChem."
+ },
+ "paraffin": {
+  "ru": "Парафин: плотность — 0,9 г/см³ (900 кг/м³); плавление — 52 °C. У разных сортов парафина температура плавления разная. Источник: Engineering ToolBox.",
+  "en": "Paraffin wax: density — 0.9 g/cm³ (900 kg/m³); melting point — 52 °C. The melting point varies between grades of paraffin. Source: Engineering ToolBox.",
+  "hy": "Պարաֆին՝ խտություն — 0,9 գ/սմ³ (900 կգ/մ³); հալում — 52 °C։ Պարաֆինի տարբեր տեսակների հալման ջերմաստիճանը տարբեր է։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Paraffine : masse volumique — 0,9 g/cm³ (900 kg/m³); fusion — 52 °C. Le point de fusion varie selon la qualité de paraffine. Source : Engineering ToolBox.",
+  "de": "Paraffin: Dichte — 0,9 g/cm³ (900 kg/m³); Schmelzpunkt — 52 °C. Der Schmelzpunkt hängt von der Paraffinsorte ab. Quelle: Engineering ToolBox."
+ },
+ "rubber": {
+  "ru": "Резина: плотность — 1,1–1,2 г/см³ (1 100–1 200 кг/м³); плавление — нет. Мягкая и твёрдая резина; при сильном нагреве разлагается, не плавясь. Источник: Engineering ToolBox.",
+  "en": "Rubber: density — 1.1–1.2 g/cm³ (1,100–1,200 kg/m³); melting point — none. Soft and hard rubber; decomposes without melting when strongly heated. Source: Engineering ToolBox.",
+  "hy": "Ռետին՝ խտություն — 1,1–1,2 գ/սմ³ (1 100–1 200 կգ/մ³); հալում — չկա։ Փափուկ և կոշտ ռետին. ուժեղ տաքացնելիս քայքայվում է՝ առանց հալվելու։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Caoutchouc : masse volumique — 1,1–1,2 g/cm³ (1 100–1 200 kg/m³); fusion — aucun. Caoutchouc souple et dur ; se décompose sans fondre quand on le chauffe fortement. Source : Engineering ToolBox.",
+  "de": "Gummi: Dichte — 1,1–1,2 g/cm³ (1.100–1.200 kg/m³); Schmelzpunkt — keiner. Weich- und Hartgummi; zersetzt sich bei starkem Erhitzen, ohne zu schmelzen. Quelle: Engineering ToolBox."
+ },
+ "pe": {
+  "ru": "Полиэтилен: плотность — 0,91–0,96 г/см³ (910–960 кг/м³); плавление — нет. Низкой и высокой плотности; размягчается и плавится постепенно. Источник: Engineering ToolBox.",
+  "en": "Polyethylene: density — 0.91–0.96 g/cm³ (910–960 kg/m³); melting point — none. Low- and high-density; softens and melts gradually. Source: Engineering ToolBox.",
+  "hy": "Պոլիէթիլեն՝ խտություն — 0,91–0,96 գ/սմ³ (910–960 կգ/մ³); հալում — չկա։ Ցածր և բարձր խտության. փափկում և հալվում է աստիճանաբար։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Polyéthylène : masse volumique — 0,91–0,96 g/cm³ (910–960 kg/m³); fusion — aucun. Basse et haute densité ; se ramollit et fond progressivement. Source : Engineering ToolBox.",
+  "de": "Polyethylen: Dichte — 0,91–0,96 g/cm³ (910–960 kg/m³); Schmelzpunkt — keiner. Niedriger und hoher Dichte; erweicht und schmilzt allmählich. Quelle: Engineering ToolBox."
+ },
+ "pvc": {
+  "ru": "Поливинилхлорид (ПВХ): плотность — 1,39–1,42 г/см³ (1 390–1 420 кг/м³); плавление — нет. Аморфная пластмасса: размягчается при нагреве, точки плавления нет. Источник: Engineering ToolBox.",
+  "en": "Polyvinyl chloride (PVC): density — 1.39–1.42 g/cm³ (1,390–1,420 kg/m³); melting point — none. An amorphous plastic: softens when heated, no melting point. Source: Engineering ToolBox.",
+  "hy": "Պոլիվինիլքլորիդ (ՊՎՔ)՝ խտություն — 1,39–1,42 գ/սմ³ (1 390–1 420 կգ/մ³); հալում — չկա։ Ամորֆ պլաստմասսա՝ տաքացնելիս փափկում է, հալման կետ չունի։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Polychlorure de vinyle (PVC) : masse volumique — 1,39–1,42 g/cm³ (1 390–1 420 kg/m³); fusion — aucun. Plastique amorphe : se ramollit à la chaleur, pas de point de fusion. Source : Engineering ToolBox.",
+  "de": "Polyvinylchlorid (PVC): Dichte — 1,39–1,42 g/cm³ (1.390–1.420 kg/m³); Schmelzpunkt — keiner. Amorpher Kunststoff: erweicht beim Erhitzen, kein Schmelzpunkt. Quelle: Engineering ToolBox."
+ },
+ "oak": {
+  "ru": "Дуб (сухая древесина): плотность — 0,60–0,90 г/см³ (600–900 кг/м³); плавление — нет. Не плавится — при нагреве обугливается и горит. Источник: Engineering ToolBox.",
+  "en": "Oak (dry wood): density — 0.60–0.90 g/cm³ (600–900 kg/m³); melting point — none. Does not melt: chars and burns when heated. Source: Engineering ToolBox.",
+  "hy": "Կաղնի (չոր փայտ)՝ խտություն — 0,60–0,90 գ/սմ³ (600–900 կգ/մ³); հալում — չկա։ Չի հալվում՝ տաքացնելիս ածխանում և այրվում է։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Chêne (bois sec) : masse volumique — 0,60–0,90 g/cm³ (600–900 kg/m³); fusion — aucun. Ne fond pas : se carbonise et brûle à la chaleur. Source : Engineering ToolBox.",
+  "de": "Eiche (trockenes Holz): Dichte — 0,60–0,90 g/cm³ (600–900 kg/m³); Schmelzpunkt — keiner. Schmilzt nicht: verkohlt und brennt beim Erhitzen. Quelle: Engineering ToolBox."
+ },
+ "pine": {
+  "ru": "Сосна обыкновенная (сухая древесина): плотность — 0,51 г/см³ (510 кг/м³); плавление — нет. Не плавится — при нагреве обугливается и горит. Источник: Engineering ToolBox.",
+  "en": "Scots pine (dry wood): density — 0.51 g/cm³ (510 kg/m³); melting point — none. Does not melt: chars and burns when heated. Source: Engineering ToolBox.",
+  "hy": "Սովորական սոճի (չոր փայտ)՝ խտություն — 0,51 գ/սմ³ (510 կգ/մ³); հալում — չկա։ Չի հալվում՝ տաքացնելիս ածխանում և այրվում է։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Pin sylvestre (bois sec) : masse volumique — 0,51 g/cm³ (510 kg/m³); fusion — aucun. Ne fond pas : se carbonise et brûle à la chaleur. Source : Engineering ToolBox.",
+  "de": "Waldkiefer (trockenes Holz): Dichte — 0,51 g/cm³ (510 kg/m³); Schmelzpunkt — keiner. Schmilzt nicht: verkohlt und brennt beim Erhitzen. Quelle: Engineering ToolBox."
+ },
+ "cork": {
+  "ru": "Пробка: плотность — 0,20–0,25 г/см³ (200–250 кг/м³); плавление — нет. Не плавится — при нагреве обугливается и горит. Источник: Engineering ToolBox.",
+  "en": "Cork: density — 0.20–0.25 g/cm³ (200–250 kg/m³); melting point — none. Does not melt: chars and burns when heated. Source: Engineering ToolBox.",
+  "hy": "Խցանափայտ՝ խտություն — 0,20–0,25 գ/սմ³ (200–250 կգ/մ³); հալում — չկա։ Չի հալվում՝ տաքացնելիս ածխանում և այրվում է։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Liège : masse volumique — 0,20–0,25 g/cm³ (200–250 kg/m³); fusion — aucun. Ne fond pas : se carbonise et brûle à la chaleur. Source : Engineering ToolBox.",
+  "de": "Kork: Dichte — 0,20–0,25 g/cm³ (200–250 kg/m³); Schmelzpunkt — keiner. Schmilzt nicht: verkohlt und brennt beim Erhitzen. Quelle: Engineering ToolBox."
+ },
+ "paper": {
+  "ru": "Бумага: плотность — 0,70–1,15 г/см³ (700–1 150 кг/м³); плавление — нет. Не плавится — при нагреве обугливается и горит. Источник: Engineering ToolBox.",
+  "en": "Paper: density — 0.70–1.15 g/cm³ (700–1,150 kg/m³); melting point — none. Does not melt: chars and burns when heated. Source: Engineering ToolBox.",
+  "hy": "Թուղթ՝ խտություն — 0,70–1,15 գ/սմ³ (700–1 150 կգ/մ³); հալում — չկա։ Չի հալվում՝ տաքացնելիս ածխանում և այրվում է։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Papier : masse volumique — 0,70–1,15 g/cm³ (700–1 150 kg/m³); fusion — aucun. Ne fond pas : se carbonise et brûle à la chaleur. Source : Engineering ToolBox.",
+  "de": "Papier: Dichte — 0,70–1,15 g/cm³ (700–1.150 kg/m³); Schmelzpunkt — keiner. Schmilzt nicht: verkohlt und brennt beim Erhitzen. Quelle: Engineering ToolBox."
+ },
+ "air": {
+  "ru": "Воздух: плотность — 0,001205 г/см³ (1,205 кг/м³); плавление — нет. Смесь газов; при 0 °C — 1,293 кг/м³. Источник: Engineering ToolBox.",
+  "en": "Air: density — 0.001205 g/cm³ (1.205 kg/m³); melting point — none. A mixture of gases; at 0 °C: 1.293 kg/m³. Source: Engineering ToolBox.",
+  "hy": "Օդ՝ խտություն — 0,001205 գ/սմ³ (1,205 կգ/մ³); հալում — չկա։ Գազերի խառնուրդ. 0 °C-ում՝ 1,293 կգ/մ³։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Air : masse volumique — 0,001205 g/cm³ (1,205 kg/m³); fusion — aucun. Mélange de gaz ; à 0 °C : 1,293 kg/m³. Source : Engineering ToolBox.",
+  "de": "Luft: Dichte — 0,001205 g/cm³ (1,205 kg/m³); Schmelzpunkt — keiner. Gasgemisch; bei 0 °C: 1,293 kg/m³. Quelle: Engineering ToolBox."
+ },
+ "n2": {
+  "ru": "Азот (N2): плотность — 0,001165 г/см³ (1,165 кг/м³); плавление — −210,0 °C. При 0 °C — 1,251 кг/м³. Источники: Engineering ToolBox, PubChem.",
+  "en": "Nitrogen (N2): density — 0.001165 g/cm³ (1.165 kg/m³); melting point — −210.0 °C. At 0 °C: 1.251 kg/m³. Sources: Engineering ToolBox, PubChem.",
+  "hy": "Ազոտ (N2)՝ խտություն — 0,001165 գ/սմ³ (1,165 կգ/մ³); հալում — −210,0 °C։ 0 °C-ում՝ 1,251 կգ/մ³։ Աղբյուրները՝ Engineering ToolBox, PubChem։",
+  "fr": "Azote (N2) : masse volumique — 0,001165 g/cm³ (1,165 kg/m³); fusion — −210,0 °C. À 0 °C : 1,251 kg/m³. Sources : Engineering ToolBox, PubChem.",
+  "de": "Stickstoff (N2): Dichte — 0,001165 g/cm³ (1,165 kg/m³); Schmelzpunkt — −210,0 °C. Bei 0 °C: 1,251 kg/m³. Quellen: Engineering ToolBox, PubChem."
+ },
+ "o2": {
+  "ru": "Кислород (O2): плотность — 0,001331 г/см³ (1,331 кг/м³); плавление — −218,79 °C. При 0 °C — 1,429 кг/м³. Источники: Engineering ToolBox, PubChem.",
+  "en": "Oxygen (O2): density — 0.001331 g/cm³ (1.331 kg/m³); melting point — −218.79 °C. At 0 °C: 1.429 kg/m³. Sources: Engineering ToolBox, PubChem.",
+  "hy": "Թթվածին (O2)՝ խտություն — 0,001331 գ/սմ³ (1,331 կգ/մ³); հալում — −218,79 °C։ 0 °C-ում՝ 1,429 կգ/մ³։ Աղբյուրները՝ Engineering ToolBox, PubChem։",
+  "fr": "Oxygène (O2) : masse volumique — 0,001331 g/cm³ (1,331 kg/m³); fusion — −218,79 °C. À 0 °C : 1,429 kg/m³. Sources : Engineering ToolBox, PubChem.",
+  "de": "Sauerstoff (O2): Dichte — 0,001331 g/cm³ (1,331 kg/m³); Schmelzpunkt — −218,79 °C. Bei 0 °C: 1,429 kg/m³. Quellen: Engineering ToolBox, PubChem."
+ },
+ "h2": {
+  "ru": "Водород (H2): плотность — 0,0000899 г/см³ (0,0899 кг/м³); плавление — −259,16 °C. Самый лёгкий газ; плотность при 0 °C. Источники: Engineering ToolBox, PubChem.",
+  "en": "Hydrogen (H2): density — 0.0000899 g/cm³ (0.0899 kg/m³); melting point — −259.16 °C. The lightest gas; density at 0 °C. Sources: Engineering ToolBox, PubChem.",
+  "hy": "Ջրածին (H2)՝ խտություն — 0,0000899 գ/սմ³ (0,0899 կգ/մ³); հալում — −259,16 °C։ Ամենաթեթև գազը. խտությունը՝ 0 °C-ում։ Աղբյուրները՝ Engineering ToolBox, PubChem։",
+  "fr": "Hydrogène (H2) : masse volumique — 0,0000899 g/cm³ (0,0899 kg/m³); fusion — −259,16 °C. Le gaz le plus léger ; masse volumique à 0 °C. Sources : Engineering ToolBox, PubChem.",
+  "de": "Wasserstoff (H2): Dichte — 0,0000899 g/cm³ (0,0899 kg/m³); Schmelzpunkt — −259,16 °C. Das leichteste Gas; Dichte bei 0 °C. Quellen: Engineering ToolBox, PubChem."
+ },
+ "he": {
+  "ru": "Гелий (He): плотность — 0,0001664 г/см³ (0,1664 кг/м³); плавление — нет. При нормальном давлении не затвердевает; при 0 °C — 0,1785 кг/м³. Источник: Engineering ToolBox.",
+  "en": "Helium (He): density — 0.0001664 g/cm³ (0.1664 kg/m³); melting point — none. Does not solidify at normal pressure; at 0 °C: 0.1785 kg/m³. Source: Engineering ToolBox.",
+  "hy": "Հելիում (He)՝ խտություն — 0,0001664 գ/սմ³ (0,1664 կգ/մ³); հալում — չկա։ Նորմալ ճնշման դեպքում չի պնդանում. 0 °C-ում՝ 0,1785 կգ/մ³։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Hélium (He) : masse volumique — 0,0001664 g/cm³ (0,1664 kg/m³); fusion — aucun. Ne se solidifie pas à pression normale ; à 0 °C : 0,1785 kg/m³. Source : Engineering ToolBox.",
+  "de": "Helium (He): Dichte — 0,0001664 g/cm³ (0,1664 kg/m³); Schmelzpunkt — keiner. Wird bei Normaldruck nicht fest; bei 0 °C: 0,1785 kg/m³. Quelle: Engineering ToolBox."
+ },
+ "co2": {
+  "ru": "Углекислый газ (CO2): плотность — 0,001842 г/см³ (1,842 кг/м³); плавление — нет. При нормальном давлении не плавится: «сухой лёд» сразу превращается в газ около −78 °C; при 0 °C — 1,977 кг/м³. Источник: Engineering ToolBox.",
+  "en": "Carbon dioxide (CO2): density — 0.001842 g/cm³ (1.842 kg/m³); melting point — none. Does not melt at normal pressure: “dry ice” turns straight into gas at about −78 °C; at 0 °C: 1.977 kg/m³. Source: Engineering ToolBox.",
+  "hy": "Ածխաթթու գազ (CO2)՝ խտություն — 0,001842 գ/սմ³ (1,842 կգ/մ³); հալում — չկա։ Նորմալ ճնշման դեպքում չի հալվում. «չոր սառույցը» անմիջապես գազ է դառնում մոտ −78 °C-ում. 0 °C-ում՝ 1,977 կգ/մ³։ Աղբյուրը՝ Engineering ToolBox։",
+  "fr": "Dioxyde de carbone (CO2) : masse volumique — 0,001842 g/cm³ (1,842 kg/m³); fusion — aucun. Ne fond pas à pression normale : la « glace carbonique » passe directement à l’état gazeux vers −78 °C ; à 0 °C : 1,977 kg/m³. Source : Engineering ToolBox.",
+  "de": "Kohlendioxid (CO2): Dichte — 0,001842 g/cm³ (1,842 kg/m³); Schmelzpunkt — keiner. Schmilzt bei Normaldruck nicht: „Trockeneis“ wird bei etwa −78 °C direkt gasförmig; bei 0 °C: 1,977 kg/m³. Quelle: Engineering ToolBox."
+ },
+ "ch4": {
+  "ru": "Метан (CH4): плотность — 0,000668 г/см³ (0,668 кг/м³); плавление — −182,6 °C. При 0 °C — 0,717 кг/м³. Источники: Engineering ToolBox, PubChem.",
+  "en": "Methane (CH4): density — 0.000668 g/cm³ (0.668 kg/m³); melting point — −182.6 °C. At 0 °C: 0.717 kg/m³. Sources: Engineering ToolBox, PubChem.",
+  "hy": "Մեթան (CH4)՝ խտություն — 0,000668 գ/սմ³ (0,668 կգ/մ³); հալում — −182,6 °C։ 0 °C-ում՝ 0,717 կգ/մ³։ Աղբյուրները՝ Engineering ToolBox, PubChem։",
+  "fr": "Méthane (CH4) : masse volumique — 0,000668 g/cm³ (0,668 kg/m³); fusion — −182,6 °C. À 0 °C : 0,717 kg/m³. Sources : Engineering ToolBox, PubChem.",
+  "de": "Methan (CH4): Dichte — 0,000668 g/cm³ (0,668 kg/m³); Schmelzpunkt — −182,6 °C. Bei 0 °C: 0,717 kg/m³. Quellen: Engineering ToolBox, PubChem."
+ },
+ "c3h8": {
+  "ru": "Пропан (C3H8): плотность — 0,001882 г/см³ (1,882 кг/м³); плавление — −187,6 °C. Источники: Engineering ToolBox, PubChem.",
+  "en": "Propane (C3H8): density — 0.001882 g/cm³ (1.882 kg/m³); melting point — −187.6 °C. Sources: Engineering ToolBox, PubChem.",
+  "hy": "Պրոպան (C3H8)՝ խտություն — 0,001882 գ/սմ³ (1,882 կգ/մ³); հալում — −187,6 °C։ Աղբյուրները՝ Engineering ToolBox, PubChem։",
+  "fr": "Propane (C3H8) : masse volumique — 0,001882 g/cm³ (1,882 kg/m³); fusion — −187,6 °C. Sources : Engineering ToolBox, PubChem.",
+  "de": "Propan (C3H8): Dichte — 0,001882 g/cm³ (1,882 kg/m³); Schmelzpunkt — −187,6 °C. Quellen: Engineering ToolBox, PubChem."
+ }
+}
