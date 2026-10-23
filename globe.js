@@ -1691,8 +1691,11 @@
     var pageInput = inputs[0];
     var langTarget = doc.querySelector(".rg-dock .gd2-lang-fab") || doc.querySelector(".gd2-lang") || doc.querySelector(".gd2-lang-fab");
     var consult = doc.querySelector(".rg-dock .rg-enroll") || doc.querySelector("a.cta-zoom.gold-cta,a.cta-zoom,a.gold-cta");
+    // 24.10.2026: на телефоне строка меню спрятана в выдвижное меню — первый шаг экскурсии показывает кнопку «☰ Меню»
+    var navMain = doc.querySelector("nav.main"), drawerBtn = doc.querySelector(".rg-drawer-btn");
+    var menuTarget = (navMain && navMain.getBoundingClientRect().width > 0) ? navMain : (drawerBtn || navMain);
     return [
-      { target: doc.querySelector("nav.main"), title: T.tour1t, text: T.tour1x },
+      { target: menuTarget, title: T.tour1t, text: T.tour1x },
       { target: langTarget, title: T.tour2t, text: T.tour2x },
       { target: pageInput, title: T.tour3t, text: T.tour3x },
       { target: consult, title: T.tour4t, text: T.tour4x },
@@ -2324,4 +2327,178 @@
   }
   if (d.readyState === "loading") d.addEventListener("DOMContentLoaded", markMain);
   else markMain();
+})();
+
+/* ── 24.10.2026, Claude «Маисовый полоз цена» (ответы Рудольфа 02:05; спецификация AutoClaw P-1024-0123-01, пункты 2.1 и 2.3):
+   1) ВЫДВИЖНОЕ МЕНЮ НА ТЕЛЕФОНЕ (до 640 точек): кнопка «☰ Меню» на месте строки меню; панель слева с группами «Главное» (ссылки
+      верхнего уровня меню), «Учиться», «Находить», «Искусство и культура» (из раскрывающихся групп меню — названия на языке
+      страницы, поэтому всегда совпадают с меню), внизу — языки и запись на консультацию; текущая страница — золотом; закрытие —
+      ✕, щелчок мимо панели, Esc; фокус ходит внутри панели; при «меньше движения» — без сдвига. На компьютере кнопки нет.
+   2) ЗАПИСЬ НА БЕСПЛАТНУЮ ZOOM-КОНСУЛЬТАЦИЮ (страница «Консультанты», блок #zoom, div.rg-slots): свободное время на 7 дней —
+      ежедневно 9:00–21:00 по Еревану (UTC+4 круглый год), по 30 минут, не раньше чем через час; рядом — время посетителя, если
+      у него другой часовой пояс; время — ссылка на WhatsApp с готовым сообщением на языке страницы. Подтверждает дом вручную,
+      как раньше; чужих служб и доступа к Zoom нет. Без JavaScript остаётся прежняя кнопка WhatsApp. ── */
+(function () {
+  var doc = document;
+  var L = (doc.documentElement.getAttribute('lang') || 'ru').slice(0, 2);
+  var REDUCE = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  // 1) выдвижное меню
+  var DTA = {
+    ru: { menu: 'Меню', main: 'Главное', close: 'Закрыть меню', lang: 'Язык' },
+    en: { menu: 'Menu', main: 'Main', close: 'Close menu', lang: 'Language' },
+    hy: { menu: 'Մենյու', main: 'Հիմնական', close: 'Փակել մենյուն', lang: 'Լեզու' },
+    fr: { menu: 'Menu', main: 'Essentiel', close: 'Fermer le menu', lang: 'Langue' },
+    de: { menu: 'Menü', main: 'Allgemein', close: 'Menü schließen', lang: 'Sprache' }
+  };
+  var DT = DTA[L] || DTA.ru;
+  var nav = doc.querySelector('header.site nav.main');
+  if (nav && !doc.querySelector('.rg-drawer-wrap')) {
+    var btn = doc.createElement('button');
+    btn.type = 'button';
+    btn.className = 'rg-drawer-btn';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', 'rg-drawer');
+    btn.innerHTML = '<span aria-hidden="true">☰</span> ' + esc(DT.menu);
+    nav.parentNode.insertBefore(btn, nav);
+    var grp = function (title, links) {
+      if (!links.length) return '';
+      return '<section class="rg-dg"><h3>' + esc(title) + '</h3><ul>' + links.map(function (a) {
+        return '<li><a href="' + esc(a.getAttribute('href')) + '"' + (a.hasAttribute('aria-current') ? ' aria-current="page"' : '') + '>' +
+          esc(a.textContent.trim()) + '</a></li>';
+      }).join('') + '</ul></section>';
+    };
+    var html = grp(DT.main, [].filter.call(nav.children, function (n) { return n.tagName === 'A'; }));
+    [].forEach.call(nav.querySelectorAll('details.more'), function (d) {
+      var s = d.querySelector('summary');
+      html += grp(s ? s.textContent.trim() : '', [].slice.call(d.querySelectorAll('.more-list a')));
+    });
+    var lg = doc.querySelector('header.site .lang');
+    if (lg) {
+      html += '<section class="rg-dg rg-dg-lang"><h3>' + esc(DT.lang) + '</h3><p>' + [].map.call(lg.querySelectorAll('a,b'), function (x) {
+        return x.tagName === 'B' ? '<b aria-current="true">' + esc(x.textContent) + '</b>' :
+          '<a href="' + esc(x.getAttribute('href')) + '" hreflang="' + esc(x.getAttribute('hreflang') || '') + '">' + esc(x.textContent) + '</a>';
+      }).join('') + '</p></section>';
+    }
+    var cta = doc.querySelector('header.site .cta-zoom');
+    if (cta) html += '<p class="rg-dg-cta"><a href="' + esc(cta.getAttribute('href')) + '">' + esc(cta.textContent.trim()) + '</a></p>';
+    var wrap = doc.createElement('div');
+    wrap.className = 'rg-drawer-wrap';
+    wrap.hidden = true;
+    wrap.innerHTML = '<div class="rg-drawer-back"></div><div class="rg-drawer" id="rg-drawer" role="dialog" aria-modal="true" aria-label="' +
+      esc(DT.menu) + '" tabindex="-1"><div class="rg-drawer-head"><b>' + esc(DT.menu) + '</b><button type="button" class="rg-drawer-x" aria-label="' +
+      esc(DT.close) + '">✕</button></div><nav class="rg-drawer-body" aria-label="' + esc(DT.menu) + '">' + html + '</nav></div>';
+    doc.body.appendChild(wrap);
+    var panel = wrap.querySelector('.rg-drawer');
+    var openD = function () {
+      wrap.hidden = false;
+      doc.body.classList.add('rg-drawer-on');
+      btn.setAttribute('aria-expanded', 'true');
+      requestAnimationFrame(function () { wrap.classList.add('open'); try { panel.focus({ preventScroll: true }); } catch (e) { panel.focus(); } });
+    };
+    var closeD = function (back) {
+      if (wrap.hidden) return;
+      wrap.classList.remove('open');
+      doc.body.classList.remove('rg-drawer-on');
+      btn.setAttribute('aria-expanded', 'false');
+      setTimeout(function () { wrap.hidden = true; }, REDUCE ? 0 : 220);
+      if (back !== false) { try { btn.focus({ preventScroll: true }); } catch (e) { btn.focus(); } }
+    };
+    btn.addEventListener('click', openD);
+    wrap.querySelector('.rg-drawer-x').addEventListener('click', function () { closeD(); });
+    wrap.querySelector('.rg-drawer-back').addEventListener('click', function () { closeD(); });
+    wrap.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { e.preventDefault(); closeD(); return; }
+      if (e.key !== 'Tab') return;
+      var f = [].filter.call(panel.querySelectorAll('a[href],button'), function (n) { return n.offsetParent !== null; });
+      if (!f.length) return;
+      if (e.shiftKey && (doc.activeElement === f[0] || doc.activeElement === panel)) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && doc.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+    });
+    panel.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a[href]')) closeD(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 640) closeD(false); });
+  }
+
+  // 2) запись по свободному времени
+  var box = doc.querySelector('.rg-slots');
+  if (!box) return;
+  var BTA = {
+    ru: { title: 'Свободное время — по Еревану', hint: 'Нажмите на время — откроется WhatsApp с готовым сообщением; подтвердим запись и пришлём ссылку на Zoom.', yours: 'у вас', today: 'Сегодня', tomorrow: 'Завтра', none: 'На этот день свободного времени уже нет — выберите другой день.', msg: 'Здравствуйте! Хочу записаться на бесплатную Zoom-консультацию (ReferenceGuides): {d}, {t} по Еревану. Направление: ...', loc: 'ru-RU' },
+    en: { title: 'Free times — Yerevan time', hint: 'Tap a time — WhatsApp opens with a ready message; we will confirm and send you a Zoom link.', yours: 'your time', today: 'Today', tomorrow: 'Tomorrow', none: 'No free times left on this day — please choose another day.', msg: 'Hello! I would like to book a free Zoom consultation (ReferenceGuides): {d}, {t} Yerevan time. Area: ...', loc: 'en-GB' },
+    hy: { title: 'Ազատ ժամեր՝ Երևանի ժամով', hint: 'Սեղմեք ժամի վրա՝ կբացվի WhatsApp-ը պատրաստի հաղորդագրությամբ. կհաստատենք գրանցումը և կուղարկենք Zoom-ի հղումը։', yours: 'ձեր ժամով', today: 'Այսօր', tomorrow: 'Վաղը', none: 'Այս օրվա համար ազատ ժամեր այլևս չկան՝ ընտրեք մեկ այլ օր։', msg: 'Բարև Ձեզ։ Կցանկանայի գրանցվել անվճար Zoom-խորհրդատվության (ReferenceGuides)՝ {d}, ժամը {t} Երևանի ժամով։ Ոլորտ՝ ...', loc: 'hy-AM' },
+    fr: { title: 'Créneaux libres — heure d’Erevan', hint: 'Touchez un horaire : WhatsApp s’ouvre avec un message prêt ; nous confirmerons et vous enverrons le lien Zoom.', yours: 'chez vous', today: 'Aujourd’hui', tomorrow: 'Demain', none: 'Plus de créneau libre ce jour-là — choisissez un autre jour.', msg: 'Bonjour ! Je souhaite réserver une consultation Zoom gratuite (ReferenceGuides) : {d}, {t}, heure d’Erevan. Domaine : ...', loc: 'fr-FR' },
+    de: { title: 'Freie Termine – Jerewaner Zeit', hint: 'Tippen Sie auf eine Uhrzeit – WhatsApp öffnet sich mit einer fertigen Nachricht; wir bestätigen und schicken Ihnen den Zoom-Link.', yours: 'bei Ihnen', today: 'Heute', tomorrow: 'Morgen', none: 'An diesem Tag sind keine Termine mehr frei – bitte wählen Sie einen anderen Tag.', msg: 'Hallo! Ich möchte eine kostenlose Zoom-Beratung buchen (ReferenceGuides): {d}, {t} Uhr Jerewaner Zeit. Bereich: ...', loc: 'de-DE' }
+  };
+  var BT = BTA[L] || BTA.ru;
+  var OFF = 4 * 3600e3, FROM = 9 * 60, TO = 21 * 60, STEP = 30, DAYS = 7, LEAD = 3600e3;
+  var NUM = (box.getAttribute('data-wa') || '37499117067').replace(/\D/g, '');
+  var now = Date.now(), ye = new Date(now + OFF);
+  var y0 = Date.UTC(ye.getUTCFullYear(), ye.getUTCMonth(), ye.getUTCDate()) - OFF;   // полночь по Еревану (мс UTC)
+  var sameTz = new Date(now).getTimezoneOffset() === -240;
+  var fmt = function (t, o) {
+    try { return new Intl.DateTimeFormat(BT.loc, o).format(new Date(t)); }
+    catch (e) { var o2 = {}; for (var k in o) if (k !== 'timeZone') o2[k] = o[k]; return new Intl.DateTimeFormat(BT.loc, o2).format(new Date(t)); }
+  };
+  var hh = function (m) { return ('0' + (m / 60 | 0)).slice(-2) + ':' + ('0' + m % 60).slice(-2); };
+  var days = [];
+  for (var i = 0; i < DAYS; i++) {
+    var d0 = y0 + i * 864e5, sl = [];
+    for (var m = FROM; m < TO; m += STEP) { var t = d0 + m * 6e4; if (t >= now + LEAD) sl.push([t, m]); }
+    days.push([d0, sl]);
+  }
+  var cur = days[0][1].length ? 0 : 1;
+  // армянские названия дней и месяцев — свои: не во всех браузерах есть армянский язык дат (проверка 24.10 — Chromium
+  // показывал дату по-русски); полдень по Еревану + 4 часа и getUTC* дают дату по Еревану в любом поясе посетителя
+  var HYW = ['կիրակի', 'երկուշաբթի', 'երեքշաբթի', 'չորեքշաբթի', 'հինգշաբթի', 'ուրբաթ', 'շաբաթ'];
+  var HYWS = ['կիր', 'երկ', 'երք', 'չրք', 'հնգ', 'ուր', 'շբթ'];
+  var HYM = ['հունվարի', 'փետրվարի', 'մարտի', 'ապրիլի', 'մայիսի', 'հունիսի', 'հուլիսի', 'օգոստոսի', 'սեպտեմբերի', 'հոկտեմբերի', 'նոյեմբերի', 'դեկտեմբերի'];
+  var HYMS = ['հնվ', 'փտվ', 'մրտ', 'ապր', 'մյս', 'հնս', 'հլս', 'օգս', 'սեպ', 'հոկ', 'նոյ', 'դեկ'];
+  var dayText = function (noon, long) {
+    if (L === 'hy') {
+      var q = new Date(noon + OFF);
+      return (long ? HYW : HYWS)[q.getUTCDay()] + ', ' + q.getUTCDate() + ' ' + (long ? HYM : HYMS)[q.getUTCMonth()];
+    }
+    return fmt(noon, long ? { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Asia/Yerevan' } :
+      { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'Asia/Yerevan' });
+  };
+  // время посетителя — всегда 24 часа, как на сайте («с 9:00 до 21:00»), без зависимости от языка браузера
+  var localHM = function (t) { var q = new Date(t); return hh(q.getHours() * 60 + q.getMinutes()); };
+  var dayName = function (k, d) {
+    var w = dayText(d + 432e5, false);
+    return k === 0 ? BT.today + ', ' + w : k === 1 ? BT.tomorrow + ', ' + w : w;
+  };
+  var render = function () {
+    var h = '<h3 class="rg-slots-t">' + esc(BT.title) + '</h3><div class="rg-days">';
+    days.forEach(function (d, k) {
+      h += '<button type="button" class="rg-day" aria-pressed="' + (k === cur) + '" data-i="' + k + '">' + esc(dayName(k, d[0])) + '</button>';
+    });
+    h += '</div>';
+    var sl2 = days[cur][1];
+    if (!sl2.length) {
+      h += '<p class="note">' + esc(BT.none) + '</p>';
+    } else {
+      var dl = dayText(days[cur][0] + 432e5, true);
+      h += '<div class="rg-times">';
+      sl2.forEach(function (s) {
+        var tY = hh(s[1]);
+        var txt = BT.msg.replace('{d}', dl).replace('{t}', tY);
+        h += '<a class="rg-time" target="_blank" rel="noopener" href="https://wa.me/' + NUM + '?text=' + encodeURIComponent(txt) + '">' + tY +
+          (sameTz ? '' : '<small>' + esc(BT.yours) + ' ' + esc(localHM(s[0])) + '</small>') + '</a>';
+      });
+      h += '</div>';
+    }
+    h += '<p class="note rg-slots-h">' + esc(BT.hint) + '</p>';
+    box.innerHTML = h;
+  };
+  render();
+  box.hidden = false;
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.rg-day');
+    if (!b) return;
+    cur = +b.getAttribute('data-i');
+    render();
+    var nb = box.querySelector('.rg-day[data-i="' + cur + '"]');
+    if (nb) nb.focus();
+  });
 })();

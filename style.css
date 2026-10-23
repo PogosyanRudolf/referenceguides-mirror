@@ -1497,3 +1497,45 @@ p.newbie+p.lead{margin-top:.8em}
    основной адрес и зеркало для России (tools\make_mirror_link.py) */
 footer.site .mirror{display:block;margin-top:8px;font-size:.86rem;color:#5c4a1e;overflow-wrap:anywhere}
 footer.site .mirror a{color:#6b5410}
+/* 3.40 (24.10.2026, Claude «Маисовый полоз цена»; «да» Рудольфа 02:05, спецификация AutoClaw п. 2.1): выдвижное меню на
+   телефоне — кнопка «☰ Меню» вместо строки меню, панель слева со светлым фоном (правило 10), текущая страница — золотом */
+.rg-drawer-btn{display:none}
+@media (max-width:640px){
+  .rg-drawer-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;margin:6px 0 2px;border:1px solid #e6d9a3;border-radius:999px;background:linear-gradient(#fffbea,#f8e39a);color:#3d2b1f;font:600 1rem var(--sans);cursor:pointer}
+  header.site nav.main{display:none}
+}
+.rg-drawer-btn:focus-visible,.rg-drawer-x:focus-visible,.rg-dg a:focus-visible{outline:2px solid #b8962e;outline-offset:2px}
+.rg-drawer-wrap[hidden]{display:none}
+.rg-drawer-wrap{position:fixed;inset:0;z-index:10300}
+.rg-drawer-back{position:absolute;inset:0;background:rgba(254,249,232,.72)}
+.rg-drawer{position:absolute;top:0;left:0;bottom:0;width:min(300px,86vw);overflow-y:auto;background:#fef9e8;border-right:1px solid #e6d9a3;box-shadow:4px 0 18px rgba(61,43,31,.18);transform:translateX(-102%);transition:transform .2s ease;color:#3d2b1f;font-family:var(--sans)}
+.rg-drawer-wrap.open .rg-drawer{transform:none}
+.rg-drawer:focus{outline:none}
+.rg-drawer-head{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid #e6d9a3;position:sticky;top:0;background:#fef9e8;z-index:1}
+.rg-drawer-x{width:44px;height:44px;border-radius:50%;border:1px solid #e6d9a3;background:linear-gradient(#fffbea,#f8e39a);color:#3d2b1f;font-size:1.05rem;cursor:pointer}
+.rg-drawer-body{padding:4px 10px 20px}
+.rg-dg h3{margin:14px 6px 4px;font:700 .78rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:#6b5410}
+.rg-dg ul{list-style:none;margin:0;padding:0}
+.rg-dg li a{display:block;padding:11px 12px;border-radius:10px;color:#3d2b1f;text-decoration:none}
+.rg-dg li a:hover{background:#fdf3cf}
+.rg-dg li a[aria-current]{background:linear-gradient(#fffbea,#f8e39a);box-shadow:inset 0 0 0 1px #b8962e;font-weight:700}
+.rg-dg-lang p{display:flex;flex-wrap:wrap;gap:6px;margin:4px 6px}
+.rg-dg-lang a,.rg-dg-lang b{display:inline-flex;align-items:center;justify-content:center;min-width:46px;min-height:44px;border-radius:999px;border:1px solid #e6d9a3;color:#3d2b1f;text-decoration:none}
+.rg-dg-lang b{background:linear-gradient(#fffbea,#f8e39a);box-shadow:inset 0 0 0 1px #b8962e}
+.rg-dg-cta{margin:16px 6px 0}
+.rg-dg-cta a{display:block;padding:12px;border-radius:12px;background:linear-gradient(#fff3b0,#ffe27a);color:#3d2b1f;font-weight:700;text-align:center;text-decoration:none;border:1px solid #c9a227}
+body.rg-drawer-on{overflow:hidden}
+@media (prefers-reduced-motion:reduce){.rg-drawer{transition:none}}
+/* 3.41 (24.10.2026, Claude «Маисовый полоз цена»; выбор Рудольфа 02:05 «свои часы и WhatsApp», часы 9–21): запись на
+   бесплатную Zoom-консультацию по свободному времени — дни и время, светлые кнопки, время посетителя мелко под временем Еревана */
+.rg-slots{margin:12px 0 14px}
+.rg-slots[hidden]{display:none}
+.rg-slots-t{font-size:1.02rem;margin:0 0 8px}
+.rg-days{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 6px}
+.rg-day{flex:0 0 auto;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid #e6d9a3;background:#fffdf5;color:#3d2b1f;font:600 .86rem var(--sans);cursor:pointer;white-space:nowrap}
+.rg-day[aria-pressed="true"]{background:linear-gradient(#fffbea,#f8e39a);box-shadow:inset 0 0 0 1px #b8962e}
+.rg-day:focus-visible{outline:2px solid #b8962e;outline-offset:2px}
+.rg-times{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:6px;margin-top:8px}
+.rg-time{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;padding:4px;border-radius:10px;border:1px solid #e6d9a3;background:#fffdf5;color:#3d2b1f;text-decoration:none;font:700 .95rem var(--sans)}
+.rg-time small{font-weight:400;font-size:.72rem;color:#6b5410}
+.rg-time:hover,.rg-time:focus-visible{background:linear-gradient(#fffbea,#f8e39a);outline:2px solid #b8962e;outline-offset:1px}
