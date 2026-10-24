@@ -2244,6 +2244,76 @@
         ctx.fillRect(x, H - s, 1, s);
         if (x >= 155 && 62 + 4 * (x - 155) >= bb - s) ctx.fillRect(x, bb - s, 1, H - bb + s);   // за наклонной кромкой — фон
       }
+      cover("r", Math.min(1, Math.max(0, cur - (N - 1))));   // справа листов не осталось — обложка
+      cover("l", Math.min(1, Math.max(0, 1 - cur)));         // слева листов не осталось — обложка
+    }
+    // обложка изнутри — видна, когда листы с этой стороны кончились (слово Рудольфа 25.10 03:34: «перелистывалось до тех пор, пока
+    // не дойдёт до обложки… обложка имеет другой вид, не такой, как лист»; 03:4x: «светло-жёлто-золотистая, с оттиском и с
+    // рисунком — орнаментом»). Цвета и орнамент — Анри (25.10 03:4x): фон #F8E8A8, золото #C89E3A, блик оттиска #FFF6D0, тень
+    // #7A5A26; двойная тонкая рамка с точками по углам, в углах — розетки из 4 лепестков, в центре — овал с ромбом и 4 луча к углам.
+    // Контур страницы на рисунке и её четыре угла (у корешка сверху, снаружи сверху, снаружи снизу, у корешка снизу) — замер 25.10.
+    var PG = {
+      r: { p: [[96, 57], [100, 53], [104, 50], [108, 48], [112, 47], [116, 46], [124, 46], [132, 45], [141, 44], [150, 72], [158, 100],
+               [130, 101], [110, 103], [100, 106], [96, 108]], q: [[98, 56], [141, 45], [157, 99], [100, 104]] },
+      l: { p: [[96, 57], [94, 54], [90, 51], [86, 49], [80, 48], [70, 47], [60, 49], [50, 49], [48, 50], [46, 56], [44, 64], [40, 80],
+               [37, 96], [36, 100], [50, 102], [70, 103], [84, 104], [90, 106], [96, 108]], q: [[94, 56], [48, 49], [36, 100], [91, 105]] }
+    };
+    function cover(side, a) {
+      if (a <= 0) return;
+      var g = PG[side], q = g.q, i, k;
+      var Q = function (u, v) {                            // точка страницы: u — от корешка наружу, v — сверху вниз (0…1)
+        var x0 = q[0][0] + (q[1][0] - q[0][0]) * u, y0 = q[0][1] + (q[1][1] - q[0][1]) * u;
+        var x1 = q[3][0] + (q[2][0] - q[3][0]) * u, y1 = q[3][1] + (q[2][1] - q[3][1]) * u;
+        return [x0 + (x1 - x0) * v, y0 + (y1 - y0) * v];
+      };
+      ctx.save();
+      ctx.globalAlpha = a;
+      ctx.beginPath();
+      ctx.moveTo(g.p[0][0], g.p[0][1]);
+      for (i = 1; i < g.p.length; i++) ctx.lineTo(g.p[i][0], g.p[i][1]);
+      ctx.closePath();
+      ctx.fillStyle = "#F8E8A8";
+      ctx.fill();
+      ctx.clip();
+      var s0 = Q(0, 0.5), s1 = Q(0.2, 0.5), gr = ctx.createLinearGradient(s0[0], s0[1], s1[0], s1[1]);
+      gr.addColorStop(0, "rgba(122,90,38,.45)");
+      gr.addColorStop(1, "rgba(122,90,38,0)");
+      ctx.fillStyle = gr;
+      ctx.fillRect(0, 0, H, H);
+      var C = [0.52, 0.5], RU = 0.17, RV = 0.19;                 // центр и полуоси овала
+      var shapes = [[[0.1, 0.08], [0.92, 0.08], [0.92, 0.92], [0.1, 0.92], [0.1, 0.08]],          // рамка внешняя
+                    [[0.15, 0.14], [0.87, 0.14], [0.87, 0.86], [0.15, 0.86], [0.15, 0.14]],      // рамка внутренняя
+                    [[C[0] - 0.1, C[1]], [C[0], C[1] - 0.12], [C[0] + 0.1, C[1]], [C[0], C[1] + 0.12], [C[0] - 0.1, C[1]]]];   // ромб
+      var oval = [];
+      for (k = 0; k <= 24; k++) oval.push([C[0] + RU * Math.cos(k * Math.PI / 12), C[1] + RV * Math.sin(k * Math.PI / 12)]);
+      shapes.push(oval);
+      var ros = [[0.24, 0.23], [0.78, 0.23], [0.78, 0.77], [0.24, 0.77]];      // розетки в углах
+      for (k = 0; k < 4; k++) {                                                 // лучи от овала к розеткам
+        var ux = ros[k][0] - C[0], vy = ros[k][1] - C[1], d = Math.sqrt(ux * ux / (RU * RU) + vy * vy / (RV * RV));
+        shapes.push([[C[0] + ux / d, C[1] + vy / d], [ros[k][0] - ux * 0.12, ros[k][1] - vy * 0.12]]);
+      }
+      var dots = [[0.1, 0.08], [0.92, 0.08], [0.92, 0.92], [0.1, 0.92], C];
+      var pass = [[0.6, 0.6, "#7A5A26"], [-0.5, -0.5, "#FFF6D0"], [0, 0, "#C89E3A"]];   // оттиск: тень, блик, золото
+      for (var n2 = 0; n2 < 3; n2++) {
+        var dx = pass[n2][0], dy = pass[n2][1];
+        ctx.strokeStyle = ctx.fillStyle = pass[n2][2];
+        ctx.lineWidth = 0.8;
+        for (i = 0; i < shapes.length; i++) {
+          ctx.beginPath();
+          for (k = 0; k < shapes[i].length; k++) { var t = Q(shapes[i][k][0], shapes[i][k][1]); ctx[k ? "lineTo" : "moveTo"](t[0] + dx, t[1] + dy); }
+          ctx.stroke();
+        }
+        for (i = 0; i < ros.length; i++) {                                  // розетка: 4 лепестка и серединка
+          var c0 = Q(ros[i][0], ros[i][1]);
+          for (k = 0; k < 4; k++) {
+            ctx.beginPath();
+            ctx.arc(c0[0] + dx + 1.3 * Math.cos(k * Math.PI / 2), c0[1] + dy + 1.3 * Math.sin(k * Math.PI / 2), 0.95, 0, 2 * Math.PI);
+            ctx.fill();
+          }
+        }
+        for (i = 0; i < dots.length; i++) { var c1 = Q(dots[i][0], dots[i][1]); ctx.beginPath(); ctx.arc(c1[0] + dx, c1[1] + dy, 0.9, 0, 2 * Math.PI); ctx.fill(); }
+      }
+      ctx.restore();
     }
     function go(to, ms) {                                // плавно к числу листов to за ms
       if (raf) { cancelAnimationFrame(raf); raf = 0; }
@@ -2445,11 +2515,12 @@
 
   // 1) выдвижное меню
   var DTA = {
-    ru: { menu: 'Меню', main: 'Главное', close: 'Закрыть меню', lang: 'Язык' },
-    en: { menu: 'Menu', main: 'Main', close: 'Close menu', lang: 'Language' },
-    hy: { menu: 'Մենյու', main: 'Հիմնական', close: 'Փակել մենյուն', lang: 'Լեզու' },
-    fr: { menu: 'Menu', main: 'Essentiel', close: 'Fermer le menu', lang: 'Langue' },
-    de: { menu: 'Menü', main: 'Allgemein', close: 'Menü schließen', lang: 'Sprache' }
+    // 25.10.2026, слово Рудольфа 03:34: на телефоне не «Меню», а «Содержание» («мы не в ресторане»); переводы — Анри
+    ru: { menu: 'Содержание', main: 'Главное', close: 'Закрыть содержание', lang: 'Язык' },
+    en: { menu: 'Contents', main: 'Main', close: 'Close contents', lang: 'Language' },
+    hy: { menu: 'Բովանդակություն', main: 'Հիմնական', close: 'Փակել բովանդակությունը', lang: 'Լեզու' },
+    fr: { menu: 'Sommaire', main: 'Essentiel', close: 'Fermer le sommaire', lang: 'Langue' },
+    de: { menu: 'Inhalt', main: 'Allgemein', close: 'Inhalt schließen', lang: 'Sprache' }
   };
   var DT = DTA[L] || DTA.ru;
   var nav = doc.querySelector('header.site nav.main');
