@@ -276,7 +276,7 @@
   }
   // Рисует Землю на холсте внутри кнопки: свет слева сверху, блик на океане, зелень, степи и пустыни, полярные льды.
   // Возвращает функцию play(true или false) — включить вращение или поставить его на паузу.
-  function miniGlobe(btn, opts) {   // opts.keep — не стирать содержимое кнопки; opts.hoverOnly — вращать только при наведении
+  function miniGlobe(btn, opts) {   // opts.keep — не стирать содержимое кнопки (opts.hoverOnly с 24.10.2026 не действует — вращается всегда)
     var cv = document.createElement('canvas');
     var ctx = cv.getContext ? cv.getContext('2d') : null;
     if (!ctx || !window.Uint8Array || !window.Float32Array) return null;
@@ -358,7 +358,7 @@
     var active = true, hover = false;  // active — большой глобус закрыт; hover — указатель мыши на кнопке
     function play(on) {
       if (on !== undefined) active = !!on;
-      run = active && (opts && opts.hoverOnly ? hover : (!REDUCED || hover));
+      run = active;   // 24.10.2026 (слово Рудольфа 15:52): глобусы вращаются всегда, не дожидаясь наведения, и при настройке «меньше движения»
       last = 0;
       if (run && !raf && window.requestAnimationFrame) raf = requestAnimationFrame(tick);
     }
@@ -381,7 +381,7 @@
   fab.setAttribute('aria-label', T.btn);
   fab.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 2.7 3.2 15.3 0 18M12 3c-3.2 2.7-3.2 15.3 0 18M5 7.5h14M5 16.5h14"/></svg>';
   document.body.appendChild(fab);
-  window.RG_miniGlobe = miniGlobe;   // и кнопке языков (слово Рудольфа 23.10 02:17: все глобусы вращаются при наведении)
+  window.RG_miniGlobe = miniGlobe;   // и кнопке языков (слово Рудольфа 24.10 15:52: все глобусы вращаются всегда)
   var spin = miniGlobe(fab); // вращающаяся Земля на кнопке
 
   // ── Версия 3: глобус вместо значка над заголовком; нижний глобус — только когда верхний ушёл с экрана ──
@@ -1928,7 +1928,7 @@
       profBtn.addEventListener("click", function () { d.classList.remove("rg-hi-on"); });
     }
     var lbtn = lf && lf.querySelector(".gd2-lang-btn");
-    if (lbtn && window.RG_miniGlobe) window.RG_miniGlobe(lbtn, { keep: true, hoverOnly: true });
+    if (lbtn && window.RG_miniGlobe) window.RG_miniGlobe(lbtn, { keep: true });   // 24.10.2026: вращается всегда
     html.className += " rg-dock-on";   // кнопку записи в шапке (.cta-row) заменяет кнопка под профессором; в HTML она остаётся
   }
 
@@ -2159,7 +2159,11 @@
     // листает тоже (02:24: у Рудольфа в Windows анимации выключены) — движение начинает сам человек наведением
     var leaf = el("span", "rg-leaf");
     leaf.setAttribute("aria-hidden", "true");
+    // 24.10.2026 (слово Рудольфа 15:52; решения Анри 17:37): толщина стопок страниц слева и справа меняется при листании —
+    // каждый перевёрнутый лист делает принимающую сторону толще, отдающую — тоньше (функция bookStacks ниже)
+    var stk = bookStacks(b);
     b.appendChild(leaf);
+    b.querySelector("img").addEventListener("error", function () { var s = b.querySelector(".rg-stk"); if (s) s.remove(); stk = null; }, { once: true });
     var mq = function (q) { return !!(window.matchMedia && window.matchMedia(q).matches); };
     if (mq("(any-hover: hover)")) {
       var side = "";
@@ -2167,16 +2171,87 @@
         if (s === side) return;
         side = s;
         b.classList.remove("leaf-r", "leaf-l");
+        if (s && stk && !stk.can(s)) return;                 // на отдающей стороне листов не осталось — не листаем
         if (s) { void leaf.offsetWidth; b.classList.add("leaf-" + s); }
       };
+      leaf.addEventListener("animationiteration", function () {   // лист лёг на другую сторону
+        if (!stk || !side) return;
+        stk.flip(side);
+        if (!stk.can(side)) b.classList.remove("leaf-r", "leaf-l");   // стопка кончилась — листание останавливается (Анри: не по кругу)
+      });
       b.addEventListener("mousemove", function (e) { var r = b.getBoundingClientRect(); setSide(e.clientX - r.left >= r.width / 2 ? "r" : "l"); });
-      b.addEventListener("mouseleave", function () { setSide(""); });
+      b.addEventListener("mouseleave", function () { setSide(""); if (stk) stk.rest(); });
     }
     b.href = logo.getAttribute("href") || (BASE + "index.html");
     b.title = HOME;
     b.setAttribute("aria-label", HOME);
     logo.parentNode.insertBefore(b, logo);
     html.className += " rg-book-on";   // значок внутри ссылки на главную скрывается — в ней остаётся название сайта
+  }
+
+  /* ---------- стопки страниц у книги в углу (24.10.2026, Claude «Маисовый полоз цена»; слово Рудольфа 15:52: «при перелистывании
+     толщина оставшейся части страниц остаётся неизменной — это неправильно»; решения Анри P-1024-1737-03: в покое книга раскрыта
+     посередине — обрез слева и справа одинаковый; 6 шагов, по шагу на каждый перевёрнутый лист; стопка кончилась — листание
+     останавливается; курсор ушёл — за полсекунды всё возвращается в покой).
+     Рисунок книги (img/ui/book.webp, 192×192) не меняется: поверх него — слой SVG с обрезом страниц. Прежний обрез справа закрыт
+     цветом фона, новый обрез рисуется слева и справа полосками-страницами; толщина — доля t ширины обреза на рисунке
+     (в покое 0,8, шаг 0,13). Границы — замер рисунка 24.10: справа край страниц x = 144 + 0,21·(y − 56), слева x = 47 − 0,27·(y − 60),
+     ширина обреза 5 + 0,17·(y − 56), строки 56…99. ---------- */
+  function bookStacks(b) {
+    var NS = "http://www.w3.org/2000/svg", Y = [56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 99];
+    var W = function (y) { return 5 + 0.17 * (y - 56); };
+    var RI = function (y) { return 144 + 0.21 * (y - 56); }, LI = function (y) { return 47 - 0.27 * (y - 60); };
+    var T0 = 0.8, S = 0.13, N = 6, k = 0, raf = 0;
+    var svg = doc.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", "0 0 192 192");
+    svg.setAttribute("class", "rg-stk");
+    svg.setAttribute("aria-hidden", "true");
+    svg.setAttribute("focusable", "false");
+    function mk(tag, at, parent) { var n = doc.createElementNS(NS, tag); for (var a in at) n.setAttribute(a, at[a]); (parent || svg).appendChild(n); return n; }
+    function P(arr) { return arr.map(function (p) { return p[0].toFixed(2) + "," + p[1]; }).join(" "); }
+    var defs = mk("defs", {});
+    var cR = mk("clipPath", { id: "rgStkR" }, defs), cL = mk("clipPath", { id: "rgStkL" }, defs);
+    var clipR = mk("polygon", {}, cR), clipL = mk("polygon", {}, cL);
+    // прежний обрез справа — цветом фона рисунка
+    mk("polygon", { fill: "#faf2e0", points: P(Y.map(function (y) { return [RI(y) - 0.6, y]; }).concat(Y.slice().reverse().map(function (y) {
+      return [149 + 0.38 * (y - 56) + 1.6, y]; }))) });
+    function band(inner, sgn, clip) {                  // полоса-обрез наибольшей толщины, видна только внутри clip
+      var g = mk("g", { "clip-path": "url(#" + clip + ")" });
+      mk("polygon", { fill: "#dccdb0", points: P(Y.map(function (y) { return [inner(y), y]; }).concat(Y.slice().reverse().map(function (y) {
+        return [inner(y) + sgn * 2 * W(y), y]; }))) }, g);
+      var d = "";
+      for (var j = 1; j <= 15; j++) d += "M" + (inner(56) + sgn * j * W(56) / 7).toFixed(2) + " 56L" + (inner(99) + sgn * j * W(99) / 7).toFixed(2) + " 99";
+      mk("path", { d: d, fill: "none", stroke: "#a39070", "stroke-width": ".5" }, g);
+      return mk("polyline", { fill: "none", stroke: "#6b4a30", "stroke-width": "1.3", "stroke-linejoin": "round" });
+    }
+    var outR = band(RI, 1, "rgStkR"), outL = band(LI, -1, "rgStkL");
+    function shape(inner, sgn, t) { return Y.map(function (y) { return [inner(y), y]; }).concat(Y.slice().reverse().map(function (y) { return [inner(y) + sgn * t * W(y), y]; })); }
+    function edge(inner, sgn, t) { return Y.map(function (y) { return [inner(y) + sgn * t * W(y), y]; }); }
+    function draw() {
+      var tl = Math.max(0.02, T0 + k * S), tr = Math.max(0.02, T0 - k * S);
+      clipL.setAttribute("points", P(shape(LI, -1, tl))); outL.setAttribute("points", P(edge(LI, -1, tl)));
+      clipR.setAttribute("points", P(shape(RI, 1, tr))); outR.setAttribute("points", P(edge(RI, 1, tr)));
+    }
+    draw();
+    var img = b.querySelector("img");
+    if (img && img.nextSibling) b.insertBefore(svg, img.nextSibling); else b.appendChild(svg);
+    return {
+      can: function (s) { return s === "r" ? k < N : k > -N; },          // есть ли что листать с этой стороны
+      flip: function (s) { if (raf) { cancelAnimationFrame(raf); raf = 0; } k = Math.max(-N, Math.min(N, k + (s === "r" ? 1 : -1))); draw(); },
+      rest: function () {                                                 // за 0,5 с плавно к середине
+        if (raf) cancelAnimationFrame(raf);
+        var k0 = k, t0 = 0;
+        if (!k0 || !window.requestAnimationFrame) { k = 0; draw(); return; }
+        var step = function (now) {
+          if (!t0) t0 = now;
+          var x = Math.min(1, (now - t0) / 500), e = 1 - Math.pow(1 - x, 3);
+          k = k0 * (1 - e); draw();
+          raf = x < 1 ? requestAnimationFrame(step) : 0;
+          if (x >= 1) k = 0;
+        };
+        raf = requestAnimationFrame(step);
+      }
+    };
   }
 
   /* ---------- глобусы-значки в карточках (слово Рудольфа 23.10 02:17: все глобусы вращаются при наведении; 01:5x — все наклонные):
@@ -2521,4 +2596,63 @@
     var nb = box.querySelector('.rg-day[data-i="' + cur + '"]');
     if (nb) nb.focus();
   });
+})();
+
+/* ── 24.10.2026, Claude «Маисовый полоз цена» (слово Рудольфа 15:52; его ответы 17:2x: страна — «по адресу в интернете»,
+   в плитке — «доли религий и организации»): страница «Религии стран мира» — плитка «Ваша страна» в самом верху: доли религий
+   страны (Pew Research Center, 2020) и организации этой страны из нашего списка (мировые центры — жирным).
+   Страну сообщает Cloudflare по адресу подключения (/cdn-cgi/trace на referenceguides.pages.dev — это тот же сайт; адрес
+   никуда не отправляется и не сохраняется); если он недоступен (зеркало в России, блокировка) — страна по часовому поясу
+   устройства. Проверка: …/religion.html?cc=BG — плитка для Болгарии. Данные — JSON #rg-here-data (tools\make_religion_page.py). ── */
+(function () {
+  var doc = document, box = doc.getElementById('rg-here'), src = doc.getElementById('rg-here-data');
+  if (!box || !src) return;
+  var D;
+  try { D = JSON.parse(src.textContent); } catch (e) { return; }
+  var L = (doc.documentElement.getAttribute('lang') || 'ru').slice(0, 2);
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function pct(v) {
+    try { return new Intl.NumberFormat(L, { style: 'percent', maximumFractionDigits: 1 }).format(v / 100); } catch (e) { return v + ' %'; }
+  }
+  function show(cc, how) {
+    var c = D.c[cc];
+    if (!c) return;
+    var h = '<h2>' + esc(D.ui.title.replace('{c}', c[0])) + '</h2>';
+    if (c[1]) {
+      var g = c[1].map(function (v, i) { return [v, i]; }).filter(function (x) { return x[0] >= 1; })
+        .sort(function (a, b) { return b[0] - a[0]; });
+      if (g.length) {
+        h += '<p class="rg-here-shares">' + esc(D.ui.shares) + ' ' + g.map(function (x) {
+          var k = D.gk[x[1]], t = esc(D.g[x[1]]) + ' — ' + esc(pct(x[0]));
+          return k ? '<a href="#rel-' + k + '">' + t + '</a>' : t;
+        }).join(' · ') + '</p>';
+      }
+    }
+    var o = D.o[cc] || [];
+    if (o.length) {
+      h += '<p class="rg-here-h">' + esc(D.ui.orgs) + '</p><ul class="rg-here-orgs">' + o.map(function (r) {
+        return '<li' + (r[2] ? ' class="w"' : '') + '><a href="' + esc(r[1]) + '" target="_blank" rel="noopener">' + esc(r[0]) + '</a></li>';
+      }).join('') + '</ul>';
+    } else {
+      h += '<p class="rg-here-none">' + esc(D.ui.none).replace('WhatsApp', '<a href="' + esc(D.wa) + '" target="_blank" rel="noopener">WhatsApp</a>') + '</p>';
+    }
+    if (how === 'ip') h += '<p class="note">' + esc(D.ui.how) + '</p>';
+    box.innerHTML = h;
+    box.hidden = false;
+  }
+  function byTz() {
+    try { return D.tz[Intl.DateTimeFormat().resolvedOptions().timeZone] || null; } catch (e) { return null; }
+  }
+  var force = /[?&]cc=([A-Za-z]{2})(?:&|$)/.exec(location.search);
+  if (force) { show(force[1].toUpperCase(), 'test'); return; }
+  var done = false;
+  function fin(cc, how) { if (done) return; done = true; if (cc) show(cc, how); }
+  var timer = setTimeout(function () { fin(byTz(), 'tz'); }, 2500);
+  if (!window.fetch) { clearTimeout(timer); fin(byTz(), 'tz'); return; }
+  var url = /\.pages\.dev$/.test(location.hostname) ? '/cdn-cgi/trace' : 'https://referenceguides.pages.dev/cdn-cgi/trace';
+  fetch(url, { cache: 'no-store', credentials: 'omit' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (t) {
+    clearTimeout(timer);
+    var m = /(?:^|\n)loc=([A-Z]{2})/.exec(t || ''), cc = m && m[1] !== 'XX' && m[1] !== 'T1' ? m[1] : null;
+    if (cc && D.c[cc]) fin(cc, 'ip'); else fin(byTz(), 'tz');
+  }).catch(function () { clearTimeout(timer); fin(byTz(), 'tz'); });
 })();
