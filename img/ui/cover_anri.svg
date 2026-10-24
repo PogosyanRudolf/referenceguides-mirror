@@ -1,0 +1,32 @@
+<!-- обложка изнутри для книги в углу сайта — рисунок Анри, 25.10.2026 (слово Рудольфа 03:49) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140" width="100" height="140">
+<rect width="100" height="140" rx="2" fill="#F8E8A8"/>
+<rect x="3" y="3" width="94" height="134" rx="1.5" fill="none" stroke="#7A5A26" stroke-width="0.6" opacity="0.6"/>
+<rect x="7" y="7" width="86" height="126" fill="none" stroke="#C89E3A" stroke-width="1.2"/>
+<rect x="9.5" y="9.5" width="81" height="121" fill="none" stroke="#C89E3A" stroke-width="0.4" opacity="0.7"/>
+<!-- угловые точки -->
+<circle cx="12" cy="12" r="1.2" fill="#C89E3A"/><circle cx="88" cy="12" r="1.2" fill="#C89E3A"/><circle cx="12" cy="128" r="1.2" fill="#C89E3A"/><circle cx="88" cy="128" r="1.2" fill="#C89E3A"/>
+<!-- угловые розетки -->
+<g fill="#C89E3A" opacity="0.9">
+<g transform="translate(18 18)"><circle r="1" /><circle cx="3" r="1"/><circle cx="-3" r="1"/><circle cy="3" r="1"/><circle cy="-3" r="1"/></g>
+<g transform="translate(82 18)"><circle r="1"/><circle cx="3" r="1"/><circle cx="-3" r="1"/><circle cy="3" r="1"/><circle cy="-3" r="1"/></g>
+<g transform="translate(18 122)"><circle r="1"/><circle cx="3" r="1"/><circle cx="-3" r="1"/><circle cy="3" r="1"/><circle cy="-3" r="1"/></g>
+<g transform="translate(82 122)"><circle r="1"/><circle cx="3" r="1"/><circle cx="-3" r="1"/><circle cy="3" r="1"/><circle cy="-3" r="1"/></g>
+</g>
+<!-- центральный овал с оттиском -->
+<ellipse cx="50" cy="70" rx="22" ry="30" fill="#EED99A" stroke="#C89E3A" stroke-width="1"/>
+<ellipse cx="50" cy="70" rx="18" ry="25" fill="none" stroke="#FFF6D0" stroke-width="0.8" opacity="0.9"/>
+<ellipse cx="50" cy="70" rx="18" ry="25" fill="none" stroke="#7A5A26" stroke-width="0.5" opacity="0.35"/>
+<!-- ромб внутри -->
+<path d="M50 52 L60 70 L50 88 L40 70 Z" fill="none" stroke="#C89E3A" stroke-width="1"/>
+<circle cx="50" cy="70" r="3" fill="#C89E3A" stroke="#7A5A26" stroke-width="0.3"/>
+<!-- лучи к углам -->
+<g stroke="#C89E3A" stroke-width="0.35" opacity="0.6">
+<path d="M50 40 L50 28"/><path d="M50 100 L50 112"/>
+<path d="M32 70 L20 70"/><path d="M68 70 L80 70"/>
+<path d="M34 50 L26 42"/><path d="M66 50 L74 42"/>
+<path d="M34 90 L26 98"/><path d="M66 90 L74 98"/>
+</g>
+<!-- блик тиснения -->
+<ellipse cx="46" cy="62" rx="12" ry="8" fill="#FFF6D0" opacity="0.35"/>
+</svg>
