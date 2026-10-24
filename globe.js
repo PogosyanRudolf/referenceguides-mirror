@@ -2159,8 +2159,9 @@
     // листает тоже (02:24: у Рудольфа в Windows анимации выключены) — движение начинает сам человек наведением
     var leaf = el("span", "rg-leaf");
     leaf.setAttribute("aria-hidden", "true");
-    // 24.10.2026 (слово Рудольфа 15:52; решения Анри 17:37): толщина стопок страниц слева и справа меняется при листании —
-    // каждый перевёрнутый лист делает принимающую сторону толще, отдающую — тоньше (функция bookStacks ниже)
+    // толщина стопок страниц слева и справа меняется при листании: каждый перевёрнутый лист делает принимающую сторону толще,
+    // отдающую — тоньше, пока листы не кончатся до обложки (функция bookStacks ниже; 24.10 — слово Рудольфа 15:52 и решения Анри,
+    // 25.10 — слово Рудольфа 02:38 и его ответы: стопки на рисунке Анри, 10 листов в каждой половине)
     var stk = bookStacks(b);
     b.appendChild(leaf);
     b.querySelector("img").addEventListener("error", function () { var s = b.querySelector(".rg-stk"); if (s) s.remove(); stk = null; }, { once: true });
@@ -2177,7 +2178,7 @@
       leaf.addEventListener("animationiteration", function () {   // лист лёг на другую сторону
         if (!stk || !side) return;
         stk.flip(side);
-        if (!stk.can(side)) b.classList.remove("leaf-r", "leaf-l");   // стопка кончилась — листание останавливается (Анри: не по кругу)
+        if (!stk.can(side)) b.classList.remove("leaf-r", "leaf-l");   // листы с этой стороны кончились — дошли до обложки, листание стоит
       });
       b.addEventListener("mousemove", function (e) { var r = b.getBoundingClientRect(); setSide(e.clientX - r.left >= r.width / 2 ? "r" : "l"); });
       b.addEventListener("mouseleave", function () { setSide(""); if (stk) stk.rest(); });
@@ -2189,68 +2190,80 @@
     html.className += " rg-book-on";   // значок внутри ссылки на главную скрывается — в ней остаётся название сайта
   }
 
-  /* ---------- стопки страниц у книги в углу (24.10.2026, Claude «Маисовый полоз цена»; слово Рудольфа 15:52: «при перелистывании
-     толщина оставшейся части страниц остаётся неизменной — это неправильно»; решения Анри P-1024-1737-03: в покое книга раскрыта
-     посередине — обрез слева и справа одинаковый; 6 шагов, по шагу на каждый перевёрнутый лист; стопка кончилась — листание
-     останавливается; курсор ушёл — за полсекунды всё возвращается в покой).
-     Рисунок книги (img/ui/book.webp, 192×192) не меняется: поверх него — слой SVG с обрезом страниц. Прежний обрез справа закрыт
-     цветом фона, новый обрез рисуется слева и справа полосками-страницами; толщина — доля t ширины обреза на рисунке
-     (в покое 0,8, шаг 0,13). Границы — замер рисунка 24.10: справа край страниц x = 144 + 0,21·(y − 56), слева x = 47 − 0,27·(y − 60),
-     ширина обреза 5 + 0,17·(y − 56), строки 56…99. ---------- */
+  /* ---------- стопки страниц у книги в углу (25.10.2026, Claude «Маисовый полоз цена»; слово Рудольфа 25.10 02:38: «пока курсор
+     находится на стороне книги, листы должны перелистываться… до обложки», затем на другой стороне — в обратную сторону, тоже
+     до обложки; его ответы 02:4x: «Стопки на рисунке Анри», «10 листов» в каждой половине). Прежний слой 24.10 менял тонкие
+     полоски по бокам книги — главная стопка под страницами не двигалась, толщины не было видно, а листание обрывалось на шестом
+     листе, хотя листы на рисунке оставались.
+     Теперь рисунок Анри (img/ui/book.webp, 192×192) перерисовывается на холсте поверх картинки, страницы стоят на месте:
+     • слева переплёт под страницей опускается, между страницей и переплётом видны листы (копия правой стопки зеркально),
+       у самого левого края кромка переплёта растягивается вниз;
+     • справа кромка под стопкой поднимается и закрывает листы; где кромка наклонная (правый край) — книга обрезается по ней.
+     n — листов в левой половине из 20: в покое 10 и 10; 20 — справа обложка (листать направо налево больше нечего); 0 — так
+     нарисовала Анри: слева обложка. Каждый перевёрнутый лист — плавный шаг за 0,35 с; курсор ушёл — за 0,5 с назад в покой
+     (решение Анри 24.10). Замеры рисунка 25.10 по столбцам x: TL — верх переплёта под левой страницей (x 22…96; до x 33 —
+     наклонная кромка слева), BOT — низ книги у левого края (x 22…33); верх кромки под правой стопкой — 119…123 (функция br);
+     наклонная кромка справа — y = 62 + 4·(x − 155). ---------- */
   function bookStacks(b) {
-    var NS = "http://www.w3.org/2000/svg", Y = [56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 99];
-    var W = function (y) { return 5 + 0.17 * (y - 56); };
-    var RI = function (y) { return 144 + 0.21 * (y - 56); }, LI = function (y) { return 47 - 0.27 * (y - 60); };
-    var T0 = 0.8, S = 0.13, N = 6, k = 0, raf = 0;
-    var svg = doc.createElementNS(NS, "svg");
-    svg.setAttribute("viewBox", "0 0 192 192");
-    svg.setAttribute("class", "rg-stk");
-    svg.setAttribute("aria-hidden", "true");
-    svg.setAttribute("focusable", "false");
-    function mk(tag, at, parent) { var n = doc.createElementNS(NS, tag); for (var a in at) n.setAttribute(a, at[a]); (parent || svg).appendChild(n); return n; }
-    function P(arr) { return arr.map(function (p) { return p[0].toFixed(2) + "," + p[1]; }).join(" "); }
-    var defs = mk("defs", {});
-    var cR = mk("clipPath", { id: "rgStkR" }, defs), cL = mk("clipPath", { id: "rgStkL" }, defs);
-    var clipR = mk("polygon", {}, cR), clipL = mk("polygon", {}, cL);
-    // прежний обрез справа — цветом фона рисунка
-    mk("polygon", { fill: "#faf2e0", points: P(Y.map(function (y) { return [RI(y) - 0.6, y]; }).concat(Y.slice().reverse().map(function (y) {
-      return [149 + 0.38 * (y - 56) + 1.6, y]; }))) });
-    function band(inner, sgn, clip) {                  // полоса-обрез наибольшей толщины, видна только внутри clip
-      var g = mk("g", { "clip-path": "url(#" + clip + ")" });
-      mk("polygon", { fill: "#dccdb0", points: P(Y.map(function (y) { return [inner(y), y]; }).concat(Y.slice().reverse().map(function (y) {
-        return [inner(y) + sgn * 2 * W(y), y]; }))) }, g);
-      var d = "";
-      for (var j = 1; j <= 15; j++) d += "M" + (inner(56) + sgn * j * W(56) / 7).toFixed(2) + " 56L" + (inner(99) + sgn * j * W(99) / 7).toFixed(2) + " 99";
-      mk("path", { d: d, fill: "none", stroke: "#a39070", "stroke-width": ".5" }, g);
-      return mk("polyline", { fill: "none", stroke: "#6b4a30", "stroke-width": "1.3", "stroke-linejoin": "round" });
-    }
-    var outR = band(RI, 1, "rgStkR"), outL = band(LI, -1, "rgStkL");
-    function shape(inner, sgn, t) { return Y.map(function (y) { return [inner(y), y]; }).concat(Y.slice().reverse().map(function (y) { return [inner(y) + sgn * t * W(y), y]; })); }
-    function edge(inner, sgn, t) { return Y.map(function (y) { return [inner(y) + sgn * t * W(y), y]; }); }
+    var img = b.querySelector("img"), cv = doc.createElement("canvas");
+    var ctx = img && cv.getContext ? cv.getContext("2d") : null;
+    if (!ctx) return null;
+    cv.width = cv.height = 192;
+    cv.className = "rg-stk";
+    cv.setAttribute("aria-hidden", "true");
+    var TL = [118, 115, 112, 109, 106, 103, 100, 97, 94, 91, 88, 85, 109, 109, 109, 108, 108, 108, 108, 107, 107, 107, 107, 107, 106,
+      106, 106, 106, 106, 106, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105,
+      105, 106, 106, 106, 106, 106, 106, 107, 107, 107, 107, 107, 108, 108, 108, 108, 109, 109, 109, 110, 110, 110, 111, 111, 112];
+    var BOT = [126, 126, 126, 126, 126, 126, 125, 126, 125, 125, 125, 125];
+    var H = 192, TR = 101, MAXL = 20, MAXR = 22, N = 20, REST = 10, n = REST, cur = REST, raf = 0, ready = false;
+    function sm(t) { t = t < 0 ? 0 : t > 1 ? 1 : t; return t * t * (3 - 2 * t); }
+    function br(x) { return x <= 124 ? 119 : x <= 144 ? Math.round(119 + (x - 124) * 3 / 20) : 123; }
     function draw() {
-      var tl = Math.max(0.02, T0 + k * S), tr = Math.max(0.02, T0 - k * S);
-      clipL.setAttribute("points", P(shape(LI, -1, tl))); outL.setAttribute("points", P(edge(LI, -1, tl)));
-      clipR.setAttribute("points", P(shape(RI, 1, tr))); outR.setAttribute("points", P(edge(RI, 1, tr)));
-    }
-    draw();
-    var img = b.querySelector("img");
-    if (img && img.nextSibling) b.insertBefore(svg, img.nextSibling); else b.appendChild(svg);
-    return {
-      can: function (s) { return s === "r" ? k < N : k > -N; },          // есть ли что листать с этой стороны
-      flip: function (s) { if (raf) { cancelAnimationFrame(raf); raf = 0; } k = Math.max(-N, Math.min(N, k + (s === "r" ? 1 : -1))); draw(); },
-      rest: function () {                                                 // за 0,5 с плавно к середине
-        if (raf) cancelAnimationFrame(raf);
-        var k0 = k, t0 = 0;
-        if (!k0 || !window.requestAnimationFrame) { k = 0; draw(); return; }
-        var step = function (now) {
-          if (!t0) t0 = now;
-          var x = Math.min(1, (now - t0) / 500), e = 1 - Math.pow(1 - x, 3);
-          k = k0 * (1 - e); draw();
-          raf = x < 1 ? requestAnimationFrame(step) : 0;
-          if (x >= 1) k = 0;
-        };
-        raf = requestAnimationFrame(step);
+      if (!ready) return;
+      var f = cur / N, x, t, s, bb;
+      ctx.drawImage(img, 0, 0, H, H);
+      for (x = 22; x <= 96; x++) {                      // левая половина: переплёт вниз на s, в щели — листы
+        s = Math.round(f * MAXL * sm((92 - x) / 18));
+        if (s <= 0) continue;
+        t = TL[x - 22];
+        if (x <= 33) {                                   // наклонная кромка слева — растянуть вниз
+          bb = BOT[x - 22];
+          ctx.drawImage(img, x, bb, 1, H - bb - s, x, bb + s, 1, H - bb - s);
+          ctx.drawImage(img, x, t, 1, bb - t, x, t, 1, bb + s - t);
+        } else {
+          ctx.drawImage(img, x, t, 1, H - s - t, x, t + s, 1, H - s - t);
+          ctx.drawImage(img, Math.min(147, Math.max(114, 192 - x)), TR, 1, s, x, t, 1, s);
+        }
       }
+      ctx.fillStyle = "rgb(250,242,223)";               // цвет фона рисунка
+      for (x = 97; x <= 175; x++) {                     // правая половина: кромка вверх на s, закрывает низ стопки
+        s = Math.round(f * MAXR * sm((x - 100) / 16));
+        if (s <= 0) continue;
+        bb = br(x);
+        ctx.drawImage(img, x, bb, 1, H - bb, x, bb - s, 1, H - bb);
+        ctx.fillRect(x, H - s, 1, s);
+        if (x >= 155 && 62 + 4 * (x - 155) >= bb - s) ctx.fillRect(x, bb - s, 1, H - bb + s);   // за наклонной кромкой — фон
+      }
+    }
+    function go(to, ms) {                                // плавно к числу листов to за ms
+      if (raf) { cancelAnimationFrame(raf); raf = 0; }
+      var from = cur, t0 = 0;
+      if (!window.requestAnimationFrame || from === to) { cur = to; draw(); return; }
+      var step = function (now) {
+        if (!t0) t0 = now;
+        var p = Math.min(1, (now - t0) / ms), e = 1 - Math.pow(1 - p, 3);
+        cur = from + (to - from) * e; draw();
+        raf = p < 1 ? requestAnimationFrame(step) : 0;
+      };
+      raf = requestAnimationFrame(step);
+    }
+    function start() { ready = true; draw(); }
+    if (img.complete && img.naturalWidth) start(); else img.addEventListener("load", start, { once: true });
+    b.insertBefore(cv, img.nextSibling);
+    return {
+      can: function (s) { return s === "r" ? n < N : n > 0; },              // остались ли листы на отдающей стороне
+      flip: function (s) { n = Math.max(0, Math.min(N, n + (s === "r" ? 1 : -1))); go(n, 350); },
+      rest: function () { n = REST; go(REST, 500); }
     };
   }
 
@@ -2612,21 +2625,44 @@
   var L = (doc.documentElement.getAttribute('lang') || 'ru').slice(0, 2);
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function pct(v) {
-    try { return new Intl.NumberFormat(L, { style: 'percent', maximumFractionDigits: 1 }).format(v / 100); } catch (e) { return v + ' %'; }
+    try { return new Intl.NumberFormat(L, { style: 'percent', maximumFractionDigits: v < 1 ? 2 : 1 }).format(v / 100); } catch (e) { return v + ' %'; }
   }
-  function show(cc, how) {
+  function num(n) { try { return new Intl.NumberFormat(L).format(n); } catch (e) { return String(n); } }   // 2 793 042
+  function big(n) {                                    // от миллиона — словами, как числа верующих на странице: 2,96 млн; 1,4 млрд
+    if (n < 1e6) return num(n);
+    var b = n >= 1e9, v = n / (b ? 1e9 : 1e6), u = ((D.ui.units || {})[b ? 'b' : 'm']) || '{n}', s;
+    try { s = new Intl.NumberFormat(L, { maximumFractionDigits: v < 10 ? 2 : 1 }).format(v); } catch (e) { s = String(Math.round(v * 10) / 10); }
+    if (Array.isArray(u)) u = (L === 'fr' ? v < 2 : v === 1) ? u[0] : u[1];
+    return u.replace('{n}', s);
+  }
+  function rnd(n) { if (n >= 1e6 || n < 100) return Math.round(n); var k = Math.pow(10, Math.floor(Math.log10(n)) - 1); return Math.round(n / k) * k; }
+  function srcl(y, k) { var t = (D.ui.src || {})[k] || ''; return y ? t.replace('{y}', y) : t.replace(/,? ?\{y\}/, ''); }
+  // 25.10.2026 (слово Рудольфа 02:38, ответ «Числа и конфессии»): det — население и церкви и общины страны из religion-detail.json
+  function show(cc, how, det) {
     var c = D.c[cc];
     if (!c) return;
+    var P = det && det.p;
     var h = '<h2>' + esc(D.ui.title.replace('{c}', c[0])) + '</h2>';
+    if (P) h += '<p class="rg-here-pop">' + esc(D.ui.pop.replace('{n}', big(P))) + '</p>';
     if (c[1]) {
       var g = c[1].map(function (v, i) { return [v, i]; }).filter(function (x) { return x[0] >= 1; })
         .sort(function (a, b) { return b[0] - a[0]; });
       if (g.length) {
         h += '<p class="rg-here-shares">' + esc(D.ui.shares) + ' ' + g.map(function (x) {
-          var k = D.gk[x[1]], t = esc(D.g[x[1]]) + ' — ' + esc(pct(x[0]));
+          var k = D.gk[x[1]], t = esc(D.g[x[1]]) + ' — ' + esc(pct(x[0])) +
+            (P ? ' (' + esc(D.ui.approx.replace('{n}', big(rnd(P * x[0] / 100)))) + ')' : '');
           return k ? '<a href="#rel-' + k + '">' + t + '</a>' : t;
         }).join(' · ') + '</p>';
       }
+    }
+    var dl = (det && det.d) || [];
+    if (dl.length) {                                     // церкви и общины страны; один источник — в заголовке, разные — у каждой строки
+      var same = dl.every(function (r) { return r[3] === dl[0][3] && r[4] === dl[0][4]; });
+      h += '<p class="rg-here-h">' + esc(same ? D.ui.conf.replace('{s}', srcl(dl[0][3], dl[0][4])) : D.ui.conf0) + '</p><ul class="rg-here-conf">' +
+        dl.map(function (r) {
+          var t = esc(r[0]) + (r[1] != null ? ' — ' + esc(pct(r[1])) : '') + (r[2] != null ? ' (' + esc(num(r[2])) + ')' : '');
+          return '<li>' + t + (same ? '' : ' <span class="note">' + esc(srcl(r[3], r[4])) + '</span>') + '</li>';
+        }).join('') + '</ul>';
     }
     var o = D.o[cc] || [];
     if (o.length) {
@@ -2643,10 +2679,16 @@
   function byTz() {
     try { return D.tz[Intl.DateTimeFormat().resolvedOptions().timeZone] || null; } catch (e) { return null; }
   }
+  function detail(cc, how) {                           // население и церкви страны — отдельным файлом, только для своей страны
+    if (!window.fetch || !D.c[cc]) return;
+    fetch('religion-detail.json', { credentials: 'omit' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+      if (j && ((j.p && j.p[cc]) || (j.d && j.d[cc]))) show(cc, how, { p: j.p && j.p[cc], d: j.d && j.d[cc] });
+    }).catch(function () {});
+  }
   var force = /[?&]cc=([A-Za-z]{2})(?:&|$)/.exec(location.search);
-  if (force) { show(force[1].toUpperCase(), 'test'); return; }
+  if (force) { show(force[1].toUpperCase(), 'test'); detail(force[1].toUpperCase(), 'test'); return; }
   var done = false;
-  function fin(cc, how) { if (done) return; done = true; if (cc) show(cc, how); }
+  function fin(cc, how) { if (done) return; done = true; if (cc) { show(cc, how); detail(cc, how); } }
   var timer = setTimeout(function () { fin(byTz(), 'tz'); }, 2500);
   if (!window.fetch) { clearTimeout(timer); fin(byTz(), 'tz'); return; }
   var url = /\.pages\.dev$/.test(location.hostname) ? '/cdn-cgi/trace' : 'https://referenceguides.pages.dev/cdn-cgi/trace';
