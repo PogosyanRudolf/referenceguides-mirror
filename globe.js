@@ -472,62 +472,64 @@
   var G5x = {
     ru: { btn: 'Гид по сайту', hello: 'Здравствуйте! Я гид по сайту. Что вы хотите сделать?', hint: 'Я ваш гид — нажмите, и я покажу, где что найти.',
       close: 'Закрыть', lang: 'Выбрать язык', pc: 'Консультанты', pa: 'О проекте', consult: 'Бесплатная Zoom-консультация — записаться',
-      f: { learn: 'Учиться', find: 'Находить', cult: 'Искусство и культура', help: 'Помощь', about: 'О нас' },
+      f: { relig: 'Религия', learn: 'Наука', cult: 'Культура', help: 'Консультанты', about: 'О нас' },  // 24.10.2026: новое меню (слово Рудольфа 14:50)
       d: { 'index.html': 'Главная страница сайта', 'science.html': 'Университеты, открытые курсы и научные базы данных', 'formalsciences.html': 'Математика и информатика',
         'natural-sciences.html': 'Физика, химия, биология', 'applied-sciences.html': 'Инженерия и медицина', 'learners.html': 'Малышам, школьникам и студентам: уроки, учебники, развивающие игры',
         'resources.html': 'Страны, университеты и языки мира', 'reference-catalogs.html': 'Плотность и температура плавления веществ, каталог справочников', 'geography.html': 'Глобус со справкой о каждой стране',
         'tv.html': 'Телевидение, радио и веб-камеры всех стран', 'apps.html': 'Бесплатные программы для учёбы, работы и творчества', 'art-culture.html': 'Музеи, галереи и культурное наследие',
-        'culture-news.html': 'События культуры Еревана с датами и источниками', 'tickets.html': 'Афиша Еревана и покупка билетов', 'religion.html': 'Официальные сайты религиозных организаций мира: 21 направление',
+        'culture-news.html': 'События культуры Еревана с датами и источниками', 'tickets.html': 'Афиша Еревана и покупка билетов', 'religion.html': 'Религии стран мира: официальные сайты, по числу верующих',
         'consultants.html': 'Помощь специалистов по источникам и данным, бесплатная Zoom-консультация', 'about.html': 'Наша миссия и правила' } },
     en: { btn: 'Site guide', hello: 'Hello! I am your guide to this site. What would you like to do?', hint: 'I am your guide — click me and I will show you where everything is.',
       close: 'Close', lang: 'Choose language', pc: 'Consultants', pa: 'About the project', consult: 'Free Zoom consultation — book now',
-      f: { learn: 'Learn', find: 'Find', cult: 'Arts and culture', help: 'Help', about: 'About us' },
+      f: { relig: 'Religion', learn: 'Science', cult: 'Culture', help: 'Consultants', about: 'About us' },
       d: { 'index.html': 'The home page', 'science.html': 'Universities, open courses and research databases', 'formalsciences.html': 'Mathematics and computer science',
         'natural-sciences.html': 'Physics, chemistry and biology', 'applied-sciences.html': 'Engineering and medicine', 'learners.html': 'For little ones, pupils and students: lessons, textbooks, educational games',
         'resources.html': 'Countries, universities and languages of the world', 'reference-catalogs.html': 'Density and melting point of substances, a catalogue of reference works', 'geography.html': 'A globe with a fact sheet on every country',
         'tv.html': 'TV, radio and webcams from every country', 'apps.html': 'Free programs for learning, work and creativity', 'art-culture.html': 'Museums, galleries and cultural heritage',
-        'culture-news.html': 'Yerevan cultural events with dates and sources', 'tickets.html': 'Yerevan events and tickets', 'religion.html': 'Official websites of religious organisations: 21 traditions',
+        'culture-news.html': 'Yerevan cultural events with dates and sources', 'tickets.html': 'Yerevan events and tickets', 'religion.html': 'Religions of the world’s countries: official websites, by number of believers',
         'consultants.html': 'Expert help with sources and data, a free Zoom consultation', 'about.html': 'Our mission and rules' } },
     hy: { btn: 'Կայքի ուղեցույց', hello: 'Բարև Ձեզ։ Ես կայքի ուղեցույցն եմ։ Ի՞նչ եք ցանկանում անել։', hint: 'Ես ձեր ուղեցույցն եմ. սեղմեք՝ ցույց կտամ, թե որտեղ ինչ կա։',
       close: 'Փակել', lang: 'Ընտրել լեզու', pc: 'Խորհրդատուներ', pa: 'Նախագծի մասին', consult: 'Անվճար Zoom խորհրդատվություն՝ գրանցվել',
-      f: { learn: 'Սովորել', find: 'Գտնել', cult: 'Արվեստ և մշակույթ', help: 'Օգնություն', about: 'Մեր մասին' },
+      f: { relig: 'Կրոն', learn: 'Գիտություն', cult: 'Մշակույթ', help: 'Խորհրդատուներ', about: 'Մեր մասին' },
       d: { 'index.html': 'Կայքի գլխավոր էջը', 'science.html': 'Համալսարաններ, բաց դասընթացներ և գիտական շտեմարաններ', 'formalsciences.html': 'Մաթեմատիկա և ինֆորմատիկա',
         'natural-sciences.html': 'Ֆիզիկա, քիմիա, կենսաբանություն', 'applied-sciences.html': 'Ինժեներիա և բժշկություն', 'learners.html': 'Փոքրիկներին, դպրոցականներին և ուսանողներին՝ դասեր, դասագրքեր, զարգացնող խաղեր',
         'resources.html': 'Աշխարհի երկրներ, համալսարաններ և լեզուներ', 'reference-catalogs.html': 'Նյութերի խտությունը և հալման ջերմաստիճանը, տեղեկատուների ցանկ', 'geography.html': 'Գլոբուս՝ յուրաքանչյուր երկրի մասին տեղեկանքով',
         'tv.html': 'Բոլոր երկրների հեռուստատեսություն, ռադիո և վեբ-տեսախցիկներ', 'apps.html': 'Անվճար ծրագրեր ուսման, աշխատանքի և ստեղծագործության համար', 'art-culture.html': 'Թանգարաններ, պատկերասրահներ և մշակութային ժառանգություն',
-        'culture-news.html': 'Երևանի մշակութային իրադարձություններ՝ ամսաթվերով և աղբյուրներով', 'tickets.html': 'Երևանի աֆիշա և տոմսերի գնում', 'religion.html': 'Կրոնական կազմակերպությունների պաշտոնական կայքեր՝ 21 ուղղություն',
+        'culture-news.html': 'Երևանի մշակութային իրադարձություններ՝ ամսաթվերով և աղբյուրներով', 'tickets.html': 'Երևանի աֆիշա և տոմսերի գնում', 'religion.html': 'Աշխարհի երկրների կրոնները՝ պաշտոնական կայքեր, ըստ հավատացյալների թվի',
         'consultants.html': 'Մասնագետների օգնություն աղբյուրների և տվյալների հարցում, անվճար Zoom խորհրդատվություն', 'about.html': 'Մեր առաքելությունը և կանոնները' } },
     fr: { btn: 'Guide du site', hello: 'Bonjour ! Je suis votre guide du site. Que souhaitez-vous faire ?', hint: 'Je suis votre guide — cliquez, je vous montre où tout se trouve.',
       close: 'Fermer', lang: 'Choisir la langue', pc: 'Consultants', pa: 'À propos du projet', consult: 'Consultation Zoom gratuite — réserver',
-      f: { learn: 'Apprendre', find: 'Trouver', cult: 'Arts et culture', help: 'Aide', about: 'À propos' },
+      f: { relig: 'Religion', learn: 'Sciences', cult: 'Culture', help: 'Consultants', about: 'À propos' },
       d: { 'index.html': 'La page d’accueil', 'science.html': 'Universités, cours ouverts et bases de données scientifiques', 'formalsciences.html': 'Mathématiques et informatique',
         'natural-sciences.html': 'Physique, chimie, biologie', 'applied-sciences.html': 'Ingénierie et médecine', 'learners.html': 'Pour les petits, les élèves et les étudiants : leçons, manuels, jeux éducatifs',
         'resources.html': 'Pays, universités et langues du monde', 'reference-catalogs.html': 'Masse volumique et point de fusion des substances, catalogue d’ouvrages de référence', 'geography.html': 'Un globe avec une fiche sur chaque pays',
         'tv.html': 'Télévision, radio et webcams de tous les pays', 'apps.html': 'Logiciels gratuits pour apprendre, travailler et créer', 'art-culture.html': 'Musées, galeries et patrimoine culturel',
-        'culture-news.html': 'Événements culturels d’Erevan avec dates et sources', 'tickets.html': 'Spectacles à Erevan et achat de billets', 'religion.html': 'Sites officiels des organisations religieuses : 21 traditions',
+        'culture-news.html': 'Événements culturels d’Erevan avec dates et sources', 'tickets.html': 'Spectacles à Erevan et achat de billets', 'religion.html': 'Religions des pays du monde : sites officiels, par nombre de fidèles',
         'consultants.html': 'L’aide d’experts pour les sources et les données, une consultation Zoom gratuite', 'about.html': 'Notre mission et nos règles' } },
     de: { btn: 'Wegweiser', hello: 'Hallo! Ich bin Ihr Wegweiser durch die Seite. Was möchten Sie tun?', hint: 'Ich bin Ihr Wegweiser — klicken Sie, ich zeige Ihnen, wo was zu finden ist.',
       close: 'Schließen', lang: 'Sprache wählen', pc: 'Berater', pa: 'Über das Projekt', consult: 'Kostenlose Zoom-Beratung — anmelden',
-      f: { learn: 'Lernen', find: 'Finden', cult: 'Kunst und Kultur', help: 'Hilfe', about: 'Über uns' },
+      f: { relig: 'Religion', learn: 'Wissenschaft', cult: 'Kultur', help: 'Beratung', about: 'Über uns' },
       d: { 'index.html': 'Die Startseite', 'science.html': 'Universitäten, offene Kurse und Forschungsdatenbanken', 'formalsciences.html': 'Mathematik und Informatik',
         'natural-sciences.html': 'Physik, Chemie, Biologie', 'applied-sciences.html': 'Ingenieurwesen und Medizin', 'learners.html': 'Für die Kleinsten, Schüler und Studierende: Lektionen, Lehrbücher, Lernspiele',
         'resources.html': 'Länder, Universitäten und Sprachen der Welt', 'reference-catalogs.html': 'Dichte und Schmelzpunkt von Stoffen, Katalog der Nachschlagewerke', 'geography.html': 'Ein Globus mit Steckbrief zu jedem Land',
         'tv.html': 'Fernsehen, Radio und Webcams aus allen Ländern', 'apps.html': 'Kostenlose Programme zum Lernen, Arbeiten und Gestalten', 'art-culture.html': 'Museen, Galerien und Kulturerbe',
-        'culture-news.html': 'Kulturveranstaltungen in Jerewan mit Daten und Quellen', 'tickets.html': 'Veranstaltungen in Jerewan und Tickets', 'religion.html': 'Offizielle Websites religiöser Organisationen: 21 Richtungen',
+        'culture-news.html': 'Kulturveranstaltungen in Jerewan mit Daten und Quellen', 'tickets.html': 'Veranstaltungen in Jerewan und Tickets', 'religion.html': 'Religionen der Länder der Welt: offizielle Websites, nach Zahl der Gläubigen',
         'consultants.html': 'Hilfe von Fachleuten zu Quellen und Daten, kostenlose Zoom-Beratung', 'about.html': 'Unsere Mission und Regeln' } }
   };
   var G5 = G5x[LANG] || G5x.en;
   // подсказки к функциям (тексты AutoClaw; армянский — Анри): видны в окне гида и при наведении на группы меню
   var G5H = {
-    ru: { learn: 'Уроки, учебники, курсы: от дошкольника до студента', find: 'Справочные таблицы, ресурсы мира, ТВ и радио, программы', cult: 'Афиша, билеты, музеи, новости', help: 'Живая консультация: Zoom и WhatsApp', about: 'Как устроен проект и кто за что отвечает' },
-    en: { learn: 'Lessons, textbooks and courses: from preschool to university', find: 'Reference tables, world resources, TV and radio, programs', cult: 'Events, tickets, museums and news', help: 'Live consultation: Zoom and WhatsApp', about: 'How the project works and who is responsible for what' },
-    hy: { learn: 'Դասեր, դասագրքեր, դասընթացներ՝ նախադպրոցականից մինչև ուսանող', find: 'Աղյուսակներ, աշխարհի ռեսուրսներ, հեռուստատեսություն և ռադիո, ծրագրեր', cult: 'Ազդագիր, տոմսեր, թանգարաններ, նորություններ', help: 'Կենդանի խորհրդատվություն՝ Zoom և WhatsApp', about: 'Ինչպես է աշխատում նախագիծը' },
-    fr: { learn: 'Leçons, manuels et cours : de la maternelle à l’université', find: 'Tables de référence, ressources du monde, télé et radio, logiciels', cult: 'Spectacles, billets, musées et actualités', help: 'Consultation en direct : Zoom et WhatsApp', about: 'Comment fonctionne le projet et qui fait quoi' },
-    de: { learn: 'Lektionen, Lehrbücher und Kurse: vom Kindergarten bis zur Uni', find: 'Referenztabellen, Ressourcen der Welt, TV und Radio, Programme', cult: 'Veranstaltungen, Tickets, Museen und Neuigkeiten', help: 'Persönliche Beratung: Zoom und WhatsApp', about: 'Wie das Projekt funktioniert und wer wofür zuständig ist' }
+    ru: { relig: 'Религии стран мира: официальные сайты, по числу верующих', learn: 'Науки, курсы, учебники, справочные таблицы, география, ресурсы и программы: от дошкольника до студента', cult: 'Музеи, новости культуры, афиша, билеты, ТВ и радио', help: 'Живая консультация: Zoom и WhatsApp', about: 'Как устроен проект и кто за что отвечает' },
+    en: { relig: 'Religions of the world’s countries: official websites, by number of believers', learn: 'Sciences, courses, textbooks, reference tables, geography, resources and programs: from preschool to university', cult: 'Museums, culture news, events, tickets, TV and radio', help: 'Live consultation: Zoom and WhatsApp', about: 'How the project works and who is responsible for what' },
+    hy: { relig: 'Աշխարհի երկրների կրոնները՝ պաշտոնական կայքեր, ըստ հավատացյալների թվի', learn: 'Գիտություններ, դասընթացներ, դասագրքեր, աղյուսակներ, աշխարհագրություն, ռեսուրսներ և ծրագրեր՝ նախադպրոցականից մինչև ուսանող', cult: 'Թանգարաններ, մշակութային նորություններ, ազդագիր, տոմսեր, հեռուստատեսություն և ռադիո', help: 'Կենդանի խորհրդատվություն՝ Zoom և WhatsApp', about: 'Ինչպես է աշխատում նախագիծը' },
+    fr: { relig: 'Religions des pays du monde : sites officiels, par nombre de fidèles', learn: 'Sciences, cours, manuels, tables de référence, géographie, ressources et logiciels : de la maternelle à l’université', cult: 'Musées, actualités culturelles, spectacles, billets, télé et radio', help: 'Consultation en direct : Zoom et WhatsApp', about: 'Comment fonctionne le projet et qui fait quoi' },
+    de: { relig: 'Religionen der Länder der Welt: offizielle Websites, nach Zahl der Gläubigen', learn: 'Wissenschaften, Kurse, Lehrbücher, Referenztabellen, Geografie, Ressourcen und Programme: vom Kindergarten bis zur Uni', cult: 'Museen, Kulturnachrichten, Veranstaltungen, Tickets, TV und Radio', help: 'Persönliche Beratung: Zoom und WhatsApp', about: 'Wie das Projekt funktioniert und wer wofür zuständig ist' }
   }[LANG] || null;
-  var FUNCS = [['learn', ['science.html', 'formalsciences.html', 'natural-sciences.html', 'applied-sciences.html', 'learners.html']],
-    ['find', ['resources.html', 'reference-catalogs.html', 'geography.html', 'tv.html', 'apps.html']],
-    ['cult', ['art-culture.html', 'religion.html', 'culture-news.html', 'tickets.html']], ['help', ['consultants.html']], ['about', ['about.html']]];
+  // 24.10.2026 (Claude «Маисовый полоз цена», слово Рудольфа 14:50): функции — как новое меню: Религия · Наука · Культура · Консультанты · О нас
+  var FUNCS = [['relig', ['religion.html']],
+    ['learn', ['science.html', 'formalsciences.html', 'natural-sciences.html', 'applied-sciences.html', 'learners.html',
+      'resources.html', 'reference-catalogs.html', 'geography.html', 'apps.html']],
+    ['cult', ['art-culture.html', 'culture-news.html', 'tickets.html', 'tv.html']], ['help', ['consultants.html']], ['about', ['about.html']]];
   var LANGNAME = { ru: 'Русский', en: 'English', hy: 'Հայերեն', fr: 'Français', de: 'Deutsch' };
   var HEREPAGE = (location.pathname.split('/').pop() || 'index.html');
   // Профессор в мантии и шапочке — рисунок сайта (свой, без чужих персонажей); vb — какую часть показать
@@ -556,12 +558,14 @@
   function pageLabel(h) {
     if (h === 'consultants.html') return G5.pc;
     if (h === 'about.html') return G5.pa;
+    if (h === 'religion.html') return { ru: 'Религии стран мира', en: 'Religions of the world’s countries', hy: 'Աշխարհի երկրների կրոնները',
+      fr: 'Religions des pays du monde', de: 'Religionen der Länder der Welt' }[LANG] || 'Religions of the world’s countries';  // 24.10.2026
     var a = navEl && navEl.querySelector('a[href="' + h + '"]');
     return a ? a.textContent : h;
   }
   if (navEl) {
     [].forEach.call(navEl.querySelectorAll('a[href]'), function (a) { var d = G5.d[a.getAttribute('href')]; if (d && !a.title) a.title = d; });
-    if (G5H) [['consultants.html', 'help'], ['about.html', 'about']].forEach(function (p) {  // «Помощь» и «О нас» в верхнем ряду
+    if (G5H) [['religion.html', 'relig'], ['consultants.html', 'help'], ['about.html', 'about']].forEach(function (p) {  // «Религия», «Консультанты» и «О нас» в верхнем ряду
       var a = navEl.querySelector(':scope > a[href="' + p[0] + '"]'); if (a) a.title = G5H[p[1]];
     });
     [].forEach.call(navEl.querySelectorAll('details.more > summary'), function (s) {
@@ -753,7 +757,13 @@
       ul.hidden = !any;
       var h = ul.previousElementSibling;
       if (h && h.tagName === 'P' && h.classList.contains('note')) { h.hidden = !any; h = h.previousElementSibling; }  // версия 7
-      if (h && /^H[23]$/.test(h.tagName)) h.hidden = !any;
+      if (h && /^H[234]$/.test(h.tagName)) h.hidden = !any;
+    });
+    // 24.10.2026 (Claude «Маисовый полоз цена»): вложенные разделы страницы «Религии стран мира» (.rg-grp) прячутся, когда в них
+    // не осталось видимого списка; раздел без списка (проверенных сайтов пока нет) виден только без фильтра
+    var filtering = !!document.querySelector('ul.links > li[hidden]');
+    [].forEach.call(document.querySelectorAll('.rg-grp'), function (g) {
+      g.hidden = g.querySelector('ul.links') ? !g.querySelector('ul.links:not([hidden])') : filtering;
     });
   }
   function showAll() { [].forEach.call(document.querySelectorAll('ul.links > li'), function (li) { li.hidden = false; }); lists(); }
@@ -1254,13 +1264,13 @@
       all: "Все разделы", search: "Что вы ищете? Например: страны, учебники, билеты",
       searchLabel: "Поиск по разделам сайта", funcsLabel: "Функции посетителя",
       tour: "Провести по сайту", next: "Далее", prev: "Назад", skip: "Пропустить", done: "Готово",
-      step: "Шаг", of: "из", nothing: "Ничего не найдено. Попробуйте другое слово или откройте раздел «Помощь».",
+      step: "Шаг", of: "из", nothing: "Ничего не найдено. Попробуйте другое слово или откройте раздел «Консультанты».",
       professor: "Профессор Гид", role: "Помогаю учиться, находить и не теряться на сайте",
       tipTitle: "Здравствуйте!", tip: "Я профессор Гид. Нажмите на меня — помогу найти нужный раздел.",
       tipClose: "Скрыть", fab: "Гид по сайту",
-      tour1t: "Меню по вашей задаче", tour1x: "Сайт собран по функциям посетителя: «Учиться», «Находить», «Искусство и культура», «Помощь», «О нас». Откройте нужную группу.",
+      tour1t: "Меню по вашей задаче", tour1x: "Меню сайта: «Главное», «Религия», «Наука», «Культура», «Консультанты», «О нас». Откройте нужный пункт.",
       tour2t: "Язык — в любой момент", tour2x: "Нажмите на глобус и выберите язык. Кнопка остаётся на экране, даже когда вы прокрутили страницу.",
-      tour3t: "Поиск и разделы", tour3x: "Ищите страну, тему или программу. Если не знаете, где искать, начните с раздела «Находить».",
+      tour3t: "Поиск и разделы", tour3x: "Ищите страну, тему или программу. Если не знаете, где искать, начните с раздела «Наука».",
       tour4t: "Нужна помощь?", tour4x: "Запишитесь на бесплатную консультацию — золотая кнопка есть на каждой странице.",
       tour5t: "Я всегда рядом", tour5x: "Нажмите на профессора, чтобы открыть гид снова: пять функций, поиск и экскурсия по сайту."
     },
@@ -1268,13 +1278,13 @@
       all: "All sections", search: "What are you looking for? E.g. countries, textbooks, tickets",
       searchLabel: "Search site sections", funcsLabel: "Visitor goals",
       tour: "Take a site tour", next: "Next", prev: "Back", skip: "Skip", done: "Done",
-      step: "Step", of: "of", nothing: "Nothing found. Try another word or open the Help section.",
+      step: "Step", of: "of", nothing: "Nothing found. Try another word or open the Consultants section.",
       professor: "Professor Guide", role: "I help you learn, find things and stay on track",
       tipTitle: "Hello!", tip: "I am Professor Guide. Click me and I will help you find the right section.",
       tipClose: "Hide", fab: "Site guide",
-      tour1t: "A menu built around your goal", tour1x: "The site is organised by visitor goals: Learn, Find, Arts and culture, Help, About us. Open the group you need.",
+      tour1t: "A menu built around your goal", tour1x: "The site menu: Home, Religion, Science, Culture, Consultants, About us. Open the item you need.",
       tour2t: "Language at any moment", tour2x: "Click the globe and choose a language. The button stays on screen even after you scroll.",
-      tour3t: "Search and sections", tour3x: "Search for a country, topic or program. If you are not sure where to look, start with Find.",
+      tour3t: "Search and sections", tour3x: "Search for a country, topic or program. If you are not sure where to look, start with Science.",
       tour4t: "Need help?", tour4x: "Book a free consultation — the gold button is on every page.",
       tour5t: "I am always here", tour5x: "Click the professor to open the guide again: five goals, search and a site tour."
     },
@@ -1282,13 +1292,13 @@
       all: "Բոլոր բաժինները", search: "Ի՞նչ եք փնտրում։ Օրինակ՝ երկրներ, դասագրքեր, տոմսեր",
       searchLabel: "Որոնում կայքի բաժիններում", funcsLabel: "Այցելուի գործառույթները",
       tour: "Շրջայց կայքում", next: "Հաջորդ", prev: "Նախորդ", skip: "Բաց թողնել", done: "Պատրաստ է",
-      step: "Քայլ", of: "ից", nothing: "Ոչինչ չգտնվեց։ Փորձեք այլ բառ կամ բացեք «Օգնություն» բաժինը։",
+      step: "Քայլ", of: "ից", nothing: "Ոչինչ չգտնվեց։ Փորձեք այլ բառ կամ բացեք «Խորհրդատուներ» բաժինը։",
       professor: "Պրոֆեսոր Ուղեցույց", role: "Օգնում եմ սովորել, գտնել և չկորչել կայքում",
       tipTitle: "Բարև Ձեզ։", tip: "Ես պրոֆեսոր Ուղեցույցն եմ։ Սեղմեք ինձ վրա՝ կօգնեմ գտնել անհրաժեշտ բաժինը։",
       tipClose: "Թաքցնել", fab: "Կայքի ուղեցույց",
-      tour1t: "Մենյուն՝ ըստ ձեր խնդրի", tour1x: "Կայքը կառուցված է ըստ այցելուի գործառույթների՝ «Սովորել», «Գտնել», «Արվեստ և մշակույթ», «Օգնություն», «Մեր մասին»։ Բացեք անհրաժեշտ խումբը։",
+      tour1t: "Մենյուն՝ ըստ ձեր խնդրի", tour1x: "Կայքի մենյուն՝ «Գլխավոր», «Կրոն», «Գիտություն», «Մշակույթ», «Խորհրդատուներ», «Մեր մասին»։ Բացեք անհրաժեշտ կետը։",
       tour2t: "Լեզուն՝ ցանկացած պահի", tour2x: "Սեղմեք գլոբուսին և ընտրեք լեզուն։ Կոճակը մնում է էկրանին նաև էջը ոլորելիս։",
-      tour3t: "Որոնում և բաժիններ", tour3x: "Փնտրեք երկիր, թեմա կամ ծրագիր։ Եթե չգիտեք որտեղ փնտրել, սկսեք «Գտնել» բաժնից։",
+      tour3t: "Որոնում և բաժիններ", tour3x: "Փնտրեք երկիր, թեմա կամ ծրագիր։ Եթե չգիտեք որտեղ փնտրել, սկսեք «Գիտություն» բաժնից։",
       tour4t: "Օգնություն պե՞տք է", tour4x: "Գրանցվեք անվճար խորհրդատվության՝ ոսկե կոճակը կա յուրաքանչյուր էջում։",
       tour5t: "Ես միշտ մոտ եմ", tour5x: "Սեղմեք պրոֆեսորին՝ նորից բացելու ուղեցույցը՝ հինգ գործառույթ, որոնում և շրջայց։"
     },
@@ -1296,13 +1306,13 @@
       all: "Toutes les rubriques", search: "Que cherchez-vous ? Par exemple : pays, manuels, billets",
       searchLabel: "Rechercher dans les rubriques du site", funcsLabel: "Objectifs du visiteur",
       tour: "Faire le tour du site", next: "Suivant", prev: "Retour", skip: "Passer", done: "Terminé",
-      step: "Étape", of: "sur", nothing: "Rien trouvé. Essayez un autre mot ou ouvrez la rubrique Aide.",
+      step: "Étape", of: "sur", nothing: "Rien trouvé. Essayez un autre mot ou ouvrez la rubrique Consultants.",
       professor: "Professeur Guide", role: "Je vous aide à apprendre, trouver et ne pas vous perdre",
       tipTitle: "Bonjour !", tip: "Je suis le professeur Guide. Cliquez sur moi — je vous aiderai à trouver la bonne rubrique.",
       tipClose: "Masquer", fab: "Guide du site",
-      tour1t: "Le menu selon votre besoin", tour1x: "Le site est organisé par fonctions : Apprendre, Trouver, Arts et culture, Aide, À propos. Ouvrez le groupe voulu.",
+      tour1t: "Le menu selon votre besoin", tour1x: "Le menu du site : Accueil, Religion, Sciences, Culture, Consultants, À propos. Ouvrez la rubrique voulue.",
       tour2t: "La langue à tout moment", tour2x: "Cliquez sur le globe et choisissez la langue. Le bouton reste à l’écran même après défilement.",
-      tour3t: "Recherche et rubriques", tour3x: "Cherchez un pays, un thème ou un programme. Si vous ne savez pas où chercher, commencez par Trouver.",
+      tour3t: "Recherche et rubriques", tour3x: "Cherchez un pays, un thème ou un programme. Si vous ne savez pas où chercher, commencez par Sciences.",
       tour4t: "Besoin d’aide ?", tour4x: "Réservez une consultation gratuite — le bouton doré est sur chaque page.",
       tour5t: "Je reste à côté", tour5x: "Cliquez sur le professeur pour rouvrir le guide : cinq objectifs, recherche et visite."
     },
@@ -1310,13 +1320,13 @@
       all: "Alle Bereiche", search: "Was suchen Sie? Zum Beispiel: Länder, Lehrbücher, Tickets",
       searchLabel: "Suche in den Bereichen der Seite", funcsLabel: "Besucherziele",
       tour: "Rundgang durch die Seite", next: "Weiter", prev: "Zurück", skip: "Überspringen", done: "Fertig",
-      step: "Schritt", of: "von", nothing: "Nichts gefunden. Versuchen Sie ein anderes Wort oder öffnen Sie den Bereich Hilfe.",
+      step: "Schritt", of: "von", nothing: "Nichts gefunden. Versuchen Sie ein anderes Wort oder öffnen Sie den Bereich Beratung.",
       professor: "Professor Wegweiser", role: "Ich helfe beim Lernen, Finden und Zurechtkommen",
       tipTitle: "Hallo!", tip: "Ich bin Professor Wegweiser. Klicken Sie auf mich — ich helfe, den richtigen Bereich zu finden.",
       tipClose: "Ausblenden", fab: "Wegweiser",
-      tour1t: "Menü nach Ihrem Ziel", tour1x: "Die Seite ist nach Besucherfunktionen geordnet: Lernen, Finden, Kunst und Kultur, Hilfe, Über uns. Öffnen Sie die passende Gruppe.",
+      tour1t: "Menü nach Ihrem Ziel", tour1x: "Das Menü der Seite: Startseite, Religion, Wissenschaft, Kultur, Beratung, Über uns. Öffnen Sie den passenden Punkt.",
       tour2t: "Sprache jederzeit", tour2x: "Klicken Sie auf den Globus und wählen Sie die Sprache. Die Taste bleibt auch beim Scrollen sichtbar.",
-      tour3t: "Suche und Bereiche", tour3x: "Suchen Sie Land, Thema oder Programm. Wenn Sie nicht wissen wo, beginnen Sie mit Finden.",
+      tour3t: "Suche und Bereiche", tour3x: "Suchen Sie Land, Thema oder Programm. Wenn Sie nicht wissen wo, beginnen Sie mit Wissenschaft.",
       tour4t: "Brauchen Sie Hilfe?", tour4x: "Buchen Sie eine kostenlose Beratung — die goldene Taste gibt es auf jeder Seite.",
       tour5t: "Ich bin immer da", tour5x: "Klicken Sie auf den Professor, um den Wegweiser erneut zu öffnen: fünf Ziele, Suche und Rundgang."
     }
@@ -1341,10 +1351,10 @@
   var ENROLL_IC = '<span class="rg-enroll-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 20l1.3-4.7L15.9 4.7a2 2 0 0 1 2.8 0l.6.6a2 2 0 0 1 0 2.8L8.7 18.7z"/><path d="M14.3 6.3l3.4 3.4"/><path d="M4 20h7"/></svg></span>';
   // поисковые синонимы на пяти языках: помогают найти раздел, даже если слово не совпало с подписью
   var KW = {
-    learn: "учиться учёба уроки учебники курсы школа вуз студент образование learn study lesson textbook course school university education սովորել դաս դասեր դասագիրք դպրոց համալսարան ուսանող կրթություն",
-    find: "находить найти справочник таблица страны география ресурсы программы приложения телевидение радио find search reference table country countries geography resources programs apps tv radio գտնել տեղեկատու աղյուսակ երկիր երկրներ աշխարհագրություն ռեսուրս ծրագիր հեռուստատեսություն ռադիո",
-    cult: "искусство религия религии вера церковь мечеть синагога храм монастырь religion religions faith church mosque synagogue temple կրոն կրոններ եկեղեցի église mosquée religionen kirche moschee искусство-культура art arts kunst արվեստ история история-культура history histoire geschichte պատմություն культура музей новости афиша билеты театр концерт culture museum news tickets theatre concert մշակույթ թանգարան նորություններ աֆիշա տոմս թատրոն համերգ",
-    help: "помощь консультация консультант zoom whatsapp help consultation consultant օգնություն խորհրդատվություն խորհրդատու",
+    learn: "наука науки учиться учёба уроки учебники курсы школа вуз студент образование справочник таблица страны география ресурсы программы приложения science sciences learn study lesson textbook course school university education reference table country countries geography resources programs apps գիտություն սովորել դաս դասեր դասագիրք դպրոց համալսարան ուսանող կրթություն տեղեկատու աղյուսակ երկիր երկրներ աշխարհագրություն ռեսուրս ծրագիր",
+    relig: "религия религии вера вероисповедание конфессия церковь мечеть синагога храм монастырь religion religions faith church mosque synagogue temple monastery կրոն կրոններ հավատք եկեղեցի մզկիթ տաճար վանք église mosquée religionen kirche moschee",
+    cult: "искусство телевидение радио видео аудио tv radio video audio հեռուստատեսություն ռադիո искусство-культура art arts kunst արվեստ история история-культура history histoire geschichte պատմություն культура музей новости афиша билеты театр концерт culture museum news tickets theatre concert մշակույթ թանգարան նորություններ աֆիշա տոմս թատրոն համերգ",
+    help: "помощь консультация консультант консультанты zoom whatsapp help consultation consultant consultants beratung օգնություն խորհրդատվություն խորհրդատու խորհրդատուներ",
     about: "о нас проект миссия правила about project mission rules մեր մասին նախագիծ առաքելություն կանոններ"
   };
 
@@ -1362,6 +1372,7 @@
     else if (name === "culture") s += '<path d="M3 9h18M5 9v9M9 9v9M15 9v9M19 9v9M3 21h18M12 3l9 5H3l9-5z"/>';
     else if (name === "help") s += '<path d="M21 12a8 8 0 0 1-8 8H6l-3 2 1-5a8 8 0 1 1 17-5z"/><path d="M9 10a3 3 0 1 1 4 2.8c-.7.3-1 .8-1 1.2"/><circle cx="12" cy="17" r=".7" fill="currentColor" stroke="none"/>';
     else if (name === "about") s += '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.2"/>';
+    else if (name === "relig") s += '<path d="M12 2.5c1.6 1.9 2.2 3.1 2.2 4.1a2.2 2.2 0 0 1-4.4 0c0-1 .6-2.2 2.2-4.1z"/><rect x="8.5" y="10" width="7" height="10" rx="1.2"/><path d="M6 21h12"/>';
     else if (name === "globe") s += '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 2.8 3 15.2 0 18M12 3c-3 2.8-3 15.2 0 18"/>';
     else if (name === "grid") s += '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>';
     else if (name === "compass") s += '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/>';
@@ -1547,7 +1558,7 @@
     FUNCS.forEach(function (f) {
       var key = f[0], pages = f[1];
       out += '<section class="gd2-group" data-func="' + key + '">' +
-        '<h3><span class="gd2-gicon">' + icon(key === "learn" ? "cap" : key === "find" ? "find" : key === "cult" ? "culture" : key === "help" ? "help" : "about") + '</span>' + esc(G5.f[key]) + '</h3>' +
+        '<h3><span class="gd2-gicon">' + icon(key === "relig" ? "relig" : key === "learn" ? "cap" : key === "find" ? "find" : key === "cult" ? "culture" : key === "help" ? "help" : "about") + '</span>' + esc(G5.f[key]) + '</h3>' +
         '<p class="gd2-gdesc">' + esc((G5H && G5H[key]) || "") + '</p><span class="gd2-kw" hidden>' + esc(KW[key] || "") + '</span><ul>';
       pages.forEach(function (h) {
         out += '<li><a href="' + BASE + h + '"' + (h === PAGE ? ' aria-current="page"' : '') + '><b>' + esc(pageTitle(h)) + '</b><small>' + esc(G5.d[h] || "") + '</small></a></li>';
@@ -1602,7 +1613,7 @@
 
     var chips = '<button type="button" class="gd2-chip active" data-func="all" aria-pressed="true">' + icon("grid") + '<span>' + esc(T.all) + "</span></button>";
     FUNCS.forEach(function (f) {
-      var ic = f[0] === "learn" ? "cap" : f[0] === "find" ? "find" : f[0] === "cult" ? "culture" : f[0] === "help" ? "help" : "about";
+      var ic = f[0] === "relig" ? "relig" : f[0] === "learn" ? "cap" : f[0] === "find" ? "find" : f[0] === "cult" ? "culture" : f[0] === "help" ? "help" : "about";
       chips += '<button type="button" class="gd2-chip" data-func="' + f[0] + '" aria-pressed="false">' + icon(ic) + '<span>' + esc(G5.f[f[0]]) + "</span></button>";
     });
 
@@ -2369,10 +2380,19 @@
           esc(a.textContent.trim()) + '</a></li>';
       }).join('') + '</ul></section>';
     };
-    var html = grp(DT.main, [].filter.call(nav.children, function (n) { return n.tagName === 'A'; }));
-    [].forEach.call(nav.querySelectorAll('details.more'), function (d) {
-      var s = d.querySelector('summary');
-      html += grp(s ? s.textContent.trim() : '', [].slice.call(d.querySelectorAll('.more-list a')));
+    // 24.10.2026, 15:50 (слово Рудольфа 14:50): панель повторяет порядок меню — пункты верхнего уровня и группы по очереди
+    // (Главное · Религия · Наука · Культура · Консультанты · О нас); первый пункт («Главное») крупнее (стиль 3.43)
+    var topLink = function (a, cls) {
+      return '<p class="rg-dg-top' + (cls ? ' ' + cls : '') + '"><a href="' + esc(a.getAttribute('href')) + '"' +
+        (a.hasAttribute('aria-current') ? ' aria-current="page"' : '') + '>' + esc(a.textContent.trim()) + '</a></p>';
+    };
+    var html = '';
+    [].forEach.call(nav.children, function (n, i) {
+      if (n.tagName === 'A') html += topLink(n, i === 0 ? 'rg-dg-home' : '');
+      else if (n.tagName === 'DETAILS') {
+        var s = n.querySelector('summary');
+        html += grp(s ? s.textContent.trim() : '', [].slice.call(n.querySelectorAll('.more-list a')));
+      }
     });
     var lg = doc.querySelector('header.site .lang');
     if (lg) {
