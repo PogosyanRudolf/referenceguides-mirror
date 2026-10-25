@@ -2131,9 +2131,10 @@
     var mark = logo && logo.querySelector(".mark");
     if (!mark) return;
     // слово Рудольфа 01:19 и 01:22: книга не синяя и не «сложенный пополам листок», а толстая, объёмная — кремовые страницы
-    // с обрезом, коричневый кожаный переплёт, красная закладка; ведёт на главную страницу (как и название сайта рядом)
-    // 25.10.2026 (слово Рудольфа 13:15): главная страница называется «Содержание»
-    var HOME = { ru: "Содержание", en: "Contents", hy: "Բովանդակություն", fr: "Sommaire", de: "Inhalt" }[LANG] || "ReferenceGuides";
+    // с обрезом, коричневый кожаный переплёт, красная закладка; до 25.10.2026 вела на главную страницу («Содержание»)
+    // 25.10.2026 22:44 (слово Рудольфа): книга с листающимися страницами открывает раздел «Книги»; название сайта рядом —
+    // по-прежнему ссылка на «Содержание»
+    var BOOKS = { ru: "Книги", en: "Books", hy: "Գրքեր", fr: "Livres", de: "Bücher" }[LANG] || "Books";
     var half = '<path d="M3 19C10.5 14.5 23.5 16 32 24.5V52.5C23.5 44.5 11 43 3.6 47z" fill="url(#rgBkC)"/>' +
       '<path d="M3.6 47C11 43 23.5 44.5 32 52.5V55C23.4 47 10.9 45.5 3.8 49.4z" fill="#4a2a12"/>' +
       '<path d="M6 37C13 33 24 34.5 32 42.5V49.5C24 41.5 13.8 40 6.8 44z" fill="#ecdab0" stroke="#b39561" stroke-width=".5"/>' +
@@ -2184,9 +2185,11 @@
       b.addEventListener("mousemove", function (e) { var r = b.getBoundingClientRect(); setSide(e.clientX - r.left >= r.width / 2 ? "r" : "l"); });
       b.addEventListener("mouseleave", function () { setSide(""); if (stk) stk.rest(); });
     }
-    b.href = logo.getAttribute("href") || (BASE + "index.html");
-    b.title = HOME;
-    b.setAttribute("aria-label", HOME);
+    var home = logo.getAttribute("href") || (BASE + "index.html");
+    b.href = /index\.html$/.test(home) ? home.replace(/index\.html$/, "books.html") : home.replace(/\/?$/, "/") + "books.html";
+    b.title = BOOKS;
+    b.setAttribute("aria-label", BOOKS);
+    if (/(^|\/)books(\.html)?$/.test(location.pathname)) b.setAttribute("aria-current", "page");   // уже в «Книгах»
     logo.parentNode.insertBefore(b, logo);
     html.className += " rg-book-on";   // значок внутри ссылки на главную скрывается — в ней остаётся название сайта
   }
