@@ -1,0 +1,25 @@
+<!-- значок плитки «science» страницы «Содержание» — рисунок Анри, 25.10.2026 (слово Рудольфа 13:15) -->
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="pg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FDF6E3"/><stop offset="100%" stop-color="#F8E8A8"/></linearGradient>
+<linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C89E3A"/><stop offset="100%" stop-color="#7A4E2D"/></linearGradient>
+</defs>
+<!-- книга внизу -->
+
+<path d="M10 42 C18 38 25 36 32 36 C39 36 46 38 54 42 L54 50 C46 46 39 44 32 44 C25 44 18 46 10 50 Z" fill="#7A4E2D" stroke="#3D2B1F" stroke-width="1.1"/>
+<path d="M10 42 C18 38 25 36 32 36 L32 44 C25 44 18 46 10 50 Z" fill="url(#pg2)" stroke="#3D2B1F" stroke-width="0.9"/>
+<path d="M54 42 C46 38 39 36 32 36 L32 44 C39 44 46 46 54 50 Z" fill="url(#pg2)" stroke="#3D2B1F" stroke-width="0.9"/>
+<!-- шапочка -->
+<g>
+<path d="M12 26 L32 16 L52 26 L32 36 Z" fill="#3D2B1F" stroke="#3D2B1F" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M12 26 L32 36 L52 26 L32 16 Z" fill="#5A3A22" opacity="0.9"/>
+<rect x="30" y="30" width="4" height="8" fill="#3D2B1F"/>
+<!-- кисточка качается -->
+<g>
+<path d="M32 38 Q32 44 31 48" stroke="#C89E3A" stroke-width="1" fill="none"/>
+<circle cx="31" cy="50" r="3" fill="url(#gl)" stroke="#3D2B1F" stroke-width="0.7"/>
+<animateTransform attributeName="transform" type="rotate" values="-8 32 30;10 32 30;-6 32 30;0 32 30" dur="3.5s" repeatCount="indefinite"/>
+</g>
+<animateTransform attributeName="transform" type="translate" values="0 0;0 -0.6;0 0" dur="4s" repeatCount="indefinite"/>
+</g>
+</svg>

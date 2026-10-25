@@ -473,7 +473,7 @@
     ru: { btn: 'Гид по сайту', hello: 'Здравствуйте! Я гид по сайту. Что вы хотите сделать?', hint: 'Я ваш гид — нажмите, и я покажу, где что найти.',
       close: 'Закрыть', lang: 'Выбрать язык', pc: 'Консультанты', pa: 'О проекте', consult: 'Бесплатная Zoom-консультация — записаться',
       f: { relig: 'Религия', learn: 'Наука', cult: 'Культура', help: 'Консультанты', about: 'О нас' },  // 24.10.2026: новое меню (слово Рудольфа 14:50)
-      d: { 'index.html': 'Главная страница сайта', 'science.html': 'Университеты, открытые курсы и научные базы данных', 'formalsciences.html': 'Математика и информатика',
+      d: { 'index.html': 'Содержание сайта: все разделы', 'science.html': 'Университеты, открытые курсы и научные базы данных', 'formalsciences.html': 'Математика и информатика',
         'natural-sciences.html': 'Физика, химия, биология', 'applied-sciences.html': 'Инженерия и медицина', 'learners.html': 'Малышам, школьникам и студентам: уроки, учебники, развивающие игры',
         'resources.html': 'Страны, университеты и языки мира', 'reference-catalogs.html': 'Плотность и температура плавления веществ, каталог справочников', 'geography.html': 'Глобус со справкой о каждой стране',
         'tv.html': 'Телевидение, радио и веб-камеры всех стран', 'apps.html': 'Бесплатные программы для учёбы, работы и творчества', 'art-culture.html': 'Музеи, галереи и культурное наследие',
@@ -482,7 +482,7 @@
     en: { btn: 'Site guide', hello: 'Hello! I am your guide to this site. What would you like to do?', hint: 'I am your guide — click me and I will show you where everything is.',
       close: 'Close', lang: 'Choose language', pc: 'Consultants', pa: 'About the project', consult: 'Free Zoom consultation — book now',
       f: { relig: 'Religion', learn: 'Science', cult: 'Culture', help: 'Consultants', about: 'About us' },
-      d: { 'index.html': 'The home page', 'science.html': 'Universities, open courses and research databases', 'formalsciences.html': 'Mathematics and computer science',
+      d: { 'index.html': 'Site contents: all sections', 'science.html': 'Universities, open courses and research databases', 'formalsciences.html': 'Mathematics and computer science',
         'natural-sciences.html': 'Physics, chemistry and biology', 'applied-sciences.html': 'Engineering and medicine', 'learners.html': 'For little ones, pupils and students: lessons, textbooks, educational games',
         'resources.html': 'Countries, universities and languages of the world', 'reference-catalogs.html': 'Density and melting point of substances, a catalogue of reference works', 'geography.html': 'A globe with a fact sheet on every country',
         'tv.html': 'TV, radio and webcams from every country', 'apps.html': 'Free programs for learning, work and creativity', 'art-culture.html': 'Museums, galleries and cultural heritage',
@@ -491,7 +491,7 @@
     hy: { btn: 'Կայքի ուղեցույց', hello: 'Բարև Ձեզ։ Ես կայքի ուղեցույցն եմ։ Ի՞նչ եք ցանկանում անել։', hint: 'Ես ձեր ուղեցույցն եմ. սեղմեք՝ ցույց կտամ, թե որտեղ ինչ կա։',
       close: 'Փակել', lang: 'Ընտրել լեզու', pc: 'Խորհրդատուներ', pa: 'Նախագծի մասին', consult: 'Անվճար Zoom խորհրդատվություն՝ գրանցվել',
       f: { relig: 'Կրոն', learn: 'Գիտություն', cult: 'Մշակույթ', help: 'Խորհրդատուներ', about: 'Մեր մասին' },
-      d: { 'index.html': 'Կայքի գլխավոր էջը', 'science.html': 'Համալսարաններ, բաց դասընթացներ և գիտական շտեմարաններ', 'formalsciences.html': 'Մաթեմատիկա և ինֆորմատիկա',
+      d: { 'index.html': 'Կայքի բովանդակությունը՝ բոլոր բաժինները', 'science.html': 'Համալսարաններ, բաց դասընթացներ և գիտական շտեմարաններ', 'formalsciences.html': 'Մաթեմատիկա և ինֆորմատիկա',
         'natural-sciences.html': 'Ֆիզիկա, քիմիա, կենսաբանություն', 'applied-sciences.html': 'Ինժեներիա և բժշկություն', 'learners.html': 'Փոքրիկներին, դպրոցականներին և ուսանողներին՝ դասեր, դասագրքեր, զարգացնող խաղեր',
         'resources.html': 'Աշխարհի երկրներ, համալսարաններ և լեզուներ', 'reference-catalogs.html': 'Նյութերի խտությունը և հալման ջերմաստիճանը, տեղեկատուների ցանկ', 'geography.html': 'Գլոբուս՝ յուրաքանչյուր երկրի մասին տեղեկանքով',
         'tv.html': 'Բոլոր երկրների հեռուստատեսություն, ռադիո և վեբ-տեսախցիկներ', 'apps.html': 'Անվճար ծրագրեր ուսման, աշխատանքի և ստեղծագործության համար', 'art-culture.html': 'Թանգարաններ, պատկերասրահներ և մշակութային ժառանգություն',
@@ -500,7 +500,7 @@
     fr: { btn: 'Guide du site', hello: 'Bonjour ! Je suis votre guide du site. Que souhaitez-vous faire ?', hint: 'Je suis votre guide — cliquez, je vous montre où tout se trouve.',
       close: 'Fermer', lang: 'Choisir la langue', pc: 'Consultants', pa: 'À propos du projet', consult: 'Consultation Zoom gratuite — réserver',
       f: { relig: 'Religion', learn: 'Sciences', cult: 'Culture', help: 'Consultants', about: 'À propos' },
-      d: { 'index.html': 'La page d’accueil', 'science.html': 'Universités, cours ouverts et bases de données scientifiques', 'formalsciences.html': 'Mathématiques et informatique',
+      d: { 'index.html': 'Sommaire du site : toutes les rubriques', 'science.html': 'Universités, cours ouverts et bases de données scientifiques', 'formalsciences.html': 'Mathématiques et informatique',
         'natural-sciences.html': 'Physique, chimie, biologie', 'applied-sciences.html': 'Ingénierie et médecine', 'learners.html': 'Pour les petits, les élèves et les étudiants : leçons, manuels, jeux éducatifs',
         'resources.html': 'Pays, universités et langues du monde', 'reference-catalogs.html': 'Masse volumique et point de fusion des substances, catalogue d’ouvrages de référence', 'geography.html': 'Un globe avec une fiche sur chaque pays',
         'tv.html': 'Télévision, radio et webcams de tous les pays', 'apps.html': 'Logiciels gratuits pour apprendre, travailler et créer', 'art-culture.html': 'Musées, galeries et patrimoine culturel',
@@ -509,7 +509,7 @@
     de: { btn: 'Wegweiser', hello: 'Hallo! Ich bin Ihr Wegweiser durch die Seite. Was möchten Sie tun?', hint: 'Ich bin Ihr Wegweiser — klicken Sie, ich zeige Ihnen, wo was zu finden ist.',
       close: 'Schließen', lang: 'Sprache wählen', pc: 'Berater', pa: 'Über das Projekt', consult: 'Kostenlose Zoom-Beratung — anmelden',
       f: { relig: 'Religion', learn: 'Wissenschaft', cult: 'Kultur', help: 'Beratung', about: 'Über uns' },
-      d: { 'index.html': 'Die Startseite', 'science.html': 'Universitäten, offene Kurse und Forschungsdatenbanken', 'formalsciences.html': 'Mathematik und Informatik',
+      d: { 'index.html': 'Inhalt der Website: alle Bereiche', 'science.html': 'Universitäten, offene Kurse und Forschungsdatenbanken', 'formalsciences.html': 'Mathematik und Informatik',
         'natural-sciences.html': 'Physik, Chemie, Biologie', 'applied-sciences.html': 'Ingenieurwesen und Medizin', 'learners.html': 'Für die Kleinsten, Schüler und Studierende: Lektionen, Lehrbücher, Lernspiele',
         'resources.html': 'Länder, Universitäten und Sprachen der Welt', 'reference-catalogs.html': 'Dichte und Schmelzpunkt von Stoffen, Katalog der Nachschlagewerke', 'geography.html': 'Ein Globus mit Steckbrief zu jedem Land',
         'tv.html': 'Fernsehen, Radio und Webcams aus allen Ländern', 'apps.html': 'Kostenlose Programme zum Lernen, Arbeiten und Gestalten', 'art-culture.html': 'Museen, Galerien und Kulturerbe',
@@ -1268,7 +1268,7 @@
       professor: "Профессор Гид", role: "Помогаю учиться, находить и не теряться на сайте",
       tipTitle: "Здравствуйте!", tip: "Я профессор Гид. Нажмите на меня — помогу найти нужный раздел.",
       tipClose: "Скрыть", fab: "Гид по сайту",
-      tour1t: "Меню по вашей задаче", tour1x: "Меню сайта: «Главное», «Религия», «Наука», «Культура», «Консультанты», «О нас». Откройте нужный пункт.",
+      tour1t: "Меню по вашей задаче", tour1x: "Меню сайта: «Содержание», «Религия», «Наука», «Культура», «Консультанты», «О нас». Откройте нужный пункт.",
       tour2t: "Язык — в любой момент", tour2x: "Нажмите на глобус и выберите язык. Кнопка остаётся на экране, даже когда вы прокрутили страницу.",
       tour3t: "Поиск и разделы", tour3x: "Ищите страну, тему или программу. Если не знаете, где искать, начните с раздела «Наука».",
       tour4t: "Нужна помощь?", tour4x: "Запишитесь на бесплатную консультацию — золотая кнопка есть на каждой странице.",
@@ -1282,7 +1282,7 @@
       professor: "Professor Guide", role: "I help you learn, find things and stay on track",
       tipTitle: "Hello!", tip: "I am Professor Guide. Click me and I will help you find the right section.",
       tipClose: "Hide", fab: "Site guide",
-      tour1t: "A menu built around your goal", tour1x: "The site menu: Home, Religion, Science, Culture, Consultants, About us. Open the item you need.",
+      tour1t: "A menu built around your goal", tour1x: "The site menu: Contents, Religion, Science, Culture, Consultants, About us. Open the item you need.",
       tour2t: "Language at any moment", tour2x: "Click the globe and choose a language. The button stays on screen even after you scroll.",
       tour3t: "Search and sections", tour3x: "Search for a country, topic or program. If you are not sure where to look, start with Science.",
       tour4t: "Need help?", tour4x: "Book a free consultation — the gold button is on every page.",
@@ -1296,7 +1296,7 @@
       professor: "Պրոֆեսոր Ուղեցույց", role: "Օգնում եմ սովորել, գտնել և չկորչել կայքում",
       tipTitle: "Բարև Ձեզ։", tip: "Ես պրոֆեսոր Ուղեցույցն եմ։ Սեղմեք ինձ վրա՝ կօգնեմ գտնել անհրաժեշտ բաժինը։",
       tipClose: "Թաքցնել", fab: "Կայքի ուղեցույց",
-      tour1t: "Մենյուն՝ ըստ ձեր խնդրի", tour1x: "Կայքի մենյուն՝ «Գլխավոր», «Կրոն», «Գիտություն», «Մշակույթ», «Խորհրդատուներ», «Մեր մասին»։ Բացեք անհրաժեշտ կետը։",
+      tour1t: "Մենյուն՝ ըստ ձեր խնդրի", tour1x: "Կայքի մենյուն՝ «Բովանդակություն», «Կրոն», «Գիտություն», «Մշակույթ», «Խորհրդատուներ», «Մեր մասին»։ Բացեք անհրաժեշտ կետը։",
       tour2t: "Լեզուն՝ ցանկացած պահի", tour2x: "Սեղմեք գլոբուսին և ընտրեք լեզուն։ Կոճակը մնում է էկրանին նաև էջը ոլորելիս։",
       tour3t: "Որոնում և բաժիններ", tour3x: "Փնտրեք երկիր, թեմա կամ ծրագիր։ Եթե չգիտեք որտեղ փնտրել, սկսեք «Գիտություն» բաժնից։",
       tour4t: "Օգնություն պե՞տք է", tour4x: "Գրանցվեք անվճար խորհրդատվության՝ ոսկե կոճակը կա յուրաքանչյուր էջում։",
@@ -1310,7 +1310,7 @@
       professor: "Professeur Guide", role: "Je vous aide à apprendre, trouver et ne pas vous perdre",
       tipTitle: "Bonjour !", tip: "Je suis le professeur Guide. Cliquez sur moi — je vous aiderai à trouver la bonne rubrique.",
       tipClose: "Masquer", fab: "Guide du site",
-      tour1t: "Le menu selon votre besoin", tour1x: "Le menu du site : Accueil, Religion, Sciences, Culture, Consultants, À propos. Ouvrez la rubrique voulue.",
+      tour1t: "Le menu selon votre besoin", tour1x: "Le menu du site : Sommaire, Religion, Sciences, Culture, Consultants, À propos. Ouvrez la rubrique voulue.",
       tour2t: "La langue à tout moment", tour2x: "Cliquez sur le globe et choisissez la langue. Le bouton reste à l’écran même après défilement.",
       tour3t: "Recherche et rubriques", tour3x: "Cherchez un pays, un thème ou un programme. Si vous ne savez pas où chercher, commencez par Sciences.",
       tour4t: "Besoin d’aide ?", tour4x: "Réservez une consultation gratuite — le bouton doré est sur chaque page.",
@@ -1324,7 +1324,7 @@
       professor: "Professor Wegweiser", role: "Ich helfe beim Lernen, Finden und Zurechtkommen",
       tipTitle: "Hallo!", tip: "Ich bin Professor Wegweiser. Klicken Sie auf mich — ich helfe, den richtigen Bereich zu finden.",
       tipClose: "Ausblenden", fab: "Wegweiser",
-      tour1t: "Menü nach Ihrem Ziel", tour1x: "Das Menü der Seite: Startseite, Religion, Wissenschaft, Kultur, Beratung, Über uns. Öffnen Sie den passenden Punkt.",
+      tour1t: "Menü nach Ihrem Ziel", tour1x: "Das Menü der Seite: Inhalt, Religion, Wissenschaft, Kultur, Beratung, Über uns. Öffnen Sie den passenden Punkt.",
       tour2t: "Sprache jederzeit", tour2x: "Klicken Sie auf den Globus und wählen Sie die Sprache. Die Taste bleibt auch beim Scrollen sichtbar.",
       tour3t: "Suche und Bereiche", tour3x: "Suchen Sie Land, Thema oder Programm. Wenn Sie nicht wissen wo, beginnen Sie mit Wissenschaft.",
       tour4t: "Brauchen Sie Hilfe?", tour4x: "Buchen Sie eine kostenlose Beratung — die goldene Taste gibt es auf jeder Seite.",
@@ -2132,7 +2132,8 @@
     if (!mark) return;
     // слово Рудольфа 01:19 и 01:22: книга не синяя и не «сложенный пополам листок», а толстая, объёмная — кремовые страницы
     // с обрезом, коричневый кожаный переплёт, красная закладка; ведёт на главную страницу (как и название сайта рядом)
-    var HOME = { ru: "Главная страница", en: "Home page", hy: "Գլխավոր էջ", fr: "Page d’accueil", de: "Startseite" }[LANG] || "ReferenceGuides";
+    // 25.10.2026 (слово Рудольфа 13:15): главная страница называется «Содержание»
+    var HOME = { ru: "Содержание", en: "Contents", hy: "Բովանդակություն", fr: "Sommaire", de: "Inhalt" }[LANG] || "ReferenceGuides";
     var half = '<path d="M3 19C10.5 14.5 23.5 16 32 24.5V52.5C23.5 44.5 11 43 3.6 47z" fill="url(#rgBkC)"/>' +
       '<path d="M3.6 47C11 43 23.5 44.5 32 52.5V55C23.4 47 10.9 45.5 3.8 49.4z" fill="#4a2a12"/>' +
       '<path d="M6 37C13 33 24 34.5 32 42.5V49.5C24 41.5 13.8 40 6.8 44z" fill="#ecdab0" stroke="#b39561" stroke-width=".5"/>' +
@@ -2188,6 +2189,27 @@
     b.setAttribute("aria-label", HOME);
     logo.parentNode.insertBefore(b, logo);
     html.className += " rg-book-on";   // значок внутри ссылки на главную скрывается — в ней остаётся название сайта
+  }
+
+  /* ---------- значки плиток на странице «Содержание» (25.10.2026, Claude «Маисовый полоз цена»; слово Рудольфа 13:15: «иконки
+     сборников каталогов на плитках страницы "содержание" активными, как иконка мировых ресурсов, и цветными в стиле книги, которая
+     с перелистывающимися страницами»). Рисунки — Анри (SVG с плавным повторяющимся движением, img/ui/tiles/*.svg; цвета его книги:
+     страницы, кожа переплёта, золото, закладка). Значок «Мировые ресурсы» — прежний вращающийся глобус, цвета — как у книги. ---------- */
+  function initTileIcons() {
+    if (!/(^|\/)(index(\.html)?)?$/.test(location.pathname)) return;      // только страница «Содержание» (главная) на любом языке
+    var MAP = { "religion.html": "religion", "science.html": "science", "formalsciences.html": "formal", "natural-sciences.html": "natural",
+      "applied-sciences.html": "applied", "reference-catalogs.html": "reftab", "art-culture.html": "art", "learners.html": "learners",
+      "resources.html": "" };
+    var cards = doc.querySelectorAll(".grid .card");
+    for (var i = 0; i < cards.length; i++) {
+      var a = cards[i].querySelector("a.more[href]"), ic = cards[i].querySelector(".icon");
+      if (!a || !ic) continue;
+      var k = MAP[(a.getAttribute("href") || "").replace(/[?#].*$/, "").replace(/^.*\//, "").replace(/^([^.]+)$/, "$1.html")];
+      if (k === "") { ic.className += " rg-tile-globe"; continue; }
+      if (!k) continue;
+      ic.className += " rg-tile-ic";
+      ic.innerHTML = '<img src="' + HERE + 'img/ui/tiles/' + k + '.svg" alt="" width="40" height="40" decoding="async">';
+    }
   }
 
   /* ---------- стопки страниц у книги в углу (25.10.2026, Claude «Маисовый полоз цена»; слово Рудольфа 25.10 02:38: «пока курсор
@@ -2413,6 +2435,7 @@
     initProfHints();
     initRoundCta();
     initBookBtn();
+    initTileIcons();
     initLift();
     initIconGlobes();
     initNavTips();
@@ -2509,11 +2532,11 @@
   // 1) выдвижное меню
   var DTA = {
     // 25.10.2026, слово Рудольфа 03:34: на телефоне не «Меню», а «Содержание» («мы не в ресторане»); переводы — Анри
-    ru: { menu: 'Содержание', main: 'Главное', close: 'Закрыть содержание', lang: 'Язык' },
-    en: { menu: 'Contents', main: 'Main', close: 'Close contents', lang: 'Language' },
-    hy: { menu: 'Բովանդակություն', main: 'Հիմնական', close: 'Փակել բովանդակությունը', lang: 'Լեզու' },
-    fr: { menu: 'Sommaire', main: 'Essentiel', close: 'Fermer le sommaire', lang: 'Langue' },
-    de: { menu: 'Inhalt', main: 'Allgemein', close: 'Inhalt schließen', lang: 'Sprache' }
+    ru: { menu: 'Содержание', main: 'Содержание', close: 'Закрыть содержание', lang: 'Язык' },
+    en: { menu: 'Contents', main: 'Contents', close: 'Close contents', lang: 'Language' },
+    hy: { menu: 'Բովանդակություն', main: 'Բովանդակություն', close: 'Փակել բովանդակությունը', lang: 'Լեզու' },
+    fr: { menu: 'Sommaire', main: 'Sommaire', close: 'Fermer le sommaire', lang: 'Langue' },
+    de: { menu: 'Inhalt', main: 'Inhalt', close: 'Inhalt schließen', lang: 'Sprache' }
   };
   var DT = DTA[L] || DTA.ru;
   var nav = doc.querySelector('header.site nav.main');
