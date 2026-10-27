@@ -1341,17 +1341,25 @@
   var IMG = HERE + (ECO ? "img/prof/ecology/" : CULT ? "img/prof/culture/" : "img/prof/");
   var IMGV = ECO ? "?v=4" : CULT ? "?v=3" : "?v=2";   // второй набор рисунков — светлая мантия и профессорская шапка (Анри 23.10 01:07, «да» Рудольфа 01:1x);
                        // метка в адресе — чтобы браузеры посетителей не показывали прежние картинки из памяти
-  /* 28.10.2026 01:18 (слово Рудольфа «исправь подпись на соответствующую — гид по разделу «Экология и …»», Клод (дом)):
-     на странице экологии гид называет свой раздел, а не весь сайт: заголовок и приветствие окна гида, подпись круглой кнопки.
+  /* 28.10.2026 01:33 (слово Рудольфа: на экологии «гид по странице «Экология и …»», в разделе «Культура» «гид по разделу
+     «Культура»»; Клод (дом), tools/guide_section_caption_patch.py): гид называет свою страницу или раздел, а не весь сайт —
+     заголовок и приветствие окна гида, подпись круглой кнопки. Остальные страницы — «Гид по сайту».
      Картинки экологии — ?v=4: рисунки Анри 28.10 (кнопка — спокойное лицо, при наведении улыбка; три позы окна гида). */
-  var ECO_SEC = ECO && {
-    ru: ["Гид по разделу «Экология и агроэкология»", "Здравствуйте! Я гид по разделу «Экология и агроэкология». Что вы хотите сделать?"],
-    en: ["Guide to the Ecology and agroecology section", "Hello! I am your guide to the Ecology and agroecology section. What would you like to do?"],
-    hy: ["«Էկոլոգիա և ագրոէկոլոգիա» բաժնի ուղեցույց", "Բարև Ձեզ։ Ես «Էկոլոգիա և ագրոէկոլոգիա» բաժնի ուղեցույցն եմ։ Ի՞նչ եք ցանկանում անել։"],
-    fr: ["Guide de la rubrique « Écologie et agroécologie »", "Bonjour ! Je suis votre guide de la rubrique « Écologie et agroécologie ». Que souhaitez-vous faire ?"],
-    de: ["Wegweiser durch den Bereich „Ökologie und Agrarökologie“", "Hallo! Ich bin Ihr Wegweiser durch den Bereich „Ökologie und Agrarökologie“. Was möchten Sie tun?"]
-  }[LANG];
-  if (ECO_SEC) { G5.btn = T.fab = ECO_SEC[0]; G5.hello = ECO_SEC[1]; }
+  var SEC = (ECO ? {
+    ru: ["Гид по странице «Экология и агроэкология»", "Здравствуйте! Я гид по странице «Экология и агроэкология». Что вы хотите сделать?"],
+    en: ["Guide to the Ecology and agroecology page", "Hello! I am your guide to the Ecology and agroecology page. What would you like to do?"],
+    hy: ["«Էկոլոգիա և ագրոէկոլոգիա» էջի ուղեցույց", "Բարև Ձեզ։ Ես «Էկոլոգիա և ագրոէկոլոգիա» էջի ուղեցույցն եմ։ Ի՞նչ եք ցանկանում անել։"],
+    fr: ["Guide de la page « Écologie et agroécologie »", "Bonjour ! Je suis votre guide de la page « Écologie et agroécologie ». Que souhaitez-vous faire ?"],
+    de: ["Wegweiser durch die Seite „Ökologie und Agrarökologie“", "Hallo! Ich bin Ihr Wegweiser durch die Seite „Ökologie und Agrarökologie“. Was möchten Sie tun?"]
+  } : CULT ? {
+    ru: ["Гид по разделу «Культура»", "Здравствуйте! Я гид по разделу «Культура». Что вы хотите сделать?"],
+    en: ["Guide to the Culture section", "Hello! I am your guide to the Culture section. What would you like to do?"],
+    hy: ["«Մշակույթ» բաժնի ուղեցույց", "Բարև Ձեզ։ Ես «Մշակույթ» բաժնի ուղեցույցն եմ։ Ի՞նչ եք ցանկանում անել։"],
+    fr: ["Guide de la rubrique « Culture »", "Bonjour ! Je suis votre guide de la rubrique « Culture ». Que souhaitez-vous faire ?"],
+    de: ["Wegweiser durch den Bereich „Kultur“", "Hallo! Ich bin Ihr Wegweiser durch den Bereich „Kultur“. Was möchten Sie tun?"]
+  } : null);   // guide_section_caption_patch
+  SEC = SEC && SEC[LANG];
+  if (SEC) { G5.btn = T.fab = SEC[0]; G5.hello = SEC[1]; }
   var MON = new Date().getMonth();
   var WINTER = MON === 11 || MON <= 1;   // декабрь–февраль: профессор в вязаной шапке (зимняя пасхалка, решение 20.10)
   var T8ALL = {
