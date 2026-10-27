@@ -91,4 +91,9 @@
 <url><loc>https://referenceguides.pages.dev/hy/books</loc><priority>0.8</priority></url>
 <url><loc>https://referenceguides.pages.dev/fr/books</loc><priority>0.8</priority></url>
 <url><loc>https://referenceguides.pages.dev/de/books</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/ecology</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/en/ecology</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/hy/ecology</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/fr/ecology</loc><priority>0.8</priority></url>
+<url><loc>https://referenceguides.pages.dev/de/ecology</loc><priority>0.8</priority></url>
 </urlset>
