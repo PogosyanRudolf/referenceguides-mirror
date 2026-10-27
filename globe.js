@@ -1339,8 +1339,19 @@
   var CULT = /(^|\/)(art-culture|culture-news|tickets|tv)(\.html)?$/.test(location.pathname);
   var ECO = /(^|\/)ecology(\.html)?$/.test(location.pathname);   // 28.10.2026 (слово Рудольфа 00:28): свой профессор экологии — портрет в золотом овале
   var IMG = HERE + (ECO ? "img/prof/ecology/" : CULT ? "img/prof/culture/" : "img/prof/");
-  var IMGV = (CULT || ECO) ? "?v=3" : "?v=2";   // второй набор рисунков — светлая мантия и профессорская шапка (Анри 23.10 01:07, «да» Рудольфа 01:1x);
+  var IMGV = ECO ? "?v=4" : CULT ? "?v=3" : "?v=2";   // второй набор рисунков — светлая мантия и профессорская шапка (Анри 23.10 01:07, «да» Рудольфа 01:1x);
                        // метка в адресе — чтобы браузеры посетителей не показывали прежние картинки из памяти
+  /* 28.10.2026 01:18 (слово Рудольфа «исправь подпись на соответствующую — гид по разделу «Экология и …»», Клод (дом)):
+     на странице экологии гид называет свой раздел, а не весь сайт: заголовок и приветствие окна гида, подпись круглой кнопки.
+     Картинки экологии — ?v=4: рисунки Анри 28.10 (кнопка — спокойное лицо, при наведении улыбка; три позы окна гида). */
+  var ECO_SEC = ECO && {
+    ru: ["Гид по разделу «Экология и агроэкология»", "Здравствуйте! Я гид по разделу «Экология и агроэкология». Что вы хотите сделать?"],
+    en: ["Guide to the Ecology and agroecology section", "Hello! I am your guide to the Ecology and agroecology section. What would you like to do?"],
+    hy: ["«Էկոլոգիա և ագրոէկոլոգիա» բաժնի ուղեցույց", "Բարև Ձեզ։ Ես «Էկոլոգիա և ագրոէկոլոգիա» բաժնի ուղեցույցն եմ։ Ի՞նչ եք ցանկանում անել։"],
+    fr: ["Guide de la rubrique « Écologie et agroécologie »", "Bonjour ! Je suis votre guide de la rubrique « Écologie et agroécologie ». Que souhaitez-vous faire ?"],
+    de: ["Wegweiser durch den Bereich „Ökologie und Agrarökologie“", "Hallo! Ich bin Ihr Wegweiser durch den Bereich „Ökologie und Agrarökologie“. Was möchten Sie tun?"]
+  }[LANG];
+  if (ECO_SEC) { G5.btn = T.fab = ECO_SEC[0]; G5.hello = ECO_SEC[1]; }
   var MON = new Date().getMonth();
   var WINTER = MON === 11 || MON <= 1;   // декабрь–февраль: профессор в вязаной шапке (зимняя пасхалка, решение 20.10)
   var T8ALL = {
@@ -1871,7 +1882,8 @@
 
   function buildDock() {
     var d = el("div", "rg-dock");
-    profBtn = el("button", "rg-prof", '<img src="' + IMG + (WINTER ? "face-winter.webp" : "face.webp") + IMGV + '" alt="" width="96" height="96" decoding="async">');
+    // 28.10.2026 01:19 (слово Рудольфа «зимние рисунки удали», Клод (дом)): у гида экологии нет зимнего рисунка — круглый год спокойное лицо
+    profBtn = el("button", "rg-prof", '<img src="' + IMG + (WINTER && !ECO ? "face-winter.webp" : "face.webp") + IMGV + '" alt="" width="96" height="96" decoding="async">');
     profBtn.type = "button";
     profBtn.title = T.fab;
     profBtn.setAttribute("aria-label", T.fab);
