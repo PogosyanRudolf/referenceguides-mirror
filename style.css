@@ -1626,3 +1626,14 @@ header.site nav.main>a:first-child{font-size:1.12em;font-weight:800}
 /* 3.46 (24.10.2026, Claude «Маисовый полоз цена», слово Рудольфа 15:52; решения Анри P-1024-1737-03): книга в углу — слой SVG
    с обрезом страниц слева и справа поверх рисунка; при листании толщина стопок меняется (globe.js, bookStacks). */
 .rg-book .rg-stk{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;border-radius:50%}
+
+/* 3.49 (30.10.2026, Клод (дом), слово Рудольфа 02:01; письмо Анри P-1030-0200-01): «О нас» — блок генерального директора:
+   портрет в золотой рамке справа, слева его слово (цитата) и мысль «Среда — это мы»; на телефоне портрет сверху. */
+.director{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,320px);gap:20px 34px;align-items:start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin:8px 0 36px;box-shadow:0 6px 22px #c9a22722}
+.director-photo{margin:0;grid-column:2;grid-row:1}
+.director-photo img{display:block;width:100%;height:auto;border-radius:4px;-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
+.director-photo figcaption{margin-top:10px;font-family:var(--sans);font-size:.9rem;line-height:1.4;color:var(--muted);text-align:center}
+.director-text{grid-column:1;grid-row:1;min-width:0}
+.director-quote{margin:6px 0 24px;padding:6px 0 6px 20px;border-left:4px solid var(--gold);font-size:1.2rem;line-height:1.6;font-style:italic;color:#3f3109}
+.director-quote p{margin:0}
+@media (max-width:760px){.director{grid-template-columns:1fr;padding:20px 18px}.director-photo{grid-column:1;grid-row:1;width:100%;max-width:320px;margin:0 auto}.director-text{grid-column:1;grid-row:2}}
