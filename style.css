@@ -1643,3 +1643,10 @@ header.site nav.main>a:first-child{font-size:1.12em;font-weight:800}
    перестали быть плавающими»): на телефоне ряд кнопок справа сверху плавает всё время, как было; подпись «Записаться на
    занятие» — на сплошном фоне: текст страницы, проходя под ней, не просвечивает и не смешивается с её буквами. */
 @media (max-width:760px){.rg-dock .rg-dock-cap,.rg-dock .rg-dock-cap:hover{background-color:#faf4e4}}
+/* 3.51 (30.10.2026, Клод (дом), слово Рудольфа 14:08 «плавающие кнопки оказываются на портрете папы — так нельзя»): ряд
+   плавающих кнопок справа сверху плавает всё время, но пока под ним проходит портрет генерального директора с подписью, он
+   прозрачный и не нажимается (globe.js, rgDockYield) — портрет ничем не закрыт; на любой ширине. */
+.rg-dock{transition:opacity .18s ease}
+.rg-dock.rg-dock-yield{opacity:0}
+.rg-dock.rg-dock-yield,.rg-dock.rg-dock-yield *{pointer-events:none!important}
+@media (prefers-reduced-motion:reduce){.rg-dock{transition:none}}

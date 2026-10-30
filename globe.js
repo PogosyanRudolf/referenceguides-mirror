@@ -2812,3 +2812,26 @@
     if (cc && D.c[cc]) fin(cc, 'ip'); else fin(byTz(), 'tz');
   }).catch(function () { clearTimeout(timer); fin(byTz(), 'tz'); });
 })();
+/* rgDockYield (30.10.2026, Клод (дом), слово Рудольфа 14:08 «плавающие кнопки оказываются на портрете папы — так нельзя»):
+   ряд кнопок справа сверху плавает всё время, но пока под ним проходит портрет генерального директора с подписью
+   (.director-photo) или блок с пометкой data-dock-avoid, ряд прозрачный и не нажимается — портрет ничем не закрыт.
+   Перекрытие — по рамкам на экране, на любой ширине. Вид — style.css, раздел 3.51 (класс rg-dock-yield). */
+(function () {
+  if (!window.requestAnimationFrame || !document.querySelectorAll) return;
+  var busy = false;
+  function hit(a, b) { return a.width > 0 && b.width > 0 && a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom; }
+  function update() {
+    busy = false;
+    var d = document.querySelector(".rg-dock");
+    if (!d) return;
+    var ps = document.querySelectorAll(".director-photo, [data-dock-avoid]");
+    var over = false, r = d.getBoundingClientRect();
+    for (var i = 0; i < ps.length && !over; i++) over = hit(r, ps[i].getBoundingClientRect());
+    if (over !== d.classList.contains("rg-dock-yield")) d.classList.toggle("rg-dock-yield", over);
+  }
+  function req() { if (!busy) { busy = true; requestAnimationFrame(update); } }
+  window.addEventListener("scroll", req, { passive: true });
+  window.addEventListener("resize", req);
+  window.addEventListener("load", req);
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", req); else req();
+})();
