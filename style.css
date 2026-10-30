@@ -1637,3 +1637,5 @@ header.site nav.main>a:first-child{font-size:1.12em;font-weight:800}
 .director-quote{margin:6px 0 24px;padding:6px 0 6px 20px;border-left:4px solid var(--gold);font-size:1.2rem;line-height:1.6;font-style:italic;color:#3f3109}
 .director-quote p{margin:0}
 @media (max-width:760px){.director{grid-template-columns:1fr;padding:20px 18px}.director-photo{grid-column:1;grid-row:1;width:100%;max-width:320px;margin:0 auto}.director-text{grid-column:1;grid-row:2}}
+/* имя генерального директора под портретом — строкой над должностью (30.10.2026 13:10, Клод (дом)) */
+.director-name{display:block;margin-bottom:3px;font-family:Georgia,'Times New Roman',serif;font-size:1.02rem;font-weight:700;color:#3f3109}
