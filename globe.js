@@ -2812,24 +2812,3 @@
     if (cc && D.c[cc]) fin(cc, 'ip'); else fin(byTz(), 'tz');
   }).catch(function () { clearTimeout(timer); fin(byTz(), 'tz'); });
 })();
-/* rgDockAutoHide (30.10.2026, Клод (дом), слово Рудольфа 13:31 «мобильная версия — буквы в подписи под папиным портретом
-   наползают»): на телефоне (до 760 точек) ряд плавающих кнопок справа сверху уезжает, пока страницу листают вниз, и
-   возвращается при прокрутке вверх и у верха страницы — кнопки не закрывают текст, который читают. Пока в ряду фокус
-   (нажата кнопка, открыт список языков) — не прячется. Вид — style.css, раздел 3.50 (класс rg-dock-away). */
-(function () {
-  if (!window.matchMedia || !window.requestAnimationFrame) return;
-  var mq = window.matchMedia("(max-width: 760px)");
-  var last = window.pageYOffset || 0, busy = false;
-  function update() {
-    busy = false;
-    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
-    var d = document.querySelector(".rg-dock");
-    if (!d) { last = y; return; }
-    var keep = !mq.matches || y < 120 || d.contains(document.activeElement);
-    if (keep) { d.classList.remove("rg-dock-away"); last = y; return; }
-    if (y > last + 6) { d.classList.add("rg-dock-away"); last = y; }
-    else if (y < last - 6) { d.classList.remove("rg-dock-away"); last = y; }
-  }
-  window.addEventListener("scroll", function () { if (!busy) { busy = true; requestAnimationFrame(update); } }, { passive: true });
-  if (mq.addEventListener) mq.addEventListener("change", update); else if (mq.addListener) mq.addListener(update);
-})();

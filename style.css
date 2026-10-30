@@ -1639,14 +1639,7 @@ header.site nav.main>a:first-child{font-size:1.12em;font-weight:800}
 @media (max-width:760px){.director{grid-template-columns:1fr;padding:20px 18px}.director-photo{grid-column:1;grid-row:1;width:100%;max-width:320px;margin:0 auto}.director-text{grid-column:1;grid-row:2}}
 /* имя генерального директора под портретом — строкой над должностью (30.10.2026 13:10, Клод (дом)) */
 .director-name{display:block;margin-bottom:3px;font-family:Georgia,'Times New Roman',serif;font-size:1.02rem;font-weight:700;color:#3f3109}
-/* 3.50 (30.10.2026, Клод (дом), слово Рудольфа 13:31 «мобильная версия — буквы в подписи под папиным портретом наползают»):
-   на телефоне ряд плавающих кнопок справа сверху не наползает на текст страницы — пока страницу листают вниз, он уезжает
-   вверх (globe.js, rgDockAutoHide), при прокрутке вверх и у верха страницы возвращается; подпись «Записаться на занятие» —
-   на сплошном фоне (текст страницы сквозь неё не просвечивает) и видна у верха страницы, при прокрутке — только круги. */
-@media (max-width:760px){
-  .rg-dock{transition:transform .28s ease,opacity .28s ease}
-  .rg-dock.rg-dock-away{transform:translateY(-150px);opacity:0}
-  .rg-dock .rg-dock-cap,.rg-dock .rg-dock-cap:hover{background-color:#faf4e4}
-  .rg-scrolled .rg-dock .rg-dock-cap{display:none}
-}
-@media (max-width:760px) and (prefers-reduced-motion:reduce){.rg-dock{transition:none}}
+/* 3.50 (30.10.2026, Клод (дом), слово Рудольфа 13:31 «буквы в подписи под папиным портретом наползают» и 13:46 «кнопки
+   перестали быть плавающими»): на телефоне ряд кнопок справа сверху плавает всё время, как было; подпись «Записаться на
+   занятие» — на сплошном фоне: текст страницы, проходя под ней, не просвечивает и не смешивается с её буквами. */
+@media (max-width:760px){.rg-dock .rg-dock-cap,.rg-dock .rg-dock-cap:hover{background-color:#faf4e4}}
